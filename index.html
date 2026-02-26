@@ -155,7 +155,7 @@ if (CONFIGURED) firebase.initializeApp(firebaseConfig);
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
 <script type="text/babel">
 const {useState,useEffect,useRef,useCallback}=React;
-const START="2026-03-01",END="2027-02-28",PICKS=5,MAX_TRADES=3;
+const START="2026-02-26",END="2027-02-28",PICKS=5,MAX_TRADES=3;
 
 const db=typeof CONFIGURED!=="undefined"&&CONFIGURED?firebase.database():null;
 const dbRef=path=>db?db.ref(path):null;
@@ -371,6 +371,8 @@ const gs=()=>{const n=new Date();return n<new Date(START)?"p":n>new Date(END)?"c
 const du=d=>Math.max(0,Math.ceil((new Date(d)-new Date())/864e5));
 const fr=v=>{if(v==null)return null;const p=(v*100).toFixed(2);return v>=0?`+${p}%`:`${p}%`};
 const ago=d=>{const s=Math.floor((Date.now()-new Date(d).getTime())/1e3);if(s<60)return"just now";if(s<3600)return Math.floor(s/60)+"m ago";if(s<86400)return Math.floor(s/3600)+"h ago";return Math.floor(s/86400)+"d ago"};
+const dailyChg=p=>{if(!p||!p.cp||!p.pp)return null;return(p.cp-p.pp)/p.pp};
+const fmtD=v=>{if(v==null)return"";const p=(v*100).toFixed(1);return v>=0?"+"+p+"%":p+"%"};
 const COLORS=["#10b981","#f59e0b","#3b82f6","#ef4444","#8b5cf6","#ec4899","#06b6d4","#84cc16","#f97316","#6366f1","#14b8a6","#e11d48","#a855f7","#22d3ee","#facc15","#fb923c","#4ade80","#f472b6","#38bdf8","#a3e635"];
 
 /* FIX #1: Per-portfolio entry price aware return calculations */
@@ -427,6 +429,7 @@ function TickerSearch({sel,onAdd,onRm,hideSlots,prices}){
               <div><span className="stk">{i.t}</span><span className="snm">{i.n}</span></div>
               <div style={{display:"flex",alignItems:"center",gap:8}}>
                 {prices&&prices[i.t]?.cp&&<span style={{fontFamily:"var(--fm)",fontSize:11,color:"var(--t3)",fontWeight:600}}>${prices[i.t].cp.toFixed(2)}</span>}
+                {prices&&dailyChg(prices[i.t])!=null&&<span style={{fontFamily:"var(--fm)",fontSize:10,fontWeight:600,color:dailyChg(prices[i.t])>=0?"var(--acc)":"var(--red)"}}>{fmtD(dailyChg(prices[i.t]))}</span>}
                 <span className={"ext "+(i.c==="e"?"ext-e":i.x==="ASX"?"ext-a":"ext-n")}>{i.c==="e"?"ETF":i.x}</span>
               </div>
             </div>
@@ -542,7 +545,7 @@ function Modal({p,prices,status,trades,onClose,onTrade}){
       <div style={{margin:"14px 0 18px",padding:"14px 0",borderTop:"1px solid var(--bdr)",borderBottom:"1px solid var(--bdr)"}}>
         <div style={{fontSize:10,color:"var(--t4)",textTransform:"uppercase",letterSpacing:".08em",fontFamily:"var(--fm)",marginBottom:3}}>Total Portfolio Return</div>
         <div style={{fontFamily:"var(--fm)",fontSize:30,fontWeight:700,color:ret==null?"var(--t5)":ret>=0?"var(--acc)":"var(--red)"}}>
-          {status==="p"?"Starts 1 Mar":fr(ret)||"Pending"}
+          {status==="p"?"Starts 26 Feb":fr(ret)||"Pending"}
         </div>
       </div>
       <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:10}}>
@@ -556,7 +559,7 @@ function Modal({p,prices,status,trades,onClose,onTrade}){
       </div>
       {p.tickers.map(t=>{const r=sr(t),d=prices[t];return(
         <div key={t} className="hr">
-          <div><div className="hrt">{t}</div>{d&&d.cp?<div className="hrp">{"$"+d.cp.toFixed(2)}</div>:null}</div>
+          <div><div className="hrt">{t}{p.entryPrices&&p.entryPrices[t]?<span style={{fontSize:9,color:"var(--orange)",marginLeft:6,fontWeight:500}}>SWAPPED</span>:null}</div>{d&&d.cp?<div className="hrp">{"$"+d.cp.toFixed(2)}{dailyChg(d)!=null&&<span style={{marginLeft:6,color:dailyChg(d)>=0?"var(--acc)":"var(--red)"}}>{fmtD(dailyChg(d))}</span>}{p.entryPrices&&p.entryPrices[t]?<span style={{marginLeft:6}}>{"entry $"+p.entryPrices[t].toFixed(2)}</span>:null}</div>:null}</div>
           <div className="hrw">20%</div>
           <div className="hrr" style={{color:r==null?"var(--t5)":r>=0?"var(--acc)":"var(--red)"}}>{status==="p"?"\u2014":fr(r)||"\u2014"}</div>
         </div>
@@ -737,7 +740,7 @@ function App(){
         <p className="tag">5 Stocks {"\u00B7"} 3 Trades {"\u00B7"} 12 Months {"\u00B7"} 1 Winner</p>
         <div className="inaugural">{"\u{1F3C6}"} Inaugural Tournament {"\u{1F3C6}"}</div>
         <div className="meta">
-          <span className="badge">{"\u{1F4C5}"} 1 Mar 2026 {"\u2192"} 28 Feb 2027</span>
+          <span className="badge">{"\u{1F4C5}"} 26 Feb 2026 {"\u2192"} 28 Feb 2027</span>
           <span className={"st st-"+(status==="p"?"p":status==="l"?"l":"c")}>
             {status==="p"&&("\u23F3 Starts in "+du(START)+" days")}{status==="l"&&<span><span className="live-dot"></span>LIVE</span>}{status==="c"&&"\u{1F3C1} COMPLETE"}
           </span>
@@ -780,7 +783,7 @@ function App(){
           <div className="reg-closed">
             <div style={{fontSize:32,marginBottom:10}}>{"\u{1F512}"}</div>
             <div style={{fontSize:16,fontWeight:600,color:"var(--t1)",marginBottom:6}}>Registration Closed</div>
-            <div>Registration closed when the competition started on 1 March 2026.</div>
+            <div>Registration closed when the competition started on 26 February 2026.</div>
           </div>
         </div>
       )}
@@ -805,7 +808,7 @@ function App(){
                   <div key={p.id} className="lbr" onClick={()=>setDet(p)}>
                     <RankBadge rank={i+1}/>
                     <div><div className="an">{p.advisorName}</div><div className="pn">{p.portfolioName}</div></div>
-                    <div className="ch">{p.tickers.map(t=><span key={t} className="mt">{t}{pr[t]?.cp&&<span style={{color:"var(--t5)",fontWeight:500,marginLeft:3}}>${pr[t].cp.toFixed(2)}</span>}</span>)}</div>
+                    <div className="ch">{p.tickers.map(t=>{const dc=dailyChg(pr[t]);return <span key={t} className="mt">{t}{pr[t]?.cp&&<span style={{color:dc!=null?(dc>=0?"var(--acc)":"var(--red)"):"var(--t5)",fontWeight:500,marginLeft:3}}>${pr[t].cp.toFixed(2)}</span>}</span>})}</div>
                     <div className={"cr "+(ret==null?"crx":ret>=0?"crp":"crn")}>{status==="p"?"\u2014":ret==null?"Pending":fr(ret)}</div>
                   </div>
                 )})}
