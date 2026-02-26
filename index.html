@@ -40,6 +40,2493 @@ body::before{content:'';position:fixed;inset:0;opacity:.03;background-image:url(
 .btn{font-family:var(--f);font-size:13px;font-weight:500;padding:9px 18px;border-radius:8px;cursor:pointer;transition:all .2s;border:1px solid var(--bdr);background:rgba(255,255,255,.04);color:var(--t3)}
 .btn:hover{border-color:var(--bdr2);color:var(--t2)}
 .btn.on{border-color:rgba(16,185,129,.4);color:var(--acc)}
+.btn.dis{opacity:.4;cursor:not-allowed;pointer-events:none}
+.btn1{width:100%;padding:14px;border-radius:10px;border:none;font-family:var(--f);font-size:15px;font-weight:600;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;cursor:pointer;transition:all .2s;box-shadow:0 4px 24px var(--accg)}
+.btn1:hover{transform:translateY(-1px);box-shadow:0 6px 30px var(--accg)}
+.btn1:disabled{opacity:.35;cursor:not-allowed;box-shadow:none;transform:none}
+.btn-trade{padding:10px 20px;border-radius:8px;border:1px solid var(--orangebdr);background:var(--orangebg);color:var(--orange);font-family:var(--f);font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;width:100%;margin-top:14px}
+.btn-trade:hover{background:rgba(249,115,22,.18)}.btn-trade:disabled{opacity:.35;cursor:not-allowed}
+.card{background:var(--bgc);border:1px solid var(--bdr);border-radius:16px;padding:24px;margin-bottom:18px;backdrop-filter:blur(20px)}
+.ctit{font-size:17px;font-weight:600;color:var(--t1);display:flex;align-items:center;gap:9px;margin-bottom:18px}
+.ctit span{font-size:20px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.fr{grid-template-columns:1fr}}
+.fg{margin-bottom:18px}
+.fl{display:block;font-size:11px;font-weight:600;color:var(--t4);text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px;font-family:var(--fm)}
+.fi{width:100%;padding:11px 14px;border-radius:9px;border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.35);color:var(--t2);font-size:14px;font-family:var(--f);outline:none;transition:border-color .2s}
+.fi::placeholder{color:var(--t5)}.fi:focus{border-color:var(--acc)}
+.fi-pin{width:120px;text-align:center;letter-spacing:.3em;font-family:var(--fm);font-size:18px;font-weight:700}
+.ht{font-size:11px;color:var(--t5);margin-top:5px}
+.et{color:var(--red);font-size:12px;margin-top:7px;font-family:var(--fm)}
+.ts{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.tc{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border-radius:7px;background:var(--accbg);border:1px solid var(--accbdr);color:var(--acc);font-size:12px;font-family:var(--fm);font-weight:600;animation:ci .2s ease-out}
+@keyframes ci{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+.tc .x{cursor:pointer;opacity:.5;font-size:15px;line-height:1;transition:opacity .15s}.tc .x:hover{opacity:1}
+.es{display:inline-flex;align-items:center;justify-content:center;padding:7px 12px;border-radius:7px;border:1px dashed rgba(255,255,255,.1);color:var(--t5);font-size:11px;font-family:var(--fm);min-width:72px}
+.sw{position:relative}
+.sug{position:absolute;top:calc(100% + 3px);left:0;right:0;max-height:260px;overflow-y:auto;background:#1a1f2e;border:1px solid rgba(255,255,255,.1);border-radius:10px;z-index:100;box-shadow:0 16px 48px rgba(0,0,0,.55);display:none}
+.sug.open{display:block}
+.stabs{display:flex;border-bottom:1px solid rgba(255,255,255,.06);padding:0 4px;position:sticky;top:0;background:#1a1f2e;z-index:1}
+.stab{padding:7px 12px;font-size:10px;font-family:var(--fm);font-weight:600;color:var(--t5);cursor:pointer;border:none;border-bottom:2px solid transparent;transition:all .15s;text-transform:uppercase;letter-spacing:.05em;background:none}
+.stab:hover{color:var(--t3)}.stab.on{color:var(--acc);border-bottom-color:var(--acc)}
+.si{padding:9px 12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:13px;transition:background .1s;border-bottom:1px solid rgba(255,255,255,.03)}
+.si:hover{background:rgba(255,255,255,.05)}.si:last-child{border-bottom:none}
+.stk{font-family:var(--fm);font-weight:700;color:var(--t2);font-size:13px}
+.snm{color:var(--t4);font-size:11px;margin-left:8px}
+.ext{font-family:var(--fm);font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600}
+.ext-a{background:var(--bluebg);color:var(--blue)}
+.ext-n{background:var(--purplebg);color:var(--purple)}
+.ext-e{background:rgba(16,185,129,.12);color:#34d399}
+.lbh{display:grid;grid-template-columns:42px 1.2fr 1.5fr 100px;padding:9px 14px;font-size:10px;font-weight:700;color:var(--t5);text-transform:uppercase;letter-spacing:.08em;font-family:var(--fm)}
+.lbr{display:grid;grid-template-columns:42px 1.2fr 1.5fr 100px;align-items:center;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.03);transition:background .15s;cursor:pointer}
+.lbr:hover{background:rgba(255,255,255,.025)}
+@media(max-width:640px){.lbh,.lbr{grid-template-columns:36px 1fr 90px}.lbh .ch,.lbr .ch{display:none}}
+.rk{font-family:var(--fm);font-weight:700;font-size:16px}
+.rk1{color:var(--gold)}.rk2{color:var(--silver)}.rk3{color:var(--bronze)}.rkn{color:var(--t5)}
+.an{font-size:14px;font-weight:600;color:var(--t1)}
+.pn{font-size:11px;color:var(--t4);margin-top:1px}
+.ch{display:flex;gap:4px;flex-wrap:wrap}
+.mt{font-family:var(--fm);font-size:10px;font-weight:600;padding:2px 6px;border-radius:3px;background:rgba(255,255,255,.05);color:var(--t3)}
+.cr{text-align:right;font-family:var(--fm);font-weight:700;font-size:14px}
+.crp{color:var(--acc)}.crn{color:var(--red)}.crx{color:var(--t5);font-weight:500;font-size:12px}
+.mo{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;animation:fi .2s}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+.mc{background:#13161f;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:28px;max-width:540px;width:100%;max-height:85vh;overflow-y:auto;position:relative;animation:su .25s ease-out}
+@keyframes su{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.mx{position:absolute;top:14px;right:14px;background:none;border:none;color:var(--t4);font-size:24px;cursor:pointer;padding:4px;line-height:1}.mx:hover{color:var(--t2)}
+.hr{display:grid;grid-template-columns:1fr 65px 75px;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.hr:last-child{border-bottom:none}
+.hrt{font-family:var(--fm);font-weight:700;font-size:13px;color:var(--t2)}
+.hrp{font-size:11px;color:var(--t5);font-weight:400;margin-top:1px}
+.hrw{font-family:var(--fm);font-size:11px;color:var(--t4);text-align:center}
+.hrr{font-family:var(--fm);font-weight:600;font-size:13px;text-align:right}
+.empty{text-align:center;padding:44px 20px;color:var(--t4)}
+.footer{text-align:center;margin-top:36px;font-size:11px;color:#1e293b;font-family:var(--fm)}
+.spin{display:inline-block;width:14px;height:14px;border:2px solid var(--bdr);border-top-color:var(--acc);border-radius:50%;animation:sp .6s linear infinite;vertical-align:middle;margin-right:6px}
+@keyframes sp{to{transform:rotate(360deg)}}
+.chwrap{margin-top:18px;padding:16px;background:rgba(0,0,0,.2);border-radius:12px;border:1px solid var(--bdr)}
+.chtit{font-size:13px;font-weight:600;color:var(--t3);margin-bottom:12px;font-family:var(--fm);text-transform:uppercase;letter-spacing:.06em}
+.sug::-webkit-scrollbar{width:6px}.sug::-webkit-scrollbar-track{background:transparent}.sug::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:3px}
+.cfg-banner{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);border-radius:12px;padding:16px 20px;margin-bottom:20px;text-align:center}
+.cfg-banner h3{color:var(--red);font-size:14px;margin-bottom:6px}.cfg-banner p{color:var(--t3);font-size:12px;font-family:var(--fm)}
+.live-dot{width:8px;height:8px;border-radius:50%;background:var(--acc);display:inline-block;margin-right:6px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.feed-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.04);align-items:flex-start}
+.feed-item:last-child{border-bottom:none}
+.feed-icon{width:32px;height:32px;border-radius:8px;background:var(--orangebg);border:1px solid var(--orangebdr);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.feed-text{font-size:13px;color:var(--t2);line-height:1.5}
+.feed-name{font-weight:600;color:var(--t1)}
+.feed-tickers{font-family:var(--fm);font-weight:600;font-size:12px}
+.feed-out{color:var(--red)}.feed-in{color:var(--acc)}
+.feed-time{font-size:10px;color:var(--t5);font-family:var(--fm);margin-top:2px}
+.feed-arrow{color:var(--t4);margin:0 4px}
+.trade-section{margin-top:16px;padding-top:16px;border-top:1px solid var(--bdr)}
+.trade-badge{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:12px;font-size:11px;font-family:var(--fm);font-weight:600}
+.trade-badge-ok{background:var(--orangebg);border:1px solid var(--orangebdr);color:var(--orange)}
+.trade-badge-done{background:rgba(255,255,255,.04);border:1px solid var(--bdr);color:var(--t5)}
+.sell-chip{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;cursor:pointer;font-family:var(--fm);font-size:12px;font-weight:600;transition:all .15s;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.03);color:var(--t3);margin:4px 4px 4px 0}
+.sell-chip:hover{border-color:var(--red);color:var(--red);background:rgba(239,68,68,.08)}
+.sell-chip.selected{border-color:var(--red);color:var(--red);background:rgba(239,68,68,.1)}
+.pin-gate{text-align:center;padding:12px 0}
+.pin-gate p{font-size:13px;color:var(--t3);margin-bottom:12px}
+.pin-row{display:flex;align-items:center;justify-content:center;gap:10px}
+.reg-closed{text-align:center;padding:20px;color:var(--t4);font-size:13px;border:1px dashed rgba(255,255,255,.1);border-radius:12px;margin-top:10px}
+</style>
+</head>
+<body>
+<div id="app" class="ctr"></div>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+<script>
+const firebaseConfig = {
+  apiKey:            "AIzaSyDcCCzORetz78V4Osc38M_Nv-JRlw_sOq8",
+  authDomain:        "stock-picking-challenge-3882f.firebaseapp.com",
+  databaseURL:       "https://stock-picking-challenge-3882f-default-rtdb.firebaseio.com",
+  projectId:         "stock-picking-challenge-3882f",
+  storageBucket:     "stock-picking-challenge-3882f.firebasestorage.app",
+  messagingSenderId: "636945009913",
+  appId:             "1:636945009913:web:92af7a5d85d5a91b5fa628"
+};
+const CONFIGURED = firebaseConfig.apiKey !== "YOUR_API_KEY_HERE";
+if (CONFIGURED) firebase.initializeApp(firebaseConfig);
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+<script type="text/babel">
+const {useState,useEffect,useRef,useCallback}=React;
+const START="2026-03-01",END="2027-02-28",PICKS=5,MAX_TRADES=3;
+
+const db=typeof CONFIGURED!=="undefined"&&CONFIGURED?firebase.database():null;
+const dbRef=path=>db?db.ref(path):null;
+const encKey=k=>k.replace(/\./g,"_DOT_");
+const decKey=k=>k.replace(/_DOT_/g,".");
+function encMap(o){if(!o)return null;const r={};for(const[k,v]of Object.entries(o))r[encKey(k)]=v;return r}
+function decMap(o){if(!o)return {};const r={};for(const[k,v]of Object.entries(o))r[decKey(k)]=v;return r}
+function fbSet(p,v){return db?dbRef(p).set(v):Promise.resolve()}
+function fbPush(p,v){return db?dbRef(p).push(v):Promise.resolve()}
+function fbUpdate(p,v){return db?dbRef(p).update(v):Promise.resolve()}
+function fbOnValue(p,cb){
+  if(!db)return ()=>{};
+  const ref=dbRef(p);const h=snap=>{cb(snap.exists()?snap.val():null)};
+  ref.on("value",h);return ()=>ref.off("value",h);
+}
+
+const U=[
+{t:"BHP.AX",n:"BHP Group",x:"ASX",c:"s"},{t:"CBA.AX",n:"Commonwealth Bank",x:"ASX",c:"s"},
+{t:"CSL.AX",n:"CSL Limited",x:"ASX",c:"s"},{t:"WBC.AX",n:"Westpac",x:"ASX",c:"s"},
+{t:"NAB.AX",n:"National Australia Bank",x:"ASX",c:"s"},{t:"ANZ.AX",n:"ANZ Group",x:"ASX",c:"s"},
+{t:"WES.AX",n:"Wesfarmers",x:"ASX",c:"s"},{t:"MQG.AX",n:"Macquarie Group",x:"ASX",c:"s"},
+{t:"FMG.AX",n:"Fortescue",x:"ASX",c:"s"},{t:"TLS.AX",n:"Telstra",x:"ASX",c:"s"},
+{t:"RIO.AX",n:"Rio Tinto",x:"ASX",c:"s"},{t:"WDS.AX",n:"Woodside Energy",x:"ASX",c:"s"},
+{t:"ALL.AX",n:"Aristocrat Leisure",x:"ASX",c:"s"},{t:"GMG.AX",n:"Goodman Group",x:"ASX",c:"s"},
+{t:"TCL.AX",n:"Transurban",x:"ASX",c:"s"},{t:"COL.AX",n:"Coles Group",x:"ASX",c:"s"},
+{t:"WOW.AX",n:"Woolworths",x:"ASX",c:"s"},{t:"REA.AX",n:"REA Group",x:"ASX",c:"s"},
+{t:"JHX.AX",n:"James Hardie",x:"ASX",c:"s"},{t:"STO.AX",n:"Santos",x:"ASX",c:"s"},
+{t:"XRO.AX",n:"Xero",x:"ASX",c:"s"},{t:"SHL.AX",n:"Sonic Healthcare",x:"ASX",c:"s"},
+{t:"QBE.AX",n:"QBE Insurance",x:"ASX",c:"s"},{t:"ORG.AX",n:"Origin Energy",x:"ASX",c:"s"},
+{t:"MIN.AX",n:"Mineral Resources",x:"ASX",c:"s"},{t:"CPU.AX",n:"Computershare",x:"ASX",c:"s"},
+{t:"SUN.AX",n:"Suncorp",x:"ASX",c:"s"},{t:"IAG.AX",n:"Insurance Australia",x:"ASX",c:"s"},
+{t:"APA.AX",n:"APA Group",x:"ASX",c:"s"},{t:"CAR.AX",n:"CAR Group",x:"ASX",c:"s"},
+{t:"SEK.AX",n:"Seek",x:"ASX",c:"s"},{t:"TWE.AX",n:"Treasury Wine Estates",x:"ASX",c:"s"},
+{t:"PME.AX",n:"Pro Medicus",x:"ASX",c:"s"},{t:"WTC.AX",n:"WiseTech Global",x:"ASX",c:"s"},
+{t:"TNE.AX",n:"TechnologyOne",x:"ASX",c:"s"},{t:"LYC.AX",n:"Lynas Rare Earths",x:"ASX",c:"s"},
+{t:"RMD.AX",n:"ResMed",x:"ASX",c:"s"},{t:"ALD.AX",n:"Ampol",x:"ASX",c:"s"},
+{t:"EVN.AX",n:"Evolution Mining",x:"ASX",c:"s"},{t:"NST.AX",n:"Northern Star",x:"ASX",c:"s"},
+{t:"MPL.AX",n:"Medibank Private",x:"ASX",c:"s"},{t:"ORI.AX",n:"Orica",x:"ASX",c:"s"},
+{t:"AMC.AX",n:"Amcor",x:"ASX",c:"s"},{t:"BSL.AX",n:"BlueScope Steel",x:"ASX",c:"s"},
+{t:"DXS.AX",n:"Dexus",x:"ASX",c:"s"},{t:"GPT.AX",n:"GPT Group",x:"ASX",c:"s"},
+{t:"MGR.AX",n:"Mirvac Group",x:"ASX",c:"s"},{t:"SGP.AX",n:"Stockland",x:"ASX",c:"s"},
+{t:"VCX.AX",n:"Vicinity Centres",x:"ASX",c:"s"},{t:"SCG.AX",n:"Scentre Group",x:"ASX",c:"s"},
+{t:"CHC.AX",n:"Charter Hall",x:"ASX",c:"s"},{t:"LLC.AX",n:"Lendlease",x:"ASX",c:"s"},
+{t:"IEL.AX",n:"IDP Education",x:"ASX",c:"s"},{t:"NHF.AX",n:"nib Holdings",x:"ASX",c:"s"},
+{t:"QAN.AX",n:"Qantas Airways",x:"ASX",c:"s"},{t:"SVW.AX",n:"Seven Group",x:"ASX",c:"s"},
+{t:"NWS.AX",n:"News Corp",x:"ASX",c:"s"},{t:"TAH.AX",n:"Tabcorp",x:"ASX",c:"s"},
+{t:"PLS.AX",n:"Pilbara Minerals",x:"ASX",c:"s"},{t:"IGO.AX",n:"IGO Limited",x:"ASX",c:"s"},
+{t:"AZJ.AX",n:"Aurizon",x:"ASX",c:"s"},{t:"SOL.AX",n:"WH Soul Pattinson",x:"ASX",c:"s"},
+{t:"ALX.AX",n:"Atlas Arteria",x:"ASX",c:"s"},{t:"FPH.AX",n:"Fisher & Paykel Healthcare",x:"ASX",c:"s"},
+{t:"CWY.AX",n:"Cleanaway Waste",x:"ASX",c:"s"},{t:"ILU.AX",n:"Iluka Resources",x:"ASX",c:"s"},
+{t:"ZIP.AX",n:"Zip Co",x:"ASX",c:"s"},{t:"HUB.AX",n:"Hub24",x:"ASX",c:"s"},
+{t:"NWL.AX",n:"Netwealth",x:"ASX",c:"s"},{t:"PDN.AX",n:"Paladin Energy",x:"ASX",c:"s"},
+{t:"WHC.AX",n:"Whitehaven Coal",x:"ASX",c:"s"},{t:"S32.AX",n:"South32",x:"ASX",c:"s"},
+{t:"BRN.AX",n:"Brainchip",x:"ASX",c:"s"},{t:"WBT.AX",n:"Weebit Nano",x:"ASX",c:"s"},
+{t:"SFR.AX",n:"Sandfire Resources",x:"ASX",c:"s"},{t:"DRR.AX",n:"Deterra Royalties",x:"ASX",c:"s"},
+{t:"AGL.AX",n:"AGL Energy",x:"ASX",c:"s"},{t:"TPG.AX",n:"TPG Telecom",x:"ASX",c:"s"},
+{t:"CEN.AX",n:"Contact Energy",x:"ASX",c:"s"},{t:"JBH.AX",n:"JB Hi-Fi",x:"ASX",c:"s"},
+{t:"A200.AX",n:"BetaShares Australia 200",x:"ASX",c:"e"},{t:"AAA.AX",n:"BetaShares High Interest Cash",x:"ASX",c:"e"},
+{t:"NDQ.AX",n:"BetaShares NASDAQ 100",x:"ASX",c:"e"},{t:"HNDQ.AX",n:"BetaShares NASDAQ 100 Hedged",x:"ASX",c:"e"},
+{t:"DHHF.AX",n:"BetaShares Diversified All Growth",x:"ASX",c:"e"},{t:"DZZF.AX",n:"BetaShares Ethical Diversified HG",x:"ASX",c:"e"},
+{t:"DGGF.AX",n:"BetaShares Ethical Diversified Growth",x:"ASX",c:"e"},{t:"DBBF.AX",n:"BetaShares Ethical Diversified Balanced",x:"ASX",c:"e"},
+{t:"BGBL.AX",n:"BetaShares Global Shares",x:"ASX",c:"e"},{t:"ATEC.AX",n:"BetaShares S&P/ASX Technology",x:"ASX",c:"e"},
+{t:"HACK.AX",n:"BetaShares Global Cybersecurity",x:"ASX",c:"e"},{t:"RBTZ.AX",n:"BetaShares Global Robotics & AI",x:"ASX",c:"e"},
+{t:"CLDD.AX",n:"BetaShares Cloud Computing",x:"ASX",c:"e"},{t:"SEMI.AX",n:"BetaShares Global Semiconductors",x:"ASX",c:"e"},
+{t:"GAME.AX",n:"BetaShares Video Games & Esports",x:"ASX",c:"e"},{t:"DRIV.AX",n:"BetaShares Electric Vehicles",x:"ASX",c:"e"},
+{t:"IPAY.AX",n:"BetaShares Future of Payments",x:"ASX",c:"e"},{t:"IBUY.AX",n:"BetaShares Online Retail",x:"ASX",c:"e"},
+{t:"ASIA.AX",n:"BetaShares Asia Technology Tigers",x:"ASX",c:"e"},{t:"CRYP.AX",n:"BetaShares Crypto Innovators",x:"ASX",c:"e"},
+{t:"ETHI.AX",n:"BetaShares Global Sustainability Leaders",x:"ASX",c:"e"},{t:"HETH.AX",n:"BetaShares Global Sustainability Hedged",x:"ASX",c:"e"},
+{t:"FAIR.AX",n:"BetaShares Aus Sustainability Leaders",x:"ASX",c:"e"},{t:"ERTH.AX",n:"BetaShares Climate Change Innovation",x:"ASX",c:"e"},
+{t:"QLTY.AX",n:"BetaShares Global Quality Leaders",x:"ASX",c:"e"},{t:"HQLT.AX",n:"BetaShares Global Quality Hedged",x:"ASX",c:"e"},
+{t:"INCM.AX",n:"BetaShares Global Income Leaders",x:"ASX",c:"e"},{t:"IIND.AX",n:"BetaShares India Quality",x:"ASX",c:"e"},
+{t:"QUS.AX",n:"BetaShares S&P 500 Equal Weight",x:"ASX",c:"e"},{t:"F100.AX",n:"BetaShares FTSE 100",x:"ASX",c:"e"},
+{t:"QOZ.AX",n:"BetaShares FTSE RAFI Australia 200",x:"ASX",c:"e"},{t:"EX20.AX",n:"BetaShares Aus Ex-20",x:"ASX",c:"e"},
+{t:"QFN.AX",n:"BetaShares S&P/ASX 200 Financials",x:"ASX",c:"e"},{t:"QRE.AX",n:"BetaShares S&P/ASX 200 Resources",x:"ASX",c:"e"},
+{t:"OZBD.AX",n:"BetaShares Aus Composite Bond",x:"ASX",c:"e"},{t:"CRED.AX",n:"BetaShares Aus IG Corp Bond",x:"ASX",c:"e"},
+{t:"AGVT.AX",n:"BetaShares Aus Government Bond",x:"ASX",c:"e"},{t:"GGOV.AX",n:"BetaShares Global Govt Bond 20+",x:"ASX",c:"e"},
+{t:"GBND.AX",n:"BetaShares Sustainability Bond",x:"ASX",c:"e"},{t:"QPON.AX",n:"BetaShares Bank Senior Floating Rate",x:"ASX",c:"e"},
+{t:"HBRD.AX",n:"BetaShares Active Aus Hybrids",x:"ASX",c:"e"},{t:"BHYB.AX",n:"BetaShares Aus Bank Hybrids",x:"ASX",c:"e"},
+{t:"GEAR.AX",n:"BetaShares Geared Aus Equity",x:"ASX",c:"e"},{t:"GGUS.AX",n:"BetaShares Geared US Equity Hedged",x:"ASX",c:"e"},
+{t:"BEAR.AX",n:"BetaShares Aus Equities Bear",x:"ASX",c:"e"},{t:"BBOZ.AX",n:"BetaShares Aus Equities Strong Bear",x:"ASX",c:"e"},
+{t:"BBUS.AX",n:"BetaShares US Equities Strong Bear",x:"ASX",c:"e"},
+{t:"QAU.AX",n:"BetaShares Gold Bullion Hedged",x:"ASX",c:"e"},{t:"OOO.AX",n:"BetaShares Crude Oil Hedged",x:"ASX",c:"e"},
+{t:"USD.AX",n:"BetaShares US Dollar",x:"ASX",c:"e"},{t:"EEU.AX",n:"BetaShares Euro",x:"ASX",c:"e"},
+{t:"POU.AX",n:"BetaShares British Pound",x:"ASX",c:"e"},
+{t:"FOOD.AX",n:"BetaShares Global Agriculture Hedged",x:"ASX",c:"e"},{t:"BNKS.AX",n:"BetaShares Global Banks Hedged",x:"ASX",c:"e"},
+{t:"FUEL.AX",n:"BetaShares Global Energy Hedged",x:"ASX",c:"e"},{t:"MNRS.AX",n:"BetaShares Global Gold Miners Hedged",x:"ASX",c:"e"},
+{t:"DRUG.AX",n:"BetaShares Global Healthcare Hedged",x:"ASX",c:"e"},
+{t:"SMLL.AX",n:"BetaShares Aus Small Companies",x:"ASX",c:"e"},{t:"HVST.AX",n:"BetaShares Aus Dividend Harvester",x:"ASX",c:"e"},
+{t:"YMAX.AX",n:"BetaShares Aus Yield Maximiser",x:"ASX",c:"e"},{t:"UMAX.AX",n:"BetaShares S&P 500 Yield Maximiser",x:"ASX",c:"e"},
+{t:"HEUR.AX",n:"BetaShares Europe Hedged",x:"ASX",c:"e"},{t:"HJPN.AX",n:"BetaShares Japan Hedged",x:"ASX",c:"e"},
+{t:"WRLD.AX",n:"BetaShares Managed Risk Global",x:"ASX",c:"e"},{t:"AUST.AX",n:"BetaShares Managed Risk Aus",x:"ASX",c:"e"},
+{t:"EMMG.AX",n:"BetaShares Legg Mason EM",x:"ASX",c:"e"},{t:"EINC.AX",n:"BetaShares Legg Mason Equity Income",x:"ASX",c:"e"},
+{t:"BNDS.AX",n:"Franklin Aus Bond Active",x:"ASX",c:"e"},
+{t:"CIIH.AX",n:"Franklin Intl Infra Hedged Active",x:"ASX",c:"e"},
+{t:"CUIV.AX",n:"Franklin Intl Multi-Asset Active",x:"ASX",c:"e"},
+{t:"CIVH.AX",n:"Franklin Intl Value Hedged Active",x:"ASX",c:"e"},
+{t:"R3AL.AX",n:"Franklin Aus Real Asset Active",x:"ASX",c:"e"},
+{t:"FRAR.AX",n:"Franklin Aus Resources Active",x:"ASX",c:"e"},
+{t:"FRGG.AX",n:"Franklin Global Growth Active",x:"ASX",c:"e"},
+{t:"VAS.AX",n:"Vanguard Aus Shares",x:"ASX",c:"e"},{t:"VGS.AX",n:"Vanguard Intl Shares",x:"ASX",c:"e"},
+{t:"VGAD.AX",n:"Vanguard Intl Shares Hedged",x:"ASX",c:"e"},{t:"VTS.AX",n:"Vanguard US Total Market",x:"ASX",c:"e"},
+{t:"VEU.AX",n:"Vanguard All-World ex-US",x:"ASX",c:"e"},{t:"VHY.AX",n:"Vanguard Aus High Yield",x:"ASX",c:"e"},
+{t:"VLC.AX",n:"Vanguard MSCI Aus Large",x:"ASX",c:"e"},{t:"VSO.AX",n:"Vanguard MSCI Aus Small",x:"ASX",c:"e"},
+{t:"VGE.AX",n:"Vanguard FTSE Emerging Markets",x:"ASX",c:"e"},{t:"VAP.AX",n:"Vanguard Aus Property",x:"ASX",c:"e"},
+{t:"VAF.AX",n:"Vanguard Aus Fixed Interest",x:"ASX",c:"e"},{t:"VGB.AX",n:"Vanguard Aus Government Bond",x:"ASX",c:"e"},
+{t:"VACF.AX",n:"Vanguard Aus Corporate Fixed Interest",x:"ASX",c:"e"},
+{t:"VEQ.AX",n:"Vanguard FTSE Europe",x:"ASX",c:"e"},{t:"VAE.AX",n:"Vanguard FTSE Asia ex Japan",x:"ASX",c:"e"},
+{t:"VDHG.AX",n:"Vanguard Diversified High Growth",x:"ASX",c:"e"},{t:"VDGR.AX",n:"Vanguard Diversified Growth",x:"ASX",c:"e"},
+{t:"VDBA.AX",n:"Vanguard Diversified Balanced",x:"ASX",c:"e"},{t:"VDCO.AX",n:"Vanguard Diversified Conservative",x:"ASX",c:"e"},
+{t:"VETH.AX",n:"Vanguard Ethically Conscious Intl",x:"ASX",c:"e"},{t:"VISM.AX",n:"Vanguard Intl Small Companies",x:"ASX",c:"e"},
+{t:"IOZ.AX",n:"iShares ASX 200",x:"ASX",c:"e"},{t:"IVV.AX",n:"iShares S&P 500",x:"ASX",c:"e"},
+{t:"IHVV.AX",n:"iShares S&P 500 Hedged",x:"ASX",c:"e"},{t:"IEM.AX",n:"iShares Emerging Markets",x:"ASX",c:"e"},
+{t:"IVE.AX",n:"iShares MSCI EAFE",x:"ASX",c:"e"},{t:"IJP.AX",n:"iShares MSCI Japan",x:"ASX",c:"e"},
+{t:"IEU.AX",n:"iShares Europe",x:"ASX",c:"e"},{t:"IOO.AX",n:"iShares Global 100",x:"ASX",c:"e"},
+{t:"IHOO.AX",n:"iShares Global 100 Hedged",x:"ASX",c:"e"},{t:"IAA.AX",n:"iShares Asia 50",x:"ASX",c:"e"},
+{t:"IZZ.AX",n:"iShares China Large-Cap",x:"ASX",c:"e"},{t:"IRU.AX",n:"iShares Russell 2000",x:"ASX",c:"e"},
+{t:"IJH.AX",n:"iShares S&P MidCap 400",x:"ASX",c:"e"},{t:"IJR.AX",n:"iShares S&P SmallCap 600",x:"ASX",c:"e"},
+{t:"ILC.AX",n:"iShares S&P/ASX 20",x:"ASX",c:"e"},{t:"ISO.AX",n:"iShares S&P/ASX Small Ords",x:"ASX",c:"e"},
+{t:"IHD.AX",n:"iShares S&P/ASX Div Opportunities",x:"ASX",c:"e"},
+{t:"IXJ.AX",n:"iShares Global Healthcare",x:"ASX",c:"e"},{t:"IXI.AX",n:"iShares Global Consumer Staples",x:"ASX",c:"e"},
+{t:"IAF.AX",n:"iShares Aus Composite Bond",x:"ASX",c:"e"},{t:"IGB.AX",n:"iShares Aus Treasury",x:"ASX",c:"e"},
+{t:"ILB.AX",n:"iShares Aus Inflation Gov Bond",x:"ASX",c:"e"},
+{t:"IHWL.AX",n:"iShares MSCI World All Cap Hedged",x:"ASX",c:"e"},
+{t:"IWLD.AX",n:"iShares Core MSCI World ex Aus ESG",x:"ASX",c:"e"},
+{t:"IESG.AX",n:"iShares Core MSCI Aus ESG",x:"ASX",c:"e"},
+{t:"IHCB.AX",n:"iShares Global Corp Bond Hedged",x:"ASX",c:"e"},
+{t:"IHHY.AX",n:"iShares Global High Yield Bond Hedged",x:"ASX",c:"e"},
+{t:"IHEB.AX",n:"iShares EM Bond Hedged",x:"ASX",c:"e"},
+{t:"WDMF.AX",n:"iShares World Multifactor",x:"ASX",c:"e"},
+{t:"MVOL.AX",n:"iShares Aus Minimum Volatility",x:"ASX",c:"e"},
+{t:"IKO.AX",n:"iShares MSCI South Korea",x:"ASX",c:"e"},{t:"ITW.AX",n:"iShares MSCI Taiwan",x:"ASX",c:"e"},
+{t:"QUAL.AX",n:"VanEck Intl Quality",x:"ASX",c:"e"},{t:"QHAL.AX",n:"VanEck Intl Quality Hedged",x:"ASX",c:"e"},
+{t:"QSML.AX",n:"VanEck Intl Small Companies Quality",x:"ASX",c:"e"},
+{t:"MOAT.AX",n:"VanEck Morningstar Wide Moat",x:"ASX",c:"e"},{t:"GOAT.AX",n:"VanEck Morningstar Intl Wide Moat",x:"ASX",c:"e"},
+{t:"MVW.AX",n:"VanEck Aus Equal Weight",x:"ASX",c:"e"},{t:"MVB.AX",n:"VanEck Aus Banks",x:"ASX",c:"e"},
+{t:"MVR.AX",n:"VanEck Aus Resources",x:"ASX",c:"e"},{t:"MVA.AX",n:"VanEck Aus Property",x:"ASX",c:"e"},
+{t:"MVE.AX",n:"VanEck S&P/ASX MidCap",x:"ASX",c:"e"},{t:"MVS.AX",n:"VanEck Small Companies Masters",x:"ASX",c:"e"},
+{t:"DVDY.AX",n:"VanEck Morningstar Aus Moat Income",x:"ASX",c:"e"},
+{t:"SUBD.AX",n:"VanEck Aus Subordinated Debt",x:"ASX",c:"e"},{t:"PLUS.AX",n:"VanEck Aus Corporate Bond Plus",x:"ASX",c:"e"},
+{t:"FLOT.AX",n:"VanEck Aus Floating Rate",x:"ASX",c:"e"},
+{t:"IFRA.AX",n:"VanEck FTSE Global Infra Hedged",x:"ASX",c:"e"},
+{t:"REIT.AX",n:"VanEck FTSE Intl Property Hedged",x:"ASX",c:"e"},
+{t:"GDX.AX",n:"VanEck Gold Miners",x:"ASX",c:"e"},{t:"CLNE.AX",n:"VanEck Global Clean Energy",x:"ASX",c:"e"},
+{t:"HLTH.AX",n:"VanEck Global Healthcare Leaders",x:"ASX",c:"e"},
+{t:"ESGI.AX",n:"VanEck Intl Sustainable Equity",x:"ASX",c:"e"},{t:"GRNV.AX",n:"VanEck Aus Sustainable Equity",x:"ASX",c:"e"},
+{t:"VLUE.AX",n:"VanEck Intl Value",x:"ASX",c:"e"},{t:"EMKT.AX",n:"VanEck EM Multifactor",x:"ASX",c:"e"},
+{t:"CETF.AX",n:"VanEck FTSE China A50",x:"ASX",c:"e"},{t:"CNEW.AX",n:"VanEck China New Economy",x:"ASX",c:"e"},
+{t:"ESPO.AX",n:"VanEck Video Gaming & eSports",x:"ASX",c:"e"},
+{t:"GCAP.AX",n:"VanEck Global Capital Securities",x:"ASX",c:"e"},{t:"EBND.AX",n:"VanEck EM Income Active",x:"ASX",c:"e"},
+{t:"STW.AX",n:"SPDR S&P/ASX 200",x:"ASX",c:"e"},{t:"SFY.AX",n:"SPDR S&P/ASX 50",x:"ASX",c:"e"},
+{t:"SPY.AX",n:"SPDR S&P 500",x:"ASX",c:"e"},{t:"SSO.AX",n:"SPDR S&P/ASX Small Ords",x:"ASX",c:"e"},
+{t:"WXOZ.AX",n:"SPDR World ex Aus",x:"ASX",c:"e"},{t:"WXHG.AX",n:"SPDR World ex Aus Hedged",x:"ASX",c:"e"},
+{t:"WEMG.AX",n:"SPDR S&P Emerging Markets",x:"ASX",c:"e"},{t:"WDIV.AX",n:"SPDR S&P Global Dividend",x:"ASX",c:"e"},
+{t:"BOND.AX",n:"SPDR S&P/ASX Aus Bond",x:"ASX",c:"e"},{t:"GOVT.AX",n:"SPDR S&P/ASX Aus Govt Bond",x:"ASX",c:"e"},
+{t:"OZF.AX",n:"SPDR S&P/ASX 200 Financials ex REITs",x:"ASX",c:"e"},
+{t:"SLF.AX",n:"SPDR S&P/ASX 200 Listed Property",x:"ASX",c:"e"},
+{t:"OZR.AX",n:"SPDR S&P/ASX 200 Resources",x:"ASX",c:"e"},
+{t:"SYI.AX",n:"SPDR MSCI Aus Select High Div Yield",x:"ASX",c:"e"},
+{t:"DJRE.AX",n:"SPDR Dow Jones Global Real Estate",x:"ASX",c:"e"},
+{t:"RDV.AX",n:"Russell High Dividend Aus",x:"ASX",c:"e"},{t:"RVL.AX",n:"Russell Aus Value",x:"ASX",c:"e"},
+{t:"RARI.AX",n:"Russell Aus Responsible Investment",x:"ASX",c:"e"},
+{t:"RCB.AX",n:"Russell Aus Select Corp Bond",x:"ASX",c:"e"},{t:"RSM.AX",n:"Russell Aus Semi-Govt Bond",x:"ASX",c:"e"},
+{t:"RGB.AX",n:"Russell Aus Government Bond",x:"ASX",c:"e"},
+{t:"PMGOLD.AX",n:"Perth Mint Gold",x:"ASX",c:"e"},{t:"ESTX.AX",n:"ETFS Euro Stoxx 50",x:"ASX",c:"e"},
+{t:"ROBO.AX",n:"ETFS ROBO Global Robotics",x:"ASX",c:"e"},{t:"TECH.AX",n:"ETFS Morningstar Global Technology",x:"ASX",c:"e"},
+{t:"ZGOL.AX",n:"ANZ ETFS Physical Gold",x:"ASX",c:"e"},{t:"ZOZI.AX",n:"ANZ ETFS S&P/ASX 100",x:"ASX",c:"e"},
+{t:"ZYAU.AX",n:"ANZ ETFS S&P/ASX 300 High Yield",x:"ASX",c:"e"},
+{t:"ZYUS.AX",n:"ANZ ETFS S&P 500 High Yield Low Vol",x:"ASX",c:"e"},
+{t:"MOGL.AX",n:"Montgomery Global Equities",x:"ASX",c:"e"},
+{t:"AAPL",n:"Apple",x:"NASDAQ",c:"s"},{t:"MSFT",n:"Microsoft",x:"NASDAQ",c:"s"},
+{t:"GOOGL",n:"Alphabet",x:"NASDAQ",c:"s"},{t:"AMZN",n:"Amazon",x:"NASDAQ",c:"s"},
+{t:"NVDA",n:"NVIDIA",x:"NASDAQ",c:"s"},{t:"META",n:"Meta Platforms",x:"NASDAQ",c:"s"},
+{t:"TSLA",n:"Tesla",x:"NASDAQ",c:"s"},{t:"NFLX",n:"Netflix",x:"NASDAQ",c:"s"},
+{t:"AMD",n:"AMD",x:"NASDAQ",c:"s"},{t:"AVGO",n:"Broadcom",x:"NASDAQ",c:"s"},
+{t:"COST",n:"Costco",x:"NASDAQ",c:"s"},{t:"ADBE",n:"Adobe",x:"NASDAQ",c:"s"},
+{t:"CRM",n:"Salesforce",x:"NASDAQ",c:"s"},{t:"QCOM",n:"Qualcomm",x:"NASDAQ",c:"s"},
+{t:"INTC",n:"Intel",x:"NASDAQ",c:"s"},{t:"PEP",n:"PepsiCo",x:"NASDAQ",c:"s"},
+{t:"SBUX",n:"Starbucks",x:"NASDAQ",c:"s"},{t:"PYPL",n:"PayPal",x:"NASDAQ",c:"s"},
+{t:"ABNB",n:"Airbnb",x:"NASDAQ",c:"s"},{t:"COIN",n:"Coinbase",x:"NASDAQ",c:"s"},
+{t:"UBER",n:"Uber",x:"NASDAQ",c:"s"},{t:"SQ",n:"Block (Square)",x:"NASDAQ",c:"s"},
+{t:"SNOW",n:"Snowflake",x:"NASDAQ",c:"s"},{t:"PANW",n:"Palo Alto Networks",x:"NASDAQ",c:"s"},
+{t:"CRWD",n:"CrowdStrike",x:"NASDAQ",c:"s"},{t:"ARM",n:"Arm Holdings",x:"NASDAQ",c:"s"},
+{t:"MRVL",n:"Marvell Technology",x:"NASDAQ",c:"s"},{t:"PLTR",n:"Palantir",x:"NASDAQ",c:"s"},
+{t:"SMCI",n:"Super Micro Computer",x:"NASDAQ",c:"s"},{t:"MU",n:"Micron Technology",x:"NASDAQ",c:"s"},
+{t:"LRCX",n:"Lam Research",x:"NASDAQ",c:"s"},{t:"KLAC",n:"KLA Corp",x:"NASDAQ",c:"s"},
+{t:"AMAT",n:"Applied Materials",x:"NASDAQ",c:"s"},{t:"SNPS",n:"Synopsys",x:"NASDAQ",c:"s"},
+{t:"CDNS",n:"Cadence Design",x:"NASDAQ",c:"s"},{t:"MELI",n:"MercadoLibre",x:"NASDAQ",c:"s"},
+{t:"BKNG",n:"Booking Holdings",x:"NASDAQ",c:"s"},{t:"ISRG",n:"Intuitive Surgical",x:"NASDAQ",c:"s"},
+{t:"REGN",n:"Regeneron",x:"NASDAQ",c:"s"},{t:"GILD",n:"Gilead Sciences",x:"NASDAQ",c:"s"},
+{t:"VRTX",n:"Vertex Pharma",x:"NASDAQ",c:"s"},{t:"MRNA",n:"Moderna",x:"NASDAQ",c:"s"},
+{t:"ILMN",n:"Illumina",x:"NASDAQ",c:"s"},{t:"DXCM",n:"Dexcom",x:"NASDAQ",c:"s"},
+{t:"ZS",n:"Zscaler",x:"NASDAQ",c:"s"},{t:"FTNT",n:"Fortinet",x:"NASDAQ",c:"s"},
+{t:"TEAM",n:"Atlassian",x:"NASDAQ",c:"s"},{t:"WDAY",n:"Workday",x:"NASDAQ",c:"s"},
+{t:"DDOG",n:"Datadog",x:"NASDAQ",c:"s"},{t:"NET",n:"Cloudflare",x:"NASDAQ",c:"s"},
+{t:"TTD",n:"The Trade Desk",x:"NASDAQ",c:"s"},{t:"ROKU",n:"Roku",x:"NASDAQ",c:"s"},
+{t:"DASH",n:"DoorDash",x:"NASDAQ",c:"s"},{t:"RBLX",n:"Roblox",x:"NASDAQ",c:"s"},
+{t:"RIVN",n:"Rivian",x:"NASDAQ",c:"s"},{t:"LCID",n:"Lucid Group",x:"NASDAQ",c:"s"},
+{t:"SOFI",n:"SoFi Technologies",x:"NASDAQ",c:"s"},{t:"HOOD",n:"Robinhood",x:"NASDAQ",c:"s"},
+{t:"CELH",n:"Celsius Holdings",x:"NASDAQ",c:"s"},{t:"MSTR",n:"MicroStrategy",x:"NASDAQ",c:"s"},
+{t:"ON",n:"ON Semiconductor",x:"NASDAQ",c:"s"},{t:"ENPH",n:"Enphase Energy",x:"NASDAQ",c:"s"},
+{t:"FSLR",n:"First Solar",x:"NASDAQ",c:"s"},{t:"CEG",n:"Constellation Energy",x:"NASDAQ",c:"s"},
+{t:"CPRT",n:"Copart",x:"NASDAQ",c:"s"},{t:"ODFL",n:"Old Dominion Freight",x:"NASDAQ",c:"s"},
+{t:"FAST",n:"Fastenal",x:"NASDAQ",c:"s"},{t:"MNST",n:"Monster Beverage",x:"NASDAQ",c:"s"},
+{t:"KDP",n:"Keurig Dr Pepper",x:"NASDAQ",c:"s"},{t:"MAR",n:"Marriott International",x:"NASDAQ",c:"s"},
+{t:"LULU",n:"Lululemon",x:"NASDAQ",c:"s"},{t:"ROST",n:"Ross Stores",x:"NASDAQ",c:"s"},
+{t:"ORLY",n:"O'Reilly Automotive",x:"NASDAQ",c:"s"},{t:"ASML",n:"ASML Holding",x:"NASDAQ",c:"s"},
+{t:"PDD",n:"PDD Holdings",x:"NASDAQ",c:"s"},{t:"JD",n:"JD.com",x:"NASDAQ",c:"s"},
+{t:"BIDU",n:"Baidu",x:"NASDAQ",c:"s"},{t:"NTES",n:"NetEase",x:"NASDAQ",c:"s"},
+{t:"AZN",n:"AstraZeneca",x:"NASDAQ",c:"s"},{t:"CHTR",n:"Charter Communications",x:"NASDAQ",c:"s"},
+];
+
+const gs=()=>{const n=new Date();return n<new Date(START)?"p":n>new Date(END)?"c":"l"};
+const du=d=>Math.max(0,Math.ceil((new Date(d)-new Date())/864e5));
+const fr=v=>{if(v==null)return null;const p=(v*100).toFixed(2);return v>=0?`+${p}%`:`${p}%`};
+const ago=d=>{const s=Math.floor((Date.now()-new Date(d).getTime())/1e3);if(s<60)return"just now";if(s<3600)return Math.floor(s/60)+"m ago";if(s<86400)return Math.floor(s/3600)+"h ago";return Math.floor(s/86400)+"d ago"};
+const COLORS=["#10b981","#f59e0b","#3b82f6","#ef4444","#8b5cf6","#ec4899","#06b6d4","#84cc16","#f97316","#6366f1","#14b8a6","#e11d48","#a855f7","#22d3ee","#facc15","#fb923c","#4ade80","#f472b6","#38bdf8","#a3e635"];
+
+/* FIX #1: Per-portfolio entry price aware return calculations */
+function stockReturn(ticker,prices,entryPrices){
+  const d=prices[ticker];if(!d||!d.sp||!d.cp)return null;
+  const base=entryPrices&&entryPrices[ticker]?entryPrices[ticker]:d.sp;
+  return(d.cp-base)/base;
+}
+function portfolioReturn(p,prices){
+  let s=0,c=0;
+  for(const t of p.tickers){const r=stockReturn(t,prices,p.entryPrices);if(r!=null){s+=r*0.2;c++}}
+  return c>0?s:null;
+}
+
+function RankBadge({rank}){
+  const m={1:"\u{1F947}",2:"\u{1F948}",3:"\u{1F949}"};
+  return React.createElement("div",{className:"rk "+(rank<=3?"rk"+rank:"rkn")},m[rank]||"#"+rank);
+}
+
+function TickerSearch({sel,onAdd,onRm,hideSlots,prices}){
+  const[q,setQ]=useState("");const[open,setOpen]=useState(false);const[tab,setTab]=useState("all");
+  const wr=useRef(null);
+  useEffect(()=>{const h=e=>{if(wr.current&&!wr.current.contains(e.target))setOpen(false)};document.addEventListener("mousedown",h);return()=>document.removeEventListener("mousedown",h)},[]);
+  const fl=U.filter(i=>{
+    if(sel.includes(i.t))return false;
+    if(tab==="as"&&!(i.x==="ASX"&&i.c==="s"))return false;
+    if(tab==="ae"&&!(i.x==="ASX"&&i.c==="e"))return false;
+    if(tab==="na"&&i.x!=="NASDAQ")return false;
+    if(!q.trim())return true;
+    const u=q.toUpperCase();return i.t.toUpperCase().includes(u)||i.n.toUpperCase().includes(u);
+  }).slice(0,14);
+  const pick=t=>{onAdd(t);setQ("");setOpen(false)};
+  const kd=e=>{if(e.key==="Enter"&&q.trim()){e.preventDefault();fl.length?pick(fl[0].t):onAdd(q.trim().toUpperCase())}};
+  const rem=PICKS-sel.length;
+  return(
+    <div className="fg">
+      {!hideSlots&&<><label className="fl">Select {PICKS} Securities ({sel.length}/{PICKS})</label>
+      <div className="ts">
+        {sel.map(t=><div key={t} className="tc">{t}{prices&&prices[t]?.cp&&<span style={{color:"var(--t4)",fontWeight:500,marginLeft:2}}>${prices[t].cp.toFixed(2)}</span>}<span className="x" onClick={()=>onRm(t)}>{"\u00D7"}</span></div>)}
+        {Array.from({length:rem}).map((_,i)=><div key={"e"+i} className="es">Slot {sel.length+i+1}</div>)}
+      </div></>}
+      <div className="sw" ref={wr}>
+        <input className="fi" value={q} onChange={e=>{setQ(e.target.value);setOpen(true)}} onFocus={()=>setOpen(true)} onKeyDown={kd} placeholder="Search ticker or company name..."/>
+        {!hideSlots&&<p className="ht">ASX: use .AX suffix (BHP.AX). NASDAQ: as-is (AAPL). Enter for custom tickers.</p>}
+        <div className={"sug "+(open?"open":"")}>
+          <div className="stabs">
+            {[["all","All"],["as","ASX Shares"],["ae","ASX ETFs"],["na","NASDAQ"]].map(function(a){return(
+              <button key={a[0]} className={"stab "+(tab===a[0]?"on":"")} onMouseDown={function(e){e.preventDefault();setTab(a[0])}}>{a[1]}</button>
+            )})}
+          </div>
+          {fl.length===0?<div style={{padding:14,textAlign:"center",color:"#475569",fontSize:13}}>No matches. Press Enter to add custom ticker.</div>:
+          fl.map(i=>(
+            <div key={i.t} className="si" onMouseDown={function(e){e.preventDefault();pick(i.t)}}>
+              <div><span className="stk">{i.t}</span><span className="snm">{i.n}</span></div>
+              <div style={{display:"flex",alignItems:"center",gap:8}}>
+                {prices&&prices[i.t]?.cp&&<span style={{fontFamily:"var(--fm)",fontSize:11,color:"var(--t3)",fontWeight:600}}>${prices[i.t].cp.toFixed(2)}</span>}
+                <span className={"ext "+(i.c==="e"?"ext-e":i.x==="ASX"?"ext-a":"ext-n")}>{i.c==="e"?"ETF":i.x}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PerfChart({portfolios,history}){
+  const ref=useRef(null),chart=useRef(null);
+  useEffect(()=>{
+    if(!ref.current||!portfolios.length||!history.length)return;
+    if(chart.current)chart.current.destroy();
+    const sorted=[...history].sort((a,b)=>new Date(a.d)-new Date(b.d));
+    const labels=sorted.map(h=>new Date(h.d).toLocaleDateString("en-AU",{day:"numeric",month:"short"}));
+    const datasets=portfolios.map((p,i)=>({
+      label:p.advisorName,
+      data:sorted.map(h=>{const v=h.r&&h.r[p.id];return v!=null?+(v*100).toFixed(2):null}),
+      borderColor:COLORS[i%COLORS.length],backgroundColor:COLORS[i%COLORS.length]+"20",
+      borderWidth:2,tension:.3,pointRadius:sorted.length>20?1:3,pointHoverRadius:5,spanGaps:true,
+    }));
+    chart.current=new Chart(ref.current,{
+      type:"line",data:{labels:labels,datasets:datasets},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:"index",intersect:false},
+        plugins:{legend:{position:"bottom",labels:{color:"#94a3b8",font:{family:"JetBrains Mono",size:11},boxWidth:12,padding:14}},
+          tooltip:{backgroundColor:"#1a1f2e",titleColor:"#f1f5f9",bodyColor:"#e2e8f0",borderColor:"rgba(255,255,255,0.1)",borderWidth:1,
+            titleFont:{family:"Outfit",weight:"600"},bodyFont:{family:"JetBrains Mono",size:12},
+            callbacks:{label:function(c){return c.dataset.label+": "+(c.parsed.y!=null?c.parsed.y.toFixed(2)+"%":"N/A")}}}},
+        scales:{x:{ticks:{color:"#475569",font:{family:"JetBrains Mono",size:10},maxRotation:45},grid:{color:"rgba(255,255,255,0.04)"}},
+          y:{ticks:{color:"#475569",font:{family:"JetBrains Mono",size:10},callback:function(v){return v.toFixed(1)+"%"}},grid:{color:"rgba(255,255,255,0.04)"},
+            title:{display:true,text:"Return %",color:"#475569",font:{family:"JetBrains Mono",size:11}}}}}
+    });
+    return()=>{if(chart.current)chart.current.destroy()};
+  },[portfolios,history]);
+  if(!portfolios.length||!history.length)return null;
+  return(
+    <div className="chwrap">
+      <div className="chtit">{"\u{1F4C8}"} Performance Over Time</div>
+      <div style={{position:"relative",height:Math.min(400,Math.max(240,portfolios.length*25+160))}}><canvas ref={ref}/></div>
+    </div>
+  );
+}
+
+function ActivityFeed({trades}){
+  if(!trades.length)return null;
+  const sorted=[...trades].sort((a,b)=>new Date(b.date)-new Date(a.date));
+  return(
+    <div className="card" style={{marginTop:0}}>
+      <div className="ctit"><span>{"\u{1F4AC}"}</span> Trade Activity</div>
+      {sorted.slice(0,20).map((t,i)=>(
+        <div key={i} className="feed-item">
+          <div className="feed-icon">{"\u{1F504}"}</div>
+          <div>
+            <div className="feed-text">
+              <span className="feed-name">{t.advisorName}</span>{" swapped "}
+              <span className="feed-tickers feed-out">{t.tickerOut}</span>
+              <span className="feed-arrow">{"\u2192"}</span>
+              <span className="feed-tickers feed-in">{t.tickerIn}</span>
+              <span style={{color:"var(--t5)",fontSize:11,marginLeft:6}}>(Trade {t.tradeNum}/{MAX_TRADES})</span>
+            </div>
+            <div className="feed-time">{ago(t.date)}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function Modal({p,prices,status,trades,onClose,onTrade}){
+  const[trading,setTrading]=useState(false);
+  const[pinGate,setPinGate]=useState(false);
+  const[pinInput,setPinInput]=useState("");
+  const[pinError,setPinError]=useState("");
+  const[sellTicker,setSellTicker]=useState(null);
+  const[buyTicker,setBuyTicker]=useState(null);
+  const[submitting,setSubmitting]=useState(false);
+  const[error,setError]=useState("");
+
+  if(!p)return null;
+
+  const pTrades=trades.filter(t=>t.portfolioId===p.id);
+  const tradesLeft=MAX_TRADES-pTrades.length;
+  const canTrade=status==="l"&&tradesLeft>0;
+
+  const sr=t=>stockReturn(t,prices,p.entryPrices);
+  const ret=portfolioReturn(p,prices);
+
+  const checkPin=()=>{
+    if(pinInput===p.pin){setPinGate(false);setPinError("");setPinInput("");setTrading(true)}
+    else{setPinError("Incorrect PIN")}
+  };
+  const pinKeyDown=e=>{if(e.key==="Enter"&&pinInput.length===4)checkPin()};
+
+  const doTrade=async()=>{
+    if(!sellTicker||!buyTicker){setError("Select a stock to sell and one to buy");return}
+    if(p.tickers.includes(buyTicker)){setError("You already hold "+buyTicker);return}
+    setSubmitting(true);setError("");
+    try{await onTrade(p,sellTicker,buyTicker,pTrades.length+1);
+      setTrading(false);setSellTicker(null);setBuyTicker(null);
+    }catch(e){setError("Trade failed — please try again")}
+    setSubmitting(false);
+  };
+
+  const resetUI=()=>{setTrading(false);setPinGate(false);setSellTicker(null);setBuyTicker(null);setError("");setPinInput("");setPinError("")};
+
+  return(
+    <div className="mo" onClick={onClose}><div className="mc" onClick={e=>e.stopPropagation()}>
+      <button className="mx" onClick={onClose}>{"\u00D7"}</button>
+      <div style={{fontSize:20,fontWeight:700,color:"var(--t1)"}}>{p.portfolioName}</div>
+      <div style={{fontSize:13,color:"var(--t4)",marginTop:3}}>{p.advisorName}</div>
+      <div style={{margin:"14px 0 18px",padding:"14px 0",borderTop:"1px solid var(--bdr)",borderBottom:"1px solid var(--bdr)"}}>
+        <div style={{fontSize:10,color:"var(--t4)",textTransform:"uppercase",letterSpacing:".08em",fontFamily:"var(--fm)",marginBottom:3}}>Total Portfolio Return</div>
+        <div style={{fontFamily:"var(--fm)",fontSize:30,fontWeight:700,color:ret==null?"var(--t5)":ret>=0?"var(--acc)":"var(--red)"}}>
+          {status==="p"?"Starts 1 Mar":fr(ret)||"Pending"}
+        </div>
+      </div>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:10}}>
+        <div style={{fontSize:10,color:"var(--t4)",textTransform:"uppercase",letterSpacing:".08em",fontFamily:"var(--fm)"}}>Holdings (20% each)</div>
+        <div className={"trade-badge "+(tradesLeft>0?"trade-badge-ok":"trade-badge-done")}>
+          {tradesLeft>0?tradesLeft+" trade"+(tradesLeft>1?"s":"")+" remaining":"No trades left"}
+        </div>
+      </div>
+      <div style={{display:"grid",gridTemplateColumns:"1fr 60px 70px",padding:"7px 0",fontSize:9,fontWeight:700,color:"var(--t5)",textTransform:"uppercase",letterSpacing:".08em",fontFamily:"var(--fm)",borderBottom:"1px solid var(--bdr)"}}>
+        <div>Ticker</div><div style={{textAlign:"center"}}>Weight</div><div style={{textAlign:"right"}}>Return</div>
+      </div>
+      {p.tickers.map(t=>{const r=sr(t),d=prices[t];return(
+        <div key={t} className="hr">
+          <div><div className="hrt">{t}</div>{d&&d.cp?<div className="hrp">{"$"+d.cp.toFixed(2)}</div>:null}</div>
+          <div className="hrw">20%</div>
+          <div className="hrr" style={{color:r==null?"var(--t5)":r>=0?"var(--acc)":"var(--red)"}}>{status==="p"?"\u2014":fr(r)||"\u2014"}</div>
+        </div>
+      )})}
+
+      {pTrades.length>0&&(
+        <div style={{marginTop:14,paddingTop:12,borderTop:"1px solid var(--bdr)"}}>
+          <div style={{fontSize:10,color:"var(--t4)",textTransform:"uppercase",letterSpacing:".08em",fontFamily:"var(--fm)",marginBottom:8}}>Trade History</div>
+          {pTrades.map((t,i)=>(
+            <div key={i} style={{fontSize:12,color:"var(--t3)",marginBottom:4,fontFamily:"var(--fm)"}}>
+              <span style={{color:"var(--red)"}}>{t.tickerOut}</span>
+              <span style={{color:"var(--t5)",margin:"0 6px"}}>{"\u2192"}</span>
+              <span style={{color:"var(--acc)"}}>{t.tickerIn}</span>
+              <span style={{color:"var(--t5)",marginLeft:8,fontSize:10}}>{ago(t.date)}</span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {canTrade&&!trading&&!pinGate&&(
+        <button className="btn-trade" onClick={()=>setPinGate(true)}>
+          {"\u{1F504}"} Make a Trade ({tradesLeft} remaining)
+        </button>
+      )}
+      {pinGate&&!trading&&(
+        <div className="trade-section">
+          <div className="pin-gate">
+            <p>{"\u{1F512}"} Enter your 4-digit PIN to trade</p>
+            <div className="pin-row">
+              <input className="fi fi-pin" type="password" maxLength={4} inputMode="numeric" value={pinInput}
+                onChange={e=>setPinInput(e.target.value.replace(/\D/g,""))} onKeyDown={pinKeyDown}
+                placeholder={"\u2022\u2022\u2022\u2022"} autoFocus/>
+              <button className="btn" style={{padding:"11px 20px"}} onClick={checkPin} disabled={pinInput.length!==4}>Unlock</button>
+            </div>
+            {pinError&&<p className="et" style={{marginTop:8}}>{pinError}</p>}
+            <button className="btn" style={{marginTop:12,fontSize:12}} onClick={resetUI}>Cancel</button>
+          </div>
+        </div>
+      )}
+      {trading&&(
+        <div className="trade-section">
+          <div style={{fontSize:14,fontWeight:600,color:"var(--t1)",marginBottom:10}}>{"\u{1F504}"} Swap a Holding</div>
+          <div style={{fontSize:11,color:"var(--t4)",fontFamily:"var(--fm)",textTransform:"uppercase",letterSpacing:".06em",marginBottom:8}}>Select stock to sell</div>
+          <div style={{display:"flex",flexWrap:"wrap",marginBottom:14}}>
+            {p.tickers.map(t=>(
+              <div key={t} className={"sell-chip "+(sellTicker===t?"selected":"")} onClick={()=>setSellTicker(t)}>{t}</div>
+            ))}
+          </div>
+          {sellTicker&&(<div>
+            <div style={{fontSize:11,color:"var(--t4)",fontFamily:"var(--fm)",textTransform:"uppercase",letterSpacing:".06em",marginBottom:6}}>Select replacement</div>
+            <TickerSearch sel={p.tickers} onAdd={t=>setBuyTicker(t)} onRm={()=>setBuyTicker(null)} hideSlots={true} prices={prices}/>
+            {buyTicker&&(
+              <div style={{padding:"10px 14px",borderRadius:8,background:"var(--accbg)",border:"1px solid var(--accbdr)",margin:"10px 0",fontFamily:"var(--fm)",fontSize:13,color:"var(--acc)",fontWeight:600}}>
+                Buying: {buyTicker}
+              </div>
+            )}
+          </div>)}
+          {error&&<p className="et">{error}</p>}
+          <div style={{display:"flex",gap:8,marginTop:12}}>
+            <button className="btn" onClick={resetUI}>Cancel</button>
+            <button className="btn-trade" style={{width:"auto",flex:1,marginTop:0}} onClick={doTrade}
+              disabled={!sellTicker||!buyTicker||submitting}>
+              {submitting?"Executing...":"Confirm Swap"}
+            </button>
+          </div>
+        </div>
+      )}
+    </div></div>
+  );
+}
+
+function App(){
+  const[ps,setPs]=useState([]);const[pr,setPr]=useState({});
+  const[hist,setHist]=useState([]);const[trades,setTrades]=useState([]);
+  const[vw,setVw]=useState("lb");const[loading,setLoading]=useState(true);
+  const[pst,setPst]=useState("idle");const[det,setDet]=useState(null);
+  const[nm,setNm]=useState("");const[pn,setPn]=useState("");const[pin,setPin]=useState("");
+  const[tk,setTk]=useState([]);const[fe,setFe]=useState("");const[sub,setSub]=useState(false);
+  const status=gs();
+  const regOpen=status==="p";
+
+  useEffect(()=>{
+    if(!db){setLoading(false);return}
+    const to=setTimeout(()=>setLoading(false),8000);
+    const u1=fbOnValue("portfolios",val=>{
+      const arr=val?Object.keys(val).map(k=>{
+        const raw=val[k];
+        return{id:k,advisorName:raw.advisorName,portfolioName:raw.portfolioName,pin:raw.pin,
+          tickers:raw.tickers,entryPrices:decMap(raw.entryPrices),createdAt:raw.createdAt};
+      }):[];
+      setPs(arr);setLoading(false);clearTimeout(to);
+    });
+    const u2=fbOnValue("prices",val=>{setPr(decMap(val))});
+    const u3=fbOnValue("history",val=>{setHist(val?Object.keys(val).map(k=>val[k]):[])});
+    const u4=fbOnValue("trades",val=>{setTrades(val?Object.keys(val).map(k=>val[k]):[])});
+    return()=>{u1();u2();u3();u4();clearTimeout(to)};
+  },[]);
+
+  const fetchPr=useCallback(async function(list){
+    if(status==="p"||!db)return;
+    const all=[...new Set(list.flatMap(p=>p.tickers))];if(!all.length)return;
+    setPst("loading");const upd=Object.assign({},pr);var ok=0;
+    for(const t of all){try{
+      const r=await fetch("https://query1.finance.yahoo.com/v8/finance/chart/"+encodeURIComponent(t)+"?range=1y&interval=1d");
+      if(!r.ok)continue;const d=await r.json(),res=d&&d.chart&&d.chart.result&&d.chart.result[0];if(!res)continue;
+      const cl=res.indicators.quote[0].close.filter(Boolean),ts=res.timestamp;
+      const sTs=new Date(START).getTime()/1000;var si=ts.findIndex(x=>x>=sTs);if(si<0)si=0;
+      const sp=cl[si]||cl[0],cp=cl[cl.length-1];
+      if(sp&&cp){upd[t]={sp:sp,cp:cp,u:new Date().toISOString()};ok++}
+    }catch(e){}}
+    await fbSet("prices",encMap(upd));
+    const snap={d:new Date().toISOString(),r:{}};
+    list.forEach(p=>{const ret=portfolioReturn(p,upd);if(ret!=null)snap.r[p.id]=ret});
+    if(Object.keys(snap.r).length>0)await fbPush("history",snap);
+    setPst(ok>0?"ok":"err");
+  },[status,pr,ps]);
+
+  const executeTrade=async function(portfolio,tickerOut,tickerIn,tradeNum){
+    const newTickers=portfolio.tickers.map(t=>t===tickerOut?tickerIn:t);
+    const ep=Object.assign({},portfolio.entryPrices||{});
+    delete ep[tickerOut];
+    if(pr[tickerIn]&&pr[tickerIn].cp){ep[tickerIn]=pr[tickerIn].cp}
+    await fbUpdate("portfolios/"+portfolio.id,{tickers:newTickers,entryPrices:encMap(ep)});
+    await fbPush("trades",{
+      portfolioId:portfolio.id,advisorName:portfolio.advisorName,
+      tickerOut:tickerOut,tickerIn:tickerIn,tradeNum:tradeNum,date:new Date().toISOString()
+    });
+    setDet(Object.assign({},portfolio,{tickers:newTickers,entryPrices:ep}));
+  };
+
+  // Derive last-updated time from most recent price timestamp
+  const lastUpdated=(()=>{const times=Object.values(pr).map(p=>p?.u).filter(Boolean);return times.length?times.sort().pop():null})();
+
+  const ranked=[...ps].sort((a,b)=>{
+    const ra=portfolioReturn(a,pr),rb=portfolioReturn(b,pr);
+    if(ra==null&&rb==null)return 0;if(ra==null)return 1;if(rb==null)return -1;return rb-ra;
+  });
+  const addT=t=>{const v=t.trim().toUpperCase();if(!v)return;if(tk.length>=PICKS){setFe("Maximum 5 stocks");return}if(tk.includes(v)){setFe(v+" already selected");return}setTk([...tk,v]);setFe("")};
+  const rmT=t=>{setTk(tk.filter(x=>x!==t));setFe("")};
+
+  const submit=async()=>{
+    if(!nm.trim()){setFe("Please enter your name");return}
+    if(!pn.trim()){setFe("Please enter a portfolio name");return}
+    if(pin.length!==4){setFe("Please set a 4-digit PIN");return}
+    if(tk.length!==PICKS){setFe("Select exactly "+PICKS+" stocks");return}
+    if(ps.some(p=>p.advisorName.toLowerCase()===nm.trim().toLowerCase())){setFe("That name is already registered");return}
+    if(!db){setFe("Firebase not configured");return}
+    setSub(true);
+    try{
+      await fbPush("portfolios",{
+        advisorName:nm.trim(),portfolioName:pn.trim(),pin:pin,
+        tickers:[...tk],entryPrices:null,createdAt:new Date().toISOString()
+      });
+      setNm("");setPn("");setPin("");setTk([]);setFe("");setVw("lb");
+    }catch(e){setFe("Failed to save")}
+    setSub(false);
+  };
+
+  if(loading)return(
+    <div style={{textAlign:"center",paddingTop:120}}>
+      <div className="logo" style={{margin:"0 auto 16px"}}>RR</div>
+      <div style={{color:"var(--t4)",fontFamily:"var(--fm)",fontSize:13}}><span className="spin"></span> Loading...</div>
+    </div>
+  );
+
+  return(
+    <div>
+      {!CONFIGURED&&(
+        <div className="cfg-banner">
+          <h3>{"\u26A0\uFE0F"} Firebase Not Configured</h3>
+          <p>Open index.html and replace the placeholder values in firebaseConfig.</p>
+        </div>
+      )}
+
+      <header className="hdr">
+        <div className="logo">RR</div>
+        <h1>The Returns Roundtable</h1>
+        <p className="tag">5 Stocks {"\u00B7"} 3 Trades {"\u00B7"} 12 Months {"\u00B7"} 1 Winner</p>
+        <div className="inaugural">{"\u{1F3C6}"} Inaugural Tournament {"\u{1F3C6}"}</div>
+        <div className="meta">
+          <span className="badge">{"\u{1F4C5}"} 1 Mar 2026 {"\u2192"} 28 Feb 2027</span>
+          <span className={"st st-"+(status==="p"?"p":status==="l"?"l":"c")}>
+            {status==="p"&&("\u23F3 Starts in "+du(START)+" days")}{status==="l"&&<span><span className="live-dot"></span>LIVE</span>}{status==="c"&&"\u{1F3C1} COMPLETE"}
+          </span>
+          <span className="badge">{"\u{1F465}"} {ps.length} registered</span>
+        </div>
+      </header>
+
+      <div className="nav">
+        <div className="navl">
+          <button className={"btn "+(vw==="lb"?"on":"")} onClick={()=>setVw("lb")}>Leaderboard</button>
+          {regOpen?(
+            <button className={"btn "+(vw==="reg"?"on":"")} onClick={()=>setVw("reg")}>+ Register</button>
+          ):(
+            <button className="btn dis" title="Registration closed">+ Register</button>
+          )}
+        </div>
+        {status==="l"&&vw==="lb"&&<button className="btn" onClick={()=>fetchPr(ps)} disabled={pst==="loading"} title="Prices auto-update daily via GitHub Actions">{pst==="loading"?<span><span className="spin"></span>Refreshing...</span>:"\u21BB Refresh Prices"}</button>}
+      </div>
+
+      {vw==="reg"&&regOpen&&(
+        <div className="card">
+          <div className="ctit"><span>{"\u{1F4DD}"}</span> Register Your Portfolio</div>
+          <div className="fr">
+            <div className="fg"><label className="fl">Your Name</label><input className="fi" value={nm} onChange={e=>setNm(e.target.value)} placeholder="e.g. James Smith"/></div>
+            <div className="fg"><label className="fl">Portfolio Name</label><input className="fi" value={pn} onChange={e=>setPn(e.target.value)} placeholder="e.g. Tech Titans"/></div>
+          </div>
+          <div className="fg">
+            <label className="fl">Trade PIN (4 digits)</label>
+            <input className="fi fi-pin" type="password" maxLength={4} inputMode="numeric" value={pin}
+              onChange={e=>setPin(e.target.value.replace(/\D/g,""))} placeholder={"\u2022\u2022\u2022\u2022"}/>
+            <p className="ht">You will need this PIN to make trades during the competition. Remember it!</p>
+          </div>
+          <TickerSearch sel={tk} onAdd={addT} onRm={rmT} prices={pr}/>
+          {fe&&<p className="et">{fe}</p>}
+          <button className="btn1" style={{marginTop:6}} onClick={submit} disabled={!CONFIGURED||!nm.trim()||!pn.trim()||pin.length!==4||tk.length!==PICKS||sub}>{sub?"Submitting...":"Submit Portfolio \u2192"}</button>
+        </div>
+      )}
+      {vw==="reg"&&!regOpen&&(
+        <div className="card">
+          <div className="reg-closed">
+            <div style={{fontSize:32,marginBottom:10}}>{"\u{1F512}"}</div>
+            <div style={{fontSize:16,fontWeight:600,color:"var(--t1)",marginBottom:6}}>Registration Closed</div>
+            <div>Registration closed when the competition started on 1 March 2026.</div>
+          </div>
+        </div>
+      )}
+
+      {vw==="lb"&&(
+        <div>
+          <div className="card">
+            <div className="ctit"><span>{"\u{1F3C6}"}</span> Leaderboard
+              {status==="l"&&lastUpdated&&<span style={{marginLeft:"auto",fontSize:10,fontWeight:500,color:"var(--t5)",fontFamily:"var(--fm)"}}>Updated {ago(lastUpdated)}</span>}
+            </div>
+            {ps.length===0?(
+              <div className="empty">
+                <div style={{fontSize:44,marginBottom:12}}>{"\u{1F4CA}"}</div>
+                <div style={{fontSize:17,color:"var(--t1)",fontWeight:600}}>No portfolios yet</div>
+                <div style={{color:"var(--t4)",marginTop:5,fontSize:14}}>Be the first to enter the inaugural tournament!</div>
+                {regOpen&&<button className="btn" style={{marginTop:14}} onClick={()=>setVw("reg")}>Register Now {"\u2192"}</button>}
+              </div>
+            ):(
+              <div>
+                <div className="lbh"><div>#</div><div>Adviser</div><div className="ch">Holdings</div><div style={{textAlign:"right"}}>Return</div></div>
+                {ranked.map((p,i)=>{const ret=portfolioReturn(p,pr);return(
+                  <div key={p.id} className="lbr" onClick={()=>setDet(p)}>
+                    <RankBadge rank={i+1}/>
+                    <div><div className="an">{p.advisorName}</div><div className="pn">{p.portfolioName}</div></div>
+                    <div className="ch">{p.tickers.map(t=><span key={t} className="mt">{t}{pr[t]?.cp&&<span style={{color:"var(--t5)",fontWeight:500,marginLeft:3}}>${pr[t].cp.toFixed(2)}</span>}</span>)}</div>
+                    <div className={"cr "+(ret==null?"crx":ret>=0?"crp":"crn")}>{status==="p"?"\u2014":ret==null?"Pending":fr(ret)}</div>
+                  </div>
+                )})}
+                <PerfChart portfolios={ps} history={hist}/>
+                {pst==="err"&&status==="l"&&<p className="ht" style={{textAlign:"center",marginTop:14}}>Manual refresh unavailable due to browser restrictions. Prices update automatically overnight via GitHub Actions.</p>}
+              </div>
+            )}
+          </div>
+          <ActivityFeed trades={trades}/>
+        </div>
+      )}
+
+      <Modal p={det} prices={pr} status={status} trades={trades} onClose={()=>setDet(null)} onTrade={executeTrade}/>
+      <div className="footer">The Returns Roundtable {"\u00B7"} Inaugural Tournament {"\u00B7"} Equal Weighted 20%</div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("app")).render(<App/>);
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Returns Roundtable</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg0:#0a0c10;--bg1:#0f1219;--bg2:#111827;--bgc:rgba(255,255,255,0.03);
+  --bdr:rgba(255,255,255,0.06);--bdr2:rgba(255,255,255,0.12);
+  --t1:#f1f5f9;--t2:#e2e8f0;--t3:#94a3b8;--t4:#64748b;--t5:#475569;
+  --acc:#10b981;--acc2:#059669;--accg:rgba(16,185,129,0.2);--accbg:rgba(16,185,129,0.1);--accbdr:rgba(16,185,129,0.25);
+  --red:#ef4444;--gold:#fbbf24;--silver:#94a3b8;--bronze:#d97706;
+  --blue:#60a5fa;--bluebg:rgba(59,130,246,0.15);
+  --purple:#c084fc;--purplebg:rgba(168,85,247,0.15);
+  --yellow:#eab308;--yellowbg:rgba(234,179,8,0.1);--yellowbdr:rgba(234,179,8,0.2);
+  --indigo:#818cf8;--indigobg:rgba(99,102,241,0.1);--indigobdr:rgba(99,102,241,0.2);
+  --orange:#f97316;--orangebg:rgba(249,115,22,0.1);--orangebdr:rgba(249,115,22,0.25);
+  --f:'Outfit','Segoe UI',sans-serif;--fm:'JetBrains Mono','Courier New',monospace;
+}
+body{min-height:100vh;background:linear-gradient(145deg,var(--bg0) 0%,var(--bg1) 40%,var(--bg2) 100%);color:var(--t2);font-family:var(--f);line-height:1.5;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+.ctr{max-width:1020px;margin:0 auto;padding:32px 20px 60px;position:relative;z-index:1}
+.hdr{text-align:center;margin-bottom:32px}
+.logo{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--acc),#06d6a0);font-size:22px;font-weight:800;color:var(--bg0);font-family:var(--fm);box-shadow:0 0 40px var(--accg);margin-bottom:14px}
+.hdr h1{font-size:clamp(24px,5vw,34px);font-weight:700;letter-spacing:-.03em;background:linear-gradient(135deg,#f0fdf4,#86efac);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.15}
+.tag{font-size:13px;color:var(--t4);font-family:var(--fm);letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
+.inaugural{display:inline-block;margin-top:12px;padding:6px 16px;border-radius:20px;background:linear-gradient(135deg,rgba(251,191,36,0.1),rgba(245,158,11,0.05));border:1px solid rgba(251,191,36,0.25);font-size:11px;font-weight:600;color:var(--gold);font-family:var(--fm);letter-spacing:.08em;text-transform:uppercase}
+.meta{display:flex;justify-content:center;gap:10px;margin-top:14px;flex-wrap:wrap}
+.badge{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--bdr);font-size:11px;color:var(--t3);font-family:var(--fm);white-space:nowrap}
+.st{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:18px;font-size:11px;font-weight:600;font-family:var(--fm)}
+.st-p{background:var(--yellowbg);border:1px solid var(--yellowbdr);color:var(--yellow)}
+.st-l{background:var(--accbg);border:1px solid var(--accbdr);color:var(--acc)}
+.st-c{background:var(--indigobg);border:1px solid var(--indigobdr);color:var(--indigo)}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:10px}
+.navl{display:flex;gap:8px;flex-wrap:wrap}
+.btn{font-family:var(--f);font-size:13px;font-weight:500;padding:9px 18px;border-radius:8px;cursor:pointer;transition:all .2s;border:1px solid var(--bdr);background:rgba(255,255,255,.04);color:var(--t3)}
+.btn:hover{border-color:var(--bdr2);color:var(--t2)}
+.btn.on{border-color:rgba(16,185,129,.4);color:var(--acc)}
+.btn.dis{opacity:.4;cursor:not-allowed;pointer-events:none}
+.btn1{width:100%;padding:14px;border-radius:10px;border:none;font-family:var(--f);font-size:15px;font-weight:600;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;cursor:pointer;transition:all .2s;box-shadow:0 4px 24px var(--accg)}
+.btn1:hover{transform:translateY(-1px);box-shadow:0 6px 30px var(--accg)}
+.btn1:disabled{opacity:.35;cursor:not-allowed;box-shadow:none;transform:none}
+.btn-trade{padding:10px 20px;border-radius:8px;border:1px solid var(--orangebdr);background:var(--orangebg);color:var(--orange);font-family:var(--f);font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;width:100%;margin-top:14px}
+.btn-trade:hover{background:rgba(249,115,22,.18)}.btn-trade:disabled{opacity:.35;cursor:not-allowed}
+.card{background:var(--bgc);border:1px solid var(--bdr);border-radius:16px;padding:24px;margin-bottom:18px;backdrop-filter:blur(20px)}
+.ctit{font-size:17px;font-weight:600;color:var(--t1);display:flex;align-items:center;gap:9px;margin-bottom:18px}
+.ctit span{font-size:20px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.fr{grid-template-columns:1fr}}
+.fg{margin-bottom:18px}
+.fl{display:block;font-size:11px;font-weight:600;color:var(--t4);text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px;font-family:var(--fm)}
+.fi{width:100%;padding:11px 14px;border-radius:9px;border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.35);color:var(--t2);font-size:14px;font-family:var(--f);outline:none;transition:border-color .2s}
+.fi::placeholder{color:var(--t5)}.fi:focus{border-color:var(--acc)}
+.fi-pin{width:120px;text-align:center;letter-spacing:.3em;font-family:var(--fm);font-size:18px;font-weight:700}
+.ht{font-size:11px;color:var(--t5);margin-top:5px}
+.et{color:var(--red);font-size:12px;margin-top:7px;font-family:var(--fm)}
+.ts{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.tc{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border-radius:7px;background:var(--accbg);border:1px solid var(--accbdr);color:var(--acc);font-size:12px;font-family:var(--fm);font-weight:600;animation:ci .2s ease-out}
+@keyframes ci{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+.tc .x{cursor:pointer;opacity:.5;font-size:15px;line-height:1;transition:opacity .15s}.tc .x:hover{opacity:1}
+.es{display:inline-flex;align-items:center;justify-content:center;padding:7px 12px;border-radius:7px;border:1px dashed rgba(255,255,255,.1);color:var(--t5);font-size:11px;font-family:var(--fm);min-width:72px}
+.sw{position:relative}
+.sug{position:absolute;top:calc(100% + 3px);left:0;right:0;max-height:260px;overflow-y:auto;background:#1a1f2e;border:1px solid rgba(255,255,255,.1);border-radius:10px;z-index:100;box-shadow:0 16px 48px rgba(0,0,0,.55);display:none}
+.sug.open{display:block}
+.stabs{display:flex;border-bottom:1px solid rgba(255,255,255,.06);padding:0 4px;position:sticky;top:0;background:#1a1f2e;z-index:1}
+.stab{padding:7px 12px;font-size:10px;font-family:var(--fm);font-weight:600;color:var(--t5);cursor:pointer;border:none;border-bottom:2px solid transparent;transition:all .15s;text-transform:uppercase;letter-spacing:.05em;background:none}
+.stab:hover{color:var(--t3)}.stab.on{color:var(--acc);border-bottom-color:var(--acc)}
+.si{padding:9px 12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:13px;transition:background .1s;border-bottom:1px solid rgba(255,255,255,.03)}
+.si:hover{background:rgba(255,255,255,.05)}.si:last-child{border-bottom:none}
+.stk{font-family:var(--fm);font-weight:700;color:var(--t2);font-size:13px}
+.snm{color:var(--t4);font-size:11px;margin-left:8px}
+.ext{font-family:var(--fm);font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600}
+.ext-a{background:var(--bluebg);color:var(--blue)}
+.ext-n{background:var(--purplebg);color:var(--purple)}
+.ext-e{background:rgba(16,185,129,.12);color:#34d399}
+.lbh{display:grid;grid-template-columns:42px 1.2fr 1.5fr 100px;padding:9px 14px;font-size:10px;font-weight:700;color:var(--t5);text-transform:uppercase;letter-spacing:.08em;font-family:var(--fm)}
+.lbr{display:grid;grid-template-columns:42px 1.2fr 1.5fr 100px;align-items:center;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.03);transition:background .15s;cursor:pointer}
+.lbr:hover{background:rgba(255,255,255,.025)}
+@media(max-width:640px){.lbh,.lbr{grid-template-columns:36px 1fr 90px}.lbh .ch,.lbr .ch{display:none}}
+.rk{font-family:var(--fm);font-weight:700;font-size:16px}
+.rk1{color:var(--gold)}.rk2{color:var(--silver)}.rk3{color:var(--bronze)}.rkn{color:var(--t5)}
+.an{font-size:14px;font-weight:600;color:var(--t1)}
+.pn{font-size:11px;color:var(--t4);margin-top:1px}
+.ch{display:flex;gap:4px;flex-wrap:wrap}
+.mt{font-family:var(--fm);font-size:10px;font-weight:600;padding:2px 6px;border-radius:3px;background:rgba(255,255,255,.05);color:var(--t3)}
+.cr{text-align:right;font-family:var(--fm);font-weight:700;font-size:14px}
+.crp{color:var(--acc)}.crn{color:var(--red)}.crx{color:var(--t5);font-weight:500;font-size:12px}
+.mo{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;animation:fi .2s}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+.mc{background:#13161f;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:28px;max-width:540px;width:100%;max-height:85vh;overflow-y:auto;position:relative;animation:su .25s ease-out}
+@keyframes su{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.mx{position:absolute;top:14px;right:14px;background:none;border:none;color:var(--t4);font-size:24px;cursor:pointer;padding:4px;line-height:1}.mx:hover{color:var(--t2)}
+.hr{display:grid;grid-template-columns:1fr 65px 75px;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.hr:last-child{border-bottom:none}
+.hrt{font-family:var(--fm);font-weight:700;font-size:13px;color:var(--t2)}
+.hrp{font-size:11px;color:var(--t5);font-weight:400;margin-top:1px}
+.hrw{font-family:var(--fm);font-size:11px;color:var(--t4);text-align:center}
+.hrr{font-family:var(--fm);font-weight:600;font-size:13px;text-align:right}
+.empty{text-align:center;padding:44px 20px;color:var(--t4)}
+.footer{text-align:center;margin-top:36px;font-size:11px;color:#1e293b;font-family:var(--fm)}
+.spin{display:inline-block;width:14px;height:14px;border:2px solid var(--bdr);border-top-color:var(--acc);border-radius:50%;animation:sp .6s linear infinite;vertical-align:middle;margin-right:6px}
+@keyframes sp{to{transform:rotate(360deg)}}
+.chwrap{margin-top:18px;padding:16px;background:rgba(0,0,0,.2);border-radius:12px;border:1px solid var(--bdr)}
+.chtit{font-size:13px;font-weight:600;color:var(--t3);margin-bottom:12px;font-family:var(--fm);text-transform:uppercase;letter-spacing:.06em}
+.sug::-webkit-scrollbar{width:6px}.sug::-webkit-scrollbar-track{background:transparent}.sug::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:3px}
+.cfg-banner{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);border-radius:12px;padding:16px 20px;margin-bottom:20px;text-align:center}
+.cfg-banner h3{color:var(--red);font-size:14px;margin-bottom:6px}.cfg-banner p{color:var(--t3);font-size:12px;font-family:var(--fm)}
+.live-dot{width:8px;height:8px;border-radius:50%;background:var(--acc);display:inline-block;margin-right:6px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.feed-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.04);align-items:flex-start}
+.feed-item:last-child{border-bottom:none}
+.feed-icon{width:32px;height:32px;border-radius:8px;background:var(--orangebg);border:1px solid var(--orangebdr);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.feed-text{font-size:13px;color:var(--t2);line-height:1.5}
+.feed-name{font-weight:600;color:var(--t1)}
+.feed-tickers{font-family:var(--fm);font-weight:600;font-size:12px}
+.feed-out{color:var(--red)}.feed-in{color:var(--acc)}
+.feed-time{font-size:10px;color:var(--t5);font-family:var(--fm);margin-top:2px}
+.feed-arrow{color:var(--t4);margin:0 4px}
+.trade-section{margin-top:16px;padding-top:16px;border-top:1px solid var(--bdr)}
+.trade-badge{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:12px;font-size:11px;font-family:var(--fm);font-weight:600}
+.trade-badge-ok{background:var(--orangebg);border:1px solid var(--orangebdr);color:var(--orange)}
+.trade-badge-done{background:rgba(255,255,255,.04);border:1px solid var(--bdr);color:var(--t5)}
+.sell-chip{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;cursor:pointer;font-family:var(--fm);font-size:12px;font-weight:600;transition:all .15s;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.03);color:var(--t3);margin:4px 4px 4px 0}
+.sell-chip:hover{border-color:var(--red);color:var(--red);background:rgba(239,68,68,.08)}
+.sell-chip.selected{border-color:var(--red);color:var(--red);background:rgba(239,68,68,.1)}
+.pin-gate{text-align:center;padding:12px 0}
+.pin-gate p{font-size:13px;color:var(--t3);margin-bottom:12px}
+.pin-row{display:flex;align-items:center;justify-content:center;gap:10px}
+.reg-closed{text-align:center;padding:20px;color:var(--t4);font-size:13px;border:1px dashed rgba(255,255,255,.1);border-radius:12px;margin-top:10px}
+</style>
+</head>
+<body>
+<div id="app" class="ctr"></div>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+<script>
+const firebaseConfig = {
+  apiKey:            "AIzaSyDcCCzORetz78V4Osc38M_Nv-JRlw_sOq8",
+  authDomain:        "stock-picking-challenge-3882f.firebaseapp.com",
+  databaseURL:       "https://stock-picking-challenge-3882f-default-rtdb.firebaseio.com",
+  projectId:         "stock-picking-challenge-3882f",
+  storageBucket:     "stock-picking-challenge-3882f.firebasestorage.app",
+  messagingSenderId: "636945009913",
+  appId:             "1:636945009913:web:92af7a5d85d5a91b5fa628"
+};
+const CONFIGURED = firebaseConfig.apiKey !== "YOUR_API_KEY_HERE";
+if (CONFIGURED) firebase.initializeApp(firebaseConfig);
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+<script type="text/babel">
+const {useState,useEffect,useRef,useCallback}=React;
+const START="2026-03-01",END="2027-02-28",PICKS=5,MAX_TRADES=3;
+
+const db=typeof CONFIGURED!=="undefined"&&CONFIGURED?firebase.database():null;
+const dbRef=path=>db?db.ref(path):null;
+const encKey=k=>k.replace(/\./g,"_DOT_");
+const decKey=k=>k.replace(/_DOT_/g,".");
+function encMap(o){if(!o)return null;const r={};for(const[k,v]of Object.entries(o))r[encKey(k)]=v;return r}
+function decMap(o){if(!o)return {};const r={};for(const[k,v]of Object.entries(o))r[decKey(k)]=v;return r}
+function fbSet(p,v){return db?dbRef(p).set(v):Promise.resolve()}
+function fbPush(p,v){return db?dbRef(p).push(v):Promise.resolve()}
+function fbUpdate(p,v){return db?dbRef(p).update(v):Promise.resolve()}
+function fbOnValue(p,cb){
+  if(!db)return ()=>{};
+  const ref=dbRef(p);const h=snap=>{cb(snap.exists()?snap.val():null)};
+  ref.on("value",h);return ()=>ref.off("value",h);
+}
+
+const U=[
+{t:"BHP.AX",n:"BHP Group",x:"ASX",c:"s"},{t:"CBA.AX",n:"Commonwealth Bank",x:"ASX",c:"s"},
+{t:"CSL.AX",n:"CSL Limited",x:"ASX",c:"s"},{t:"WBC.AX",n:"Westpac",x:"ASX",c:"s"},
+{t:"NAB.AX",n:"National Australia Bank",x:"ASX",c:"s"},{t:"ANZ.AX",n:"ANZ Group",x:"ASX",c:"s"},
+{t:"WES.AX",n:"Wesfarmers",x:"ASX",c:"s"},{t:"MQG.AX",n:"Macquarie Group",x:"ASX",c:"s"},
+{t:"FMG.AX",n:"Fortescue",x:"ASX",c:"s"},{t:"TLS.AX",n:"Telstra",x:"ASX",c:"s"},
+{t:"RIO.AX",n:"Rio Tinto",x:"ASX",c:"s"},{t:"WDS.AX",n:"Woodside Energy",x:"ASX",c:"s"},
+{t:"ALL.AX",n:"Aristocrat Leisure",x:"ASX",c:"s"},{t:"GMG.AX",n:"Goodman Group",x:"ASX",c:"s"},
+{t:"TCL.AX",n:"Transurban",x:"ASX",c:"s"},{t:"COL.AX",n:"Coles Group",x:"ASX",c:"s"},
+{t:"WOW.AX",n:"Woolworths",x:"ASX",c:"s"},{t:"REA.AX",n:"REA Group",x:"ASX",c:"s"},
+{t:"JHX.AX",n:"James Hardie",x:"ASX",c:"s"},{t:"STO.AX",n:"Santos",x:"ASX",c:"s"},
+{t:"XRO.AX",n:"Xero",x:"ASX",c:"s"},{t:"SHL.AX",n:"Sonic Healthcare",x:"ASX",c:"s"},
+{t:"QBE.AX",n:"QBE Insurance",x:"ASX",c:"s"},{t:"ORG.AX",n:"Origin Energy",x:"ASX",c:"s"},
+{t:"MIN.AX",n:"Mineral Resources",x:"ASX",c:"s"},{t:"CPU.AX",n:"Computershare",x:"ASX",c:"s"},
+{t:"SUN.AX",n:"Suncorp",x:"ASX",c:"s"},{t:"IAG.AX",n:"Insurance Australia",x:"ASX",c:"s"},
+{t:"APA.AX",n:"APA Group",x:"ASX",c:"s"},{t:"CAR.AX",n:"CAR Group",x:"ASX",c:"s"},
+{t:"SEK.AX",n:"Seek",x:"ASX",c:"s"},{t:"TWE.AX",n:"Treasury Wine Estates",x:"ASX",c:"s"},
+{t:"PME.AX",n:"Pro Medicus",x:"ASX",c:"s"},{t:"WTC.AX",n:"WiseTech Global",x:"ASX",c:"s"},
+{t:"TNE.AX",n:"TechnologyOne",x:"ASX",c:"s"},{t:"LYC.AX",n:"Lynas Rare Earths",x:"ASX",c:"s"},
+{t:"RMD.AX",n:"ResMed",x:"ASX",c:"s"},{t:"ALD.AX",n:"Ampol",x:"ASX",c:"s"},
+{t:"EVN.AX",n:"Evolution Mining",x:"ASX",c:"s"},{t:"NST.AX",n:"Northern Star",x:"ASX",c:"s"},
+{t:"MPL.AX",n:"Medibank Private",x:"ASX",c:"s"},{t:"ORI.AX",n:"Orica",x:"ASX",c:"s"},
+{t:"AMC.AX",n:"Amcor",x:"ASX",c:"s"},{t:"BSL.AX",n:"BlueScope Steel",x:"ASX",c:"s"},
+{t:"DXS.AX",n:"Dexus",x:"ASX",c:"s"},{t:"GPT.AX",n:"GPT Group",x:"ASX",c:"s"},
+{t:"MGR.AX",n:"Mirvac Group",x:"ASX",c:"s"},{t:"SGP.AX",n:"Stockland",x:"ASX",c:"s"},
+{t:"VCX.AX",n:"Vicinity Centres",x:"ASX",c:"s"},{t:"SCG.AX",n:"Scentre Group",x:"ASX",c:"s"},
+{t:"CHC.AX",n:"Charter Hall",x:"ASX",c:"s"},{t:"LLC.AX",n:"Lendlease",x:"ASX",c:"s"},
+{t:"IEL.AX",n:"IDP Education",x:"ASX",c:"s"},{t:"NHF.AX",n:"nib Holdings",x:"ASX",c:"s"},
+{t:"QAN.AX",n:"Qantas Airways",x:"ASX",c:"s"},{t:"SVW.AX",n:"Seven Group",x:"ASX",c:"s"},
+{t:"NWS.AX",n:"News Corp",x:"ASX",c:"s"},{t:"TAH.AX",n:"Tabcorp",x:"ASX",c:"s"},
+{t:"PLS.AX",n:"Pilbara Minerals",x:"ASX",c:"s"},{t:"IGO.AX",n:"IGO Limited",x:"ASX",c:"s"},
+{t:"AZJ.AX",n:"Aurizon",x:"ASX",c:"s"},{t:"SOL.AX",n:"WH Soul Pattinson",x:"ASX",c:"s"},
+{t:"ALX.AX",n:"Atlas Arteria",x:"ASX",c:"s"},{t:"FPH.AX",n:"Fisher & Paykel Healthcare",x:"ASX",c:"s"},
+{t:"CWY.AX",n:"Cleanaway Waste",x:"ASX",c:"s"},{t:"ILU.AX",n:"Iluka Resources",x:"ASX",c:"s"},
+{t:"ZIP.AX",n:"Zip Co",x:"ASX",c:"s"},{t:"HUB.AX",n:"Hub24",x:"ASX",c:"s"},
+{t:"NWL.AX",n:"Netwealth",x:"ASX",c:"s"},{t:"PDN.AX",n:"Paladin Energy",x:"ASX",c:"s"},
+{t:"WHC.AX",n:"Whitehaven Coal",x:"ASX",c:"s"},{t:"S32.AX",n:"South32",x:"ASX",c:"s"},
+{t:"BRN.AX",n:"Brainchip",x:"ASX",c:"s"},{t:"WBT.AX",n:"Weebit Nano",x:"ASX",c:"s"},
+{t:"SFR.AX",n:"Sandfire Resources",x:"ASX",c:"s"},{t:"DRR.AX",n:"Deterra Royalties",x:"ASX",c:"s"},
+{t:"AGL.AX",n:"AGL Energy",x:"ASX",c:"s"},{t:"TPG.AX",n:"TPG Telecom",x:"ASX",c:"s"},
+{t:"CEN.AX",n:"Contact Energy",x:"ASX",c:"s"},{t:"JBH.AX",n:"JB Hi-Fi",x:"ASX",c:"s"},
+{t:"A200.AX",n:"BetaShares Australia 200",x:"ASX",c:"e"},{t:"AAA.AX",n:"BetaShares High Interest Cash",x:"ASX",c:"e"},
+{t:"NDQ.AX",n:"BetaShares NASDAQ 100",x:"ASX",c:"e"},{t:"HNDQ.AX",n:"BetaShares NASDAQ 100 Hedged",x:"ASX",c:"e"},
+{t:"DHHF.AX",n:"BetaShares Diversified All Growth",x:"ASX",c:"e"},{t:"DZZF.AX",n:"BetaShares Ethical Diversified HG",x:"ASX",c:"e"},
+{t:"DGGF.AX",n:"BetaShares Ethical Diversified Growth",x:"ASX",c:"e"},{t:"DBBF.AX",n:"BetaShares Ethical Diversified Balanced",x:"ASX",c:"e"},
+{t:"BGBL.AX",n:"BetaShares Global Shares",x:"ASX",c:"e"},{t:"ATEC.AX",n:"BetaShares S&P/ASX Technology",x:"ASX",c:"e"},
+{t:"HACK.AX",n:"BetaShares Global Cybersecurity",x:"ASX",c:"e"},{t:"RBTZ.AX",n:"BetaShares Global Robotics & AI",x:"ASX",c:"e"},
+{t:"CLDD.AX",n:"BetaShares Cloud Computing",x:"ASX",c:"e"},{t:"SEMI.AX",n:"BetaShares Global Semiconductors",x:"ASX",c:"e"},
+{t:"GAME.AX",n:"BetaShares Video Games & Esports",x:"ASX",c:"e"},{t:"DRIV.AX",n:"BetaShares Electric Vehicles",x:"ASX",c:"e"},
+{t:"IPAY.AX",n:"BetaShares Future of Payments",x:"ASX",c:"e"},{t:"IBUY.AX",n:"BetaShares Online Retail",x:"ASX",c:"e"},
+{t:"ASIA.AX",n:"BetaShares Asia Technology Tigers",x:"ASX",c:"e"},{t:"CRYP.AX",n:"BetaShares Crypto Innovators",x:"ASX",c:"e"},
+{t:"ETHI.AX",n:"BetaShares Global Sustainability Leaders",x:"ASX",c:"e"},{t:"HETH.AX",n:"BetaShares Global Sustainability Hedged",x:"ASX",c:"e"},
+{t:"FAIR.AX",n:"BetaShares Aus Sustainability Leaders",x:"ASX",c:"e"},{t:"ERTH.AX",n:"BetaShares Climate Change Innovation",x:"ASX",c:"e"},
+{t:"QLTY.AX",n:"BetaShares Global Quality Leaders",x:"ASX",c:"e"},{t:"HQLT.AX",n:"BetaShares Global Quality Hedged",x:"ASX",c:"e"},
+{t:"INCM.AX",n:"BetaShares Global Income Leaders",x:"ASX",c:"e"},{t:"IIND.AX",n:"BetaShares India Quality",x:"ASX",c:"e"},
+{t:"QUS.AX",n:"BetaShares S&P 500 Equal Weight",x:"ASX",c:"e"},{t:"F100.AX",n:"BetaShares FTSE 100",x:"ASX",c:"e"},
+{t:"QOZ.AX",n:"BetaShares FTSE RAFI Australia 200",x:"ASX",c:"e"},{t:"EX20.AX",n:"BetaShares Aus Ex-20",x:"ASX",c:"e"},
+{t:"QFN.AX",n:"BetaShares S&P/ASX 200 Financials",x:"ASX",c:"e"},{t:"QRE.AX",n:"BetaShares S&P/ASX 200 Resources",x:"ASX",c:"e"},
+{t:"OZBD.AX",n:"BetaShares Aus Composite Bond",x:"ASX",c:"e"},{t:"CRED.AX",n:"BetaShares Aus IG Corp Bond",x:"ASX",c:"e"},
+{t:"AGVT.AX",n:"BetaShares Aus Government Bond",x:"ASX",c:"e"},{t:"GGOV.AX",n:"BetaShares Global Govt Bond 20+",x:"ASX",c:"e"},
+{t:"GBND.AX",n:"BetaShares Sustainability Bond",x:"ASX",c:"e"},{t:"QPON.AX",n:"BetaShares Bank Senior Floating Rate",x:"ASX",c:"e"},
+{t:"HBRD.AX",n:"BetaShares Active Aus Hybrids",x:"ASX",c:"e"},{t:"BHYB.AX",n:"BetaShares Aus Bank Hybrids",x:"ASX",c:"e"},
+{t:"GEAR.AX",n:"BetaShares Geared Aus Equity",x:"ASX",c:"e"},{t:"GGUS.AX",n:"BetaShares Geared US Equity Hedged",x:"ASX",c:"e"},
+{t:"BEAR.AX",n:"BetaShares Aus Equities Bear",x:"ASX",c:"e"},{t:"BBOZ.AX",n:"BetaShares Aus Equities Strong Bear",x:"ASX",c:"e"},
+{t:"BBUS.AX",n:"BetaShares US Equities Strong Bear",x:"ASX",c:"e"},
+{t:"QAU.AX",n:"BetaShares Gold Bullion Hedged",x:"ASX",c:"e"},{t:"OOO.AX",n:"BetaShares Crude Oil Hedged",x:"ASX",c:"e"},
+{t:"USD.AX",n:"BetaShares US Dollar",x:"ASX",c:"e"},{t:"EEU.AX",n:"BetaShares Euro",x:"ASX",c:"e"},
+{t:"POU.AX",n:"BetaShares British Pound",x:"ASX",c:"e"},
+{t:"FOOD.AX",n:"BetaShares Global Agriculture Hedged",x:"ASX",c:"e"},{t:"BNKS.AX",n:"BetaShares Global Banks Hedged",x:"ASX",c:"e"},
+{t:"FUEL.AX",n:"BetaShares Global Energy Hedged",x:"ASX",c:"e"},{t:"MNRS.AX",n:"BetaShares Global Gold Miners Hedged",x:"ASX",c:"e"},
+{t:"DRUG.AX",n:"BetaShares Global Healthcare Hedged",x:"ASX",c:"e"},
+{t:"SMLL.AX",n:"BetaShares Aus Small Companies",x:"ASX",c:"e"},{t:"HVST.AX",n:"BetaShares Aus Dividend Harvester",x:"ASX",c:"e"},
+{t:"YMAX.AX",n:"BetaShares Aus Yield Maximiser",x:"ASX",c:"e"},{t:"UMAX.AX",n:"BetaShares S&P 500 Yield Maximiser",x:"ASX",c:"e"},
+{t:"HEUR.AX",n:"BetaShares Europe Hedged",x:"ASX",c:"e"},{t:"HJPN.AX",n:"BetaShares Japan Hedged",x:"ASX",c:"e"},
+{t:"WRLD.AX",n:"BetaShares Managed Risk Global",x:"ASX",c:"e"},{t:"AUST.AX",n:"BetaShares Managed Risk Aus",x:"ASX",c:"e"},
+{t:"EMMG.AX",n:"BetaShares Legg Mason EM",x:"ASX",c:"e"},{t:"EINC.AX",n:"BetaShares Legg Mason Equity Income",x:"ASX",c:"e"},
+{t:"BNDS.AX",n:"Franklin Aus Bond Active",x:"ASX",c:"e"},
+{t:"CIIH.AX",n:"Franklin Intl Infra Hedged Active",x:"ASX",c:"e"},
+{t:"CUIV.AX",n:"Franklin Intl Multi-Asset Active",x:"ASX",c:"e"},
+{t:"CIVH.AX",n:"Franklin Intl Value Hedged Active",x:"ASX",c:"e"},
+{t:"R3AL.AX",n:"Franklin Aus Real Asset Active",x:"ASX",c:"e"},
+{t:"FRAR.AX",n:"Franklin Aus Resources Active",x:"ASX",c:"e"},
+{t:"FRGG.AX",n:"Franklin Global Growth Active",x:"ASX",c:"e"},
+{t:"VAS.AX",n:"Vanguard Aus Shares",x:"ASX",c:"e"},{t:"VGS.AX",n:"Vanguard Intl Shares",x:"ASX",c:"e"},
+{t:"VGAD.AX",n:"Vanguard Intl Shares Hedged",x:"ASX",c:"e"},{t:"VTS.AX",n:"Vanguard US Total Market",x:"ASX",c:"e"},
+{t:"VEU.AX",n:"Vanguard All-World ex-US",x:"ASX",c:"e"},{t:"VHY.AX",n:"Vanguard Aus High Yield",x:"ASX",c:"e"},
+{t:"VLC.AX",n:"Vanguard MSCI Aus Large",x:"ASX",c:"e"},{t:"VSO.AX",n:"Vanguard MSCI Aus Small",x:"ASX",c:"e"},
+{t:"VGE.AX",n:"Vanguard FTSE Emerging Markets",x:"ASX",c:"e"},{t:"VAP.AX",n:"Vanguard Aus Property",x:"ASX",c:"e"},
+{t:"VAF.AX",n:"Vanguard Aus Fixed Interest",x:"ASX",c:"e"},{t:"VGB.AX",n:"Vanguard Aus Government Bond",x:"ASX",c:"e"},
+{t:"VACF.AX",n:"Vanguard Aus Corporate Fixed Interest",x:"ASX",c:"e"},
+{t:"VEQ.AX",n:"Vanguard FTSE Europe",x:"ASX",c:"e"},{t:"VAE.AX",n:"Vanguard FTSE Asia ex Japan",x:"ASX",c:"e"},
+{t:"VDHG.AX",n:"Vanguard Diversified High Growth",x:"ASX",c:"e"},{t:"VDGR.AX",n:"Vanguard Diversified Growth",x:"ASX",c:"e"},
+{t:"VDBA.AX",n:"Vanguard Diversified Balanced",x:"ASX",c:"e"},{t:"VDCO.AX",n:"Vanguard Diversified Conservative",x:"ASX",c:"e"},
+{t:"VETH.AX",n:"Vanguard Ethically Conscious Intl",x:"ASX",c:"e"},{t:"VISM.AX",n:"Vanguard Intl Small Companies",x:"ASX",c:"e"},
+{t:"IOZ.AX",n:"iShares ASX 200",x:"ASX",c:"e"},{t:"IVV.AX",n:"iShares S&P 500",x:"ASX",c:"e"},
+{t:"IHVV.AX",n:"iShares S&P 500 Hedged",x:"ASX",c:"e"},{t:"IEM.AX",n:"iShares Emerging Markets",x:"ASX",c:"e"},
+{t:"IVE.AX",n:"iShares MSCI EAFE",x:"ASX",c:"e"},{t:"IJP.AX",n:"iShares MSCI Japan",x:"ASX",c:"e"},
+{t:"IEU.AX",n:"iShares Europe",x:"ASX",c:"e"},{t:"IOO.AX",n:"iShares Global 100",x:"ASX",c:"e"},
+{t:"IHOO.AX",n:"iShares Global 100 Hedged",x:"ASX",c:"e"},{t:"IAA.AX",n:"iShares Asia 50",x:"ASX",c:"e"},
+{t:"IZZ.AX",n:"iShares China Large-Cap",x:"ASX",c:"e"},{t:"IRU.AX",n:"iShares Russell 2000",x:"ASX",c:"e"},
+{t:"IJH.AX",n:"iShares S&P MidCap 400",x:"ASX",c:"e"},{t:"IJR.AX",n:"iShares S&P SmallCap 600",x:"ASX",c:"e"},
+{t:"ILC.AX",n:"iShares S&P/ASX 20",x:"ASX",c:"e"},{t:"ISO.AX",n:"iShares S&P/ASX Small Ords",x:"ASX",c:"e"},
+{t:"IHD.AX",n:"iShares S&P/ASX Div Opportunities",x:"ASX",c:"e"},
+{t:"IXJ.AX",n:"iShares Global Healthcare",x:"ASX",c:"e"},{t:"IXI.AX",n:"iShares Global Consumer Staples",x:"ASX",c:"e"},
+{t:"IAF.AX",n:"iShares Aus Composite Bond",x:"ASX",c:"e"},{t:"IGB.AX",n:"iShares Aus Treasury",x:"ASX",c:"e"},
+{t:"ILB.AX",n:"iShares Aus Inflation Gov Bond",x:"ASX",c:"e"},
+{t:"IHWL.AX",n:"iShares MSCI World All Cap Hedged",x:"ASX",c:"e"},
+{t:"IWLD.AX",n:"iShares Core MSCI World ex Aus ESG",x:"ASX",c:"e"},
+{t:"IESG.AX",n:"iShares Core MSCI Aus ESG",x:"ASX",c:"e"},
+{t:"IHCB.AX",n:"iShares Global Corp Bond Hedged",x:"ASX",c:"e"},
+{t:"IHHY.AX",n:"iShares Global High Yield Bond Hedged",x:"ASX",c:"e"},
+{t:"IHEB.AX",n:"iShares EM Bond Hedged",x:"ASX",c:"e"},
+{t:"WDMF.AX",n:"iShares World Multifactor",x:"ASX",c:"e"},
+{t:"MVOL.AX",n:"iShares Aus Minimum Volatility",x:"ASX",c:"e"},
+{t:"IKO.AX",n:"iShares MSCI South Korea",x:"ASX",c:"e"},{t:"ITW.AX",n:"iShares MSCI Taiwan",x:"ASX",c:"e"},
+{t:"QUAL.AX",n:"VanEck Intl Quality",x:"ASX",c:"e"},{t:"QHAL.AX",n:"VanEck Intl Quality Hedged",x:"ASX",c:"e"},
+{t:"QSML.AX",n:"VanEck Intl Small Companies Quality",x:"ASX",c:"e"},
+{t:"MOAT.AX",n:"VanEck Morningstar Wide Moat",x:"ASX",c:"e"},{t:"GOAT.AX",n:"VanEck Morningstar Intl Wide Moat",x:"ASX",c:"e"},
+{t:"MVW.AX",n:"VanEck Aus Equal Weight",x:"ASX",c:"e"},{t:"MVB.AX",n:"VanEck Aus Banks",x:"ASX",c:"e"},
+{t:"MVR.AX",n:"VanEck Aus Resources",x:"ASX",c:"e"},{t:"MVA.AX",n:"VanEck Aus Property",x:"ASX",c:"e"},
+{t:"MVE.AX",n:"VanEck S&P/ASX MidCap",x:"ASX",c:"e"},{t:"MVS.AX",n:"VanEck Small Companies Masters",x:"ASX",c:"e"},
+{t:"DVDY.AX",n:"VanEck Morningstar Aus Moat Income",x:"ASX",c:"e"},
+{t:"SUBD.AX",n:"VanEck Aus Subordinated Debt",x:"ASX",c:"e"},{t:"PLUS.AX",n:"VanEck Aus Corporate Bond Plus",x:"ASX",c:"e"},
+{t:"FLOT.AX",n:"VanEck Aus Floating Rate",x:"ASX",c:"e"},
+{t:"IFRA.AX",n:"VanEck FTSE Global Infra Hedged",x:"ASX",c:"e"},
+{t:"REIT.AX",n:"VanEck FTSE Intl Property Hedged",x:"ASX",c:"e"},
+{t:"GDX.AX",n:"VanEck Gold Miners",x:"ASX",c:"e"},{t:"CLNE.AX",n:"VanEck Global Clean Energy",x:"ASX",c:"e"},
+{t:"HLTH.AX",n:"VanEck Global Healthcare Leaders",x:"ASX",c:"e"},
+{t:"ESGI.AX",n:"VanEck Intl Sustainable Equity",x:"ASX",c:"e"},{t:"GRNV.AX",n:"VanEck Aus Sustainable Equity",x:"ASX",c:"e"},
+{t:"VLUE.AX",n:"VanEck Intl Value",x:"ASX",c:"e"},{t:"EMKT.AX",n:"VanEck EM Multifactor",x:"ASX",c:"e"},
+{t:"CETF.AX",n:"VanEck FTSE China A50",x:"ASX",c:"e"},{t:"CNEW.AX",n:"VanEck China New Economy",x:"ASX",c:"e"},
+{t:"ESPO.AX",n:"VanEck Video Gaming & eSports",x:"ASX",c:"e"},
+{t:"GCAP.AX",n:"VanEck Global Capital Securities",x:"ASX",c:"e"},{t:"EBND.AX",n:"VanEck EM Income Active",x:"ASX",c:"e"},
+{t:"STW.AX",n:"SPDR S&P/ASX 200",x:"ASX",c:"e"},{t:"SFY.AX",n:"SPDR S&P/ASX 50",x:"ASX",c:"e"},
+{t:"SPY.AX",n:"SPDR S&P 500",x:"ASX",c:"e"},{t:"SSO.AX",n:"SPDR S&P/ASX Small Ords",x:"ASX",c:"e"},
+{t:"WXOZ.AX",n:"SPDR World ex Aus",x:"ASX",c:"e"},{t:"WXHG.AX",n:"SPDR World ex Aus Hedged",x:"ASX",c:"e"},
+{t:"WEMG.AX",n:"SPDR S&P Emerging Markets",x:"ASX",c:"e"},{t:"WDIV.AX",n:"SPDR S&P Global Dividend",x:"ASX",c:"e"},
+{t:"BOND.AX",n:"SPDR S&P/ASX Aus Bond",x:"ASX",c:"e"},{t:"GOVT.AX",n:"SPDR S&P/ASX Aus Govt Bond",x:"ASX",c:"e"},
+{t:"OZF.AX",n:"SPDR S&P/ASX 200 Financials ex REITs",x:"ASX",c:"e"},
+{t:"SLF.AX",n:"SPDR S&P/ASX 200 Listed Property",x:"ASX",c:"e"},
+{t:"OZR.AX",n:"SPDR S&P/ASX 200 Resources",x:"ASX",c:"e"},
+{t:"SYI.AX",n:"SPDR MSCI Aus Select High Div Yield",x:"ASX",c:"e"},
+{t:"DJRE.AX",n:"SPDR Dow Jones Global Real Estate",x:"ASX",c:"e"},
+{t:"RDV.AX",n:"Russell High Dividend Aus",x:"ASX",c:"e"},{t:"RVL.AX",n:"Russell Aus Value",x:"ASX",c:"e"},
+{t:"RARI.AX",n:"Russell Aus Responsible Investment",x:"ASX",c:"e"},
+{t:"RCB.AX",n:"Russell Aus Select Corp Bond",x:"ASX",c:"e"},{t:"RSM.AX",n:"Russell Aus Semi-Govt Bond",x:"ASX",c:"e"},
+{t:"RGB.AX",n:"Russell Aus Government Bond",x:"ASX",c:"e"},
+{t:"PMGOLD.AX",n:"Perth Mint Gold",x:"ASX",c:"e"},{t:"ESTX.AX",n:"ETFS Euro Stoxx 50",x:"ASX",c:"e"},
+{t:"ROBO.AX",n:"ETFS ROBO Global Robotics",x:"ASX",c:"e"},{t:"TECH.AX",n:"ETFS Morningstar Global Technology",x:"ASX",c:"e"},
+{t:"ZGOL.AX",n:"ANZ ETFS Physical Gold",x:"ASX",c:"e"},{t:"ZOZI.AX",n:"ANZ ETFS S&P/ASX 100",x:"ASX",c:"e"},
+{t:"ZYAU.AX",n:"ANZ ETFS S&P/ASX 300 High Yield",x:"ASX",c:"e"},
+{t:"ZYUS.AX",n:"ANZ ETFS S&P 500 High Yield Low Vol",x:"ASX",c:"e"},
+{t:"MOGL.AX",n:"Montgomery Global Equities",x:"ASX",c:"e"},
+{t:"AAPL",n:"Apple",x:"NASDAQ",c:"s"},{t:"MSFT",n:"Microsoft",x:"NASDAQ",c:"s"},
+{t:"GOOGL",n:"Alphabet",x:"NASDAQ",c:"s"},{t:"AMZN",n:"Amazon",x:"NASDAQ",c:"s"},
+{t:"NVDA",n:"NVIDIA",x:"NASDAQ",c:"s"},{t:"META",n:"Meta Platforms",x:"NASDAQ",c:"s"},
+{t:"TSLA",n:"Tesla",x:"NASDAQ",c:"s"},{t:"NFLX",n:"Netflix",x:"NASDAQ",c:"s"},
+{t:"AMD",n:"AMD",x:"NASDAQ",c:"s"},{t:"AVGO",n:"Broadcom",x:"NASDAQ",c:"s"},
+{t:"COST",n:"Costco",x:"NASDAQ",c:"s"},{t:"ADBE",n:"Adobe",x:"NASDAQ",c:"s"},
+{t:"CRM",n:"Salesforce",x:"NASDAQ",c:"s"},{t:"QCOM",n:"Qualcomm",x:"NASDAQ",c:"s"},
+{t:"INTC",n:"Intel",x:"NASDAQ",c:"s"},{t:"PEP",n:"PepsiCo",x:"NASDAQ",c:"s"},
+{t:"SBUX",n:"Starbucks",x:"NASDAQ",c:"s"},{t:"PYPL",n:"PayPal",x:"NASDAQ",c:"s"},
+{t:"ABNB",n:"Airbnb",x:"NASDAQ",c:"s"},{t:"COIN",n:"Coinbase",x:"NASDAQ",c:"s"},
+{t:"UBER",n:"Uber",x:"NASDAQ",c:"s"},{t:"SQ",n:"Block (Square)",x:"NASDAQ",c:"s"},
+{t:"SNOW",n:"Snowflake",x:"NASDAQ",c:"s"},{t:"PANW",n:"Palo Alto Networks",x:"NASDAQ",c:"s"},
+{t:"CRWD",n:"CrowdStrike",x:"NASDAQ",c:"s"},{t:"ARM",n:"Arm Holdings",x:"NASDAQ",c:"s"},
+{t:"MRVL",n:"Marvell Technology",x:"NASDAQ",c:"s"},{t:"PLTR",n:"Palantir",x:"NASDAQ",c:"s"},
+{t:"SMCI",n:"Super Micro Computer",x:"NASDAQ",c:"s"},{t:"MU",n:"Micron Technology",x:"NASDAQ",c:"s"},
+{t:"LRCX",n:"Lam Research",x:"NASDAQ",c:"s"},{t:"KLAC",n:"KLA Corp",x:"NASDAQ",c:"s"},
+{t:"AMAT",n:"Applied Materials",x:"NASDAQ",c:"s"},{t:"SNPS",n:"Synopsys",x:"NASDAQ",c:"s"},
+{t:"CDNS",n:"Cadence Design",x:"NASDAQ",c:"s"},{t:"MELI",n:"MercadoLibre",x:"NASDAQ",c:"s"},
+{t:"BKNG",n:"Booking Holdings",x:"NASDAQ",c:"s"},{t:"ISRG",n:"Intuitive Surgical",x:"NASDAQ",c:"s"},
+{t:"REGN",n:"Regeneron",x:"NASDAQ",c:"s"},{t:"GILD",n:"Gilead Sciences",x:"NASDAQ",c:"s"},
+{t:"VRTX",n:"Vertex Pharma",x:"NASDAQ",c:"s"},{t:"MRNA",n:"Moderna",x:"NASDAQ",c:"s"},
+{t:"ILMN",n:"Illumina",x:"NASDAQ",c:"s"},{t:"DXCM",n:"Dexcom",x:"NASDAQ",c:"s"},
+{t:"ZS",n:"Zscaler",x:"NASDAQ",c:"s"},{t:"FTNT",n:"Fortinet",x:"NASDAQ",c:"s"},
+{t:"TEAM",n:"Atlassian",x:"NASDAQ",c:"s"},{t:"WDAY",n:"Workday",x:"NASDAQ",c:"s"},
+{t:"DDOG",n:"Datadog",x:"NASDAQ",c:"s"},{t:"NET",n:"Cloudflare",x:"NASDAQ",c:"s"},
+{t:"TTD",n:"The Trade Desk",x:"NASDAQ",c:"s"},{t:"ROKU",n:"Roku",x:"NASDAQ",c:"s"},
+{t:"DASH",n:"DoorDash",x:"NASDAQ",c:"s"},{t:"RBLX",n:"Roblox",x:"NASDAQ",c:"s"},
+{t:"RIVN",n:"Rivian",x:"NASDAQ",c:"s"},{t:"LCID",n:"Lucid Group",x:"NASDAQ",c:"s"},
+{t:"SOFI",n:"SoFi Technologies",x:"NASDAQ",c:"s"},{t:"HOOD",n:"Robinhood",x:"NASDAQ",c:"s"},
+{t:"CELH",n:"Celsius Holdings",x:"NASDAQ",c:"s"},{t:"MSTR",n:"MicroStrategy",x:"NASDAQ",c:"s"},
+{t:"ON",n:"ON Semiconductor",x:"NASDAQ",c:"s"},{t:"ENPH",n:"Enphase Energy",x:"NASDAQ",c:"s"},
+{t:"FSLR",n:"First Solar",x:"NASDAQ",c:"s"},{t:"CEG",n:"Constellation Energy",x:"NASDAQ",c:"s"},
+{t:"CPRT",n:"Copart",x:"NASDAQ",c:"s"},{t:"ODFL",n:"Old Dominion Freight",x:"NASDAQ",c:"s"},
+{t:"FAST",n:"Fastenal",x:"NASDAQ",c:"s"},{t:"MNST",n:"Monster Beverage",x:"NASDAQ",c:"s"},
+{t:"KDP",n:"Keurig Dr Pepper",x:"NASDAQ",c:"s"},{t:"MAR",n:"Marriott International",x:"NASDAQ",c:"s"},
+{t:"LULU",n:"Lululemon",x:"NASDAQ",c:"s"},{t:"ROST",n:"Ross Stores",x:"NASDAQ",c:"s"},
+{t:"ORLY",n:"O'Reilly Automotive",x:"NASDAQ",c:"s"},{t:"ASML",n:"ASML Holding",x:"NASDAQ",c:"s"},
+{t:"PDD",n:"PDD Holdings",x:"NASDAQ",c:"s"},{t:"JD",n:"JD.com",x:"NASDAQ",c:"s"},
+{t:"BIDU",n:"Baidu",x:"NASDAQ",c:"s"},{t:"NTES",n:"NetEase",x:"NASDAQ",c:"s"},
+{t:"AZN",n:"AstraZeneca",x:"NASDAQ",c:"s"},{t:"CHTR",n:"Charter Communications",x:"NASDAQ",c:"s"},
+];
+
+const gs=()=>{const n=new Date();return n<new Date(START)?"p":n>new Date(END)?"c":"l"};
+const du=d=>Math.max(0,Math.ceil((new Date(d)-new Date())/864e5));
+const fr=v=>{if(v==null)return null;const p=(v*100).toFixed(2);return v>=0?`+${p}%`:`${p}%`};
+const ago=d=>{const s=Math.floor((Date.now()-new Date(d).getTime())/1e3);if(s<60)return"just now";if(s<3600)return Math.floor(s/60)+"m ago";if(s<86400)return Math.floor(s/3600)+"h ago";return Math.floor(s/86400)+"d ago"};
+const COLORS=["#10b981","#f59e0b","#3b82f6","#ef4444","#8b5cf6","#ec4899","#06b6d4","#84cc16","#f97316","#6366f1","#14b8a6","#e11d48","#a855f7","#22d3ee","#facc15","#fb923c","#4ade80","#f472b6","#38bdf8","#a3e635"];
+
+/* FIX #1: Per-portfolio entry price aware return calculations */
+function stockReturn(ticker,prices,entryPrices){
+  const d=prices[ticker];if(!d||!d.sp||!d.cp)return null;
+  const base=entryPrices&&entryPrices[ticker]?entryPrices[ticker]:d.sp;
+  return(d.cp-base)/base;
+}
+function portfolioReturn(p,prices){
+  let s=0,c=0;
+  for(const t of p.tickers){const r=stockReturn(t,prices,p.entryPrices);if(r!=null){s+=r*0.2;c++}}
+  return c>0?s:null;
+}
+
+function RankBadge({rank}){
+  const m={1:"\u{1F947}",2:"\u{1F948}",3:"\u{1F949}"};
+  return React.createElement("div",{className:"rk "+(rank<=3?"rk"+rank:"rkn")},m[rank]||"#"+rank);
+}
+
+function TickerSearch({sel,onAdd,onRm,hideSlots,prices}){
+  const[q,setQ]=useState("");const[open,setOpen]=useState(false);const[tab,setTab]=useState("all");
+  const wr=useRef(null);
+  useEffect(()=>{const h=e=>{if(wr.current&&!wr.current.contains(e.target))setOpen(false)};document.addEventListener("mousedown",h);return()=>document.removeEventListener("mousedown",h)},[]);
+  const fl=U.filter(i=>{
+    if(sel.includes(i.t))return false;
+    if(tab==="as"&&!(i.x==="ASX"&&i.c==="s"))return false;
+    if(tab==="ae"&&!(i.x==="ASX"&&i.c==="e"))return false;
+    if(tab==="na"&&i.x!=="NASDAQ")return false;
+    if(!q.trim())return true;
+    const u=q.toUpperCase();return i.t.toUpperCase().includes(u)||i.n.toUpperCase().includes(u);
+  }).slice(0,14);
+  const pick=t=>{onAdd(t);setQ("");setOpen(false)};
+  const kd=e=>{if(e.key==="Enter"&&q.trim()){e.preventDefault();fl.length?pick(fl[0].t):onAdd(q.trim().toUpperCase())}};
+  const rem=PICKS-sel.length;
+  return(
+    <div className="fg">
+      {!hideSlots&&<><label className="fl">Select {PICKS} Securities ({sel.length}/{PICKS})</label>
+      <div className="ts">
+        {sel.map(t=><div key={t} className="tc">{t}{prices&&prices[t]?.cp&&<span style={{color:"var(--t4)",fontWeight:500,marginLeft:2}}>${prices[t].cp.toFixed(2)}</span>}<span className="x" onClick={()=>onRm(t)}>{"\u00D7"}</span></div>)}
+        {Array.from({length:rem}).map((_,i)=><div key={"e"+i} className="es">Slot {sel.length+i+1}</div>)}
+      </div></>}
+      <div className="sw" ref={wr}>
+        <input className="fi" value={q} onChange={e=>{setQ(e.target.value);setOpen(true)}} onFocus={()=>setOpen(true)} onKeyDown={kd} placeholder="Search ticker or company name..."/>
+        {!hideSlots&&<p className="ht">ASX: use .AX suffix (BHP.AX). NASDAQ: as-is (AAPL). Enter for custom tickers.</p>}
+        <div className={"sug "+(open?"open":"")}>
+          <div className="stabs">
+            {[["all","All"],["as","ASX Shares"],["ae","ASX ETFs"],["na","NASDAQ"]].map(function(a){return(
+              <button key={a[0]} className={"stab "+(tab===a[0]?"on":"")} onMouseDown={function(e){e.preventDefault();setTab(a[0])}}>{a[1]}</button>
+            )})}
+          </div>
+          {fl.length===0?<div style={{padding:14,textAlign:"center",color:"#475569",fontSize:13}}>No matches. Press Enter to add custom ticker.</div>:
+          fl.map(i=>(
+            <div key={i.t} className="si" onMouseDown={function(e){e.preventDefault();pick(i.t)}}>
+              <div><span className="stk">{i.t}</span><span className="snm">{i.n}</span></div>
+              <div style={{display:"flex",alignItems:"center",gap:8}}>
+                {prices&&prices[i.t]?.cp&&<span style={{fontFamily:"var(--fm)",fontSize:11,color:"var(--t3)",fontWeight:600}}>${prices[i.t].cp.toFixed(2)}</span>}
+                <span className={"ext "+(i.c==="e"?"ext-e":i.x==="ASX"?"ext-a":"ext-n")}>{i.c==="e"?"ETF":i.x}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PerfChart({portfolios,history}){
+  const ref=useRef(null),chart=useRef(null);
+  useEffect(()=>{
+    if(!ref.current||!portfolios.length||!history.length)return;
+    if(chart.current)chart.current.destroy();
+    const sorted=[...history].sort((a,b)=>new Date(a.d)-new Date(b.d));
+    const labels=sorted.map(h=>new Date(h.d).toLocaleDateString("en-AU",{day:"numeric",month:"short"}));
+    const datasets=portfolios.map((p,i)=>({
+      label:p.advisorName,
+      data:sorted.map(h=>{const v=h.r&&h.r[p.id];return v!=null?+(v*100).toFixed(2):null}),
+      borderColor:COLORS[i%COLORS.length],backgroundColor:COLORS[i%COLORS.length]+"20",
+      borderWidth:2,tension:.3,pointRadius:sorted.length>20?1:3,pointHoverRadius:5,spanGaps:true,
+    }));
+    chart.current=new Chart(ref.current,{
+      type:"line",data:{labels:labels,datasets:datasets},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:"index",intersect:false},
+        plugins:{legend:{position:"bottom",labels:{color:"#94a3b8",font:{family:"JetBrains Mono",size:11},boxWidth:12,padding:14}},
+          tooltip:{backgroundColor:"#1a1f2e",titleColor:"#f1f5f9",bodyColor:"#e2e8f0",borderColor:"rgba(255,255,255,0.1)",borderWidth:1,
+            titleFont:{family:"Outfit",weight:"600"},bodyFont:{family:"JetBrains Mono",size:12},
+            callbacks:{label:function(c){return c.dataset.label+": "+(c.parsed.y!=null?c.parsed.y.toFixed(2)+"%":"N/A")}}}},
+        scales:{x:{ticks:{color:"#475569",font:{family:"JetBrains Mono",size:10},maxRotation:45},grid:{color:"rgba(255,255,255,0.04)"}},
+          y:{ticks:{color:"#475569",font:{family:"JetBrains Mono",size:10},callback:function(v){return v.toFixed(1)+"%"}},grid:{color:"rgba(255,255,255,0.04)"},
+            title:{display:true,text:"Return %",color:"#475569",font:{family:"JetBrains Mono",size:11}}}}}
+    });
+    return()=>{if(chart.current)chart.current.destroy()};
+  },[portfolios,history]);
+  if(!portfolios.length||!history.length)return null;
+  return(
+    <div className="chwrap">
+      <div className="chtit">{"\u{1F4C8}"} Performance Over Time</div>
+      <div style={{position:"relative",height:Math.min(400,Math.max(240,portfolios.length*25+160))}}><canvas ref={ref}/></div>
+    </div>
+  );
+}
+
+function ActivityFeed({trades}){
+  if(!trades.length)return null;
+  const sorted=[...trades].sort((a,b)=>new Date(b.date)-new Date(a.date));
+  return(
+    <div className="card" style={{marginTop:0}}>
+      <div className="ctit"><span>{"\u{1F4AC}"}</span> Trade Activity</div>
+      {sorted.slice(0,20).map((t,i)=>(
+        <div key={i} className="feed-item">
+          <div className="feed-icon">{"\u{1F504}"}</div>
+          <div>
+            <div className="feed-text">
+              <span className="feed-name">{t.advisorName}</span>{" swapped "}
+              <span className="feed-tickers feed-out">{t.tickerOut}</span>
+              <span className="feed-arrow">{"\u2192"}</span>
+              <span className="feed-tickers feed-in">{t.tickerIn}</span>
+              <span style={{color:"var(--t5)",fontSize:11,marginLeft:6}}>(Trade {t.tradeNum}/{MAX_TRADES})</span>
+            </div>
+            <div className="feed-time">{ago(t.date)}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function Modal({p,prices,status,trades,onClose,onTrade}){
+  const[trading,setTrading]=useState(false);
+  const[pinGate,setPinGate]=useState(false);
+  const[pinInput,setPinInput]=useState("");
+  const[pinError,setPinError]=useState("");
+  const[sellTicker,setSellTicker]=useState(null);
+  const[buyTicker,setBuyTicker]=useState(null);
+  const[submitting,setSubmitting]=useState(false);
+  const[error,setError]=useState("");
+
+  if(!p)return null;
+
+  const pTrades=trades.filter(t=>t.portfolioId===p.id);
+  const tradesLeft=MAX_TRADES-pTrades.length;
+  const canTrade=status==="l"&&tradesLeft>0;
+
+  const sr=t=>stockReturn(t,prices,p.entryPrices);
+  const ret=portfolioReturn(p,prices);
+
+  const checkPin=()=>{
+    if(pinInput===p.pin){setPinGate(false);setPinError("");setPinInput("");setTrading(true)}
+    else{setPinError("Incorrect PIN")}
+  };
+  const pinKeyDown=e=>{if(e.key==="Enter"&&pinInput.length===4)checkPin()};
+
+  const doTrade=async()=>{
+    if(!sellTicker||!buyTicker){setError("Select a stock to sell and one to buy");return}
+    if(p.tickers.includes(buyTicker)){setError("You already hold "+buyTicker);return}
+    setSubmitting(true);setError("");
+    try{await onTrade(p,sellTicker,buyTicker,pTrades.length+1);
+      setTrading(false);setSellTicker(null);setBuyTicker(null);
+    }catch(e){setError("Trade failed — please try again")}
+    setSubmitting(false);
+  };
+
+  const resetUI=()=>{setTrading(false);setPinGate(false);setSellTicker(null);setBuyTicker(null);setError("");setPinInput("");setPinError("")};
+
+  return(
+    <div className="mo" onClick={onClose}><div className="mc" onClick={e=>e.stopPropagation()}>
+      <button className="mx" onClick={onClose}>{"\u00D7"}</button>
+      <div style={{fontSize:20,fontWeight:700,color:"var(--t1)"}}>{p.portfolioName}</div>
+      <div style={{fontSize:13,color:"var(--t4)",marginTop:3}}>{p.advisorName}</div>
+      <div style={{margin:"14px 0 18px",padding:"14px 0",borderTop:"1px solid var(--bdr)",borderBottom:"1px solid var(--bdr)"}}>
+        <div style={{fontSize:10,color:"var(--t4)",textTransform:"uppercase",letterSpacing:".08em",fontFamily:"var(--fm)",marginBottom:3}}>Total Portfolio Return</div>
+        <div style={{fontFamily:"var(--fm)",fontSize:30,fontWeight:700,color:ret==null?"var(--t5)":ret>=0?"var(--acc)":"var(--red)"}}>
+          {status==="p"?"Starts 1 Mar":fr(ret)||"Pending"}
+        </div>
+      </div>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:10}}>
+        <div style={{fontSize:10,color:"var(--t4)",textTransform:"uppercase",letterSpacing:".08em",fontFamily:"var(--fm)"}}>Holdings (20% each)</div>
+        <div className={"trade-badge "+(tradesLeft>0?"trade-badge-ok":"trade-badge-done")}>
+          {tradesLeft>0?tradesLeft+" trade"+(tradesLeft>1?"s":"")+" remaining":"No trades left"}
+        </div>
+      </div>
+      <div style={{display:"grid",gridTemplateColumns:"1fr 60px 70px",padding:"7px 0",fontSize:9,fontWeight:700,color:"var(--t5)",textTransform:"uppercase",letterSpacing:".08em",fontFamily:"var(--fm)",borderBottom:"1px solid var(--bdr)"}}>
+        <div>Ticker</div><div style={{textAlign:"center"}}>Weight</div><div style={{textAlign:"right"}}>Return</div>
+      </div>
+      {p.tickers.map(t=>{const r=sr(t),d=prices[t];return(
+        <div key={t} className="hr">
+          <div><div className="hrt">{t}</div>{d&&d.cp?<div className="hrp">{"$"+d.cp.toFixed(2)}</div>:null}</div>
+          <div className="hrw">20%</div>
+          <div className="hrr" style={{color:r==null?"var(--t5)":r>=0?"var(--acc)":"var(--red)"}}>{status==="p"?"\u2014":fr(r)||"\u2014"}</div>
+        </div>
+      )})}
+
+      {pTrades.length>0&&(
+        <div style={{marginTop:14,paddingTop:12,borderTop:"1px solid var(--bdr)"}}>
+          <div style={{fontSize:10,color:"var(--t4)",textTransform:"uppercase",letterSpacing:".08em",fontFamily:"var(--fm)",marginBottom:8}}>Trade History</div>
+          {pTrades.map((t,i)=>(
+            <div key={i} style={{fontSize:12,color:"var(--t3)",marginBottom:4,fontFamily:"var(--fm)"}}>
+              <span style={{color:"var(--red)"}}>{t.tickerOut}</span>
+              <span style={{color:"var(--t5)",margin:"0 6px"}}>{"\u2192"}</span>
+              <span style={{color:"var(--acc)"}}>{t.tickerIn}</span>
+              <span style={{color:"var(--t5)",marginLeft:8,fontSize:10}}>{ago(t.date)}</span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {canTrade&&!trading&&!pinGate&&(
+        <button className="btn-trade" onClick={()=>setPinGate(true)}>
+          {"\u{1F504}"} Make a Trade ({tradesLeft} remaining)
+        </button>
+      )}
+      {pinGate&&!trading&&(
+        <div className="trade-section">
+          <div className="pin-gate">
+            <p>{"\u{1F512}"} Enter your 4-digit PIN to trade</p>
+            <div className="pin-row">
+              <input className="fi fi-pin" type="password" maxLength={4} inputMode="numeric" value={pinInput}
+                onChange={e=>setPinInput(e.target.value.replace(/\D/g,""))} onKeyDown={pinKeyDown}
+                placeholder={"\u2022\u2022\u2022\u2022"} autoFocus/>
+              <button className="btn" style={{padding:"11px 20px"}} onClick={checkPin} disabled={pinInput.length!==4}>Unlock</button>
+            </div>
+            {pinError&&<p className="et" style={{marginTop:8}}>{pinError}</p>}
+            <button className="btn" style={{marginTop:12,fontSize:12}} onClick={resetUI}>Cancel</button>
+          </div>
+        </div>
+      )}
+      {trading&&(
+        <div className="trade-section">
+          <div style={{fontSize:14,fontWeight:600,color:"var(--t1)",marginBottom:10}}>{"\u{1F504}"} Swap a Holding</div>
+          <div style={{fontSize:11,color:"var(--t4)",fontFamily:"var(--fm)",textTransform:"uppercase",letterSpacing:".06em",marginBottom:8}}>Select stock to sell</div>
+          <div style={{display:"flex",flexWrap:"wrap",marginBottom:14}}>
+            {p.tickers.map(t=>(
+              <div key={t} className={"sell-chip "+(sellTicker===t?"selected":"")} onClick={()=>setSellTicker(t)}>{t}</div>
+            ))}
+          </div>
+          {sellTicker&&(<div>
+            <div style={{fontSize:11,color:"var(--t4)",fontFamily:"var(--fm)",textTransform:"uppercase",letterSpacing:".06em",marginBottom:6}}>Select replacement</div>
+            <TickerSearch sel={p.tickers} onAdd={t=>setBuyTicker(t)} onRm={()=>setBuyTicker(null)} hideSlots={true} prices={prices}/>
+            {buyTicker&&(
+              <div style={{padding:"10px 14px",borderRadius:8,background:"var(--accbg)",border:"1px solid var(--accbdr)",margin:"10px 0",fontFamily:"var(--fm)",fontSize:13,color:"var(--acc)",fontWeight:600}}>
+                Buying: {buyTicker}
+              </div>
+            )}
+          </div>)}
+          {error&&<p className="et">{error}</p>}
+          <div style={{display:"flex",gap:8,marginTop:12}}>
+            <button className="btn" onClick={resetUI}>Cancel</button>
+            <button className="btn-trade" style={{width:"auto",flex:1,marginTop:0}} onClick={doTrade}
+              disabled={!sellTicker||!buyTicker||submitting}>
+              {submitting?"Executing...":"Confirm Swap"}
+            </button>
+          </div>
+        </div>
+      )}
+    </div></div>
+  );
+}
+
+function App(){
+  const[ps,setPs]=useState([]);const[pr,setPr]=useState({});
+  const[hist,setHist]=useState([]);const[trades,setTrades]=useState([]);
+  const[vw,setVw]=useState("lb");const[loading,setLoading]=useState(true);
+  const[pst,setPst]=useState("idle");const[det,setDet]=useState(null);
+  const[nm,setNm]=useState("");const[pn,setPn]=useState("");const[pin,setPin]=useState("");
+  const[tk,setTk]=useState([]);const[fe,setFe]=useState("");const[sub,setSub]=useState(false);
+  const status=gs();
+  const regOpen=status==="p";
+
+  useEffect(()=>{
+    if(!db){setLoading(false);return}
+    const to=setTimeout(()=>setLoading(false),8000);
+    const u1=fbOnValue("portfolios",val=>{
+      const arr=val?Object.keys(val).map(k=>{
+        const raw=val[k];
+        return{id:k,advisorName:raw.advisorName,portfolioName:raw.portfolioName,pin:raw.pin,
+          tickers:raw.tickers,entryPrices:decMap(raw.entryPrices),createdAt:raw.createdAt};
+      }):[];
+      setPs(arr);setLoading(false);clearTimeout(to);
+    });
+    const u2=fbOnValue("prices",val=>{setPr(decMap(val))});
+    const u3=fbOnValue("history",val=>{setHist(val?Object.keys(val).map(k=>val[k]):[])});
+    const u4=fbOnValue("trades",val=>{setTrades(val?Object.keys(val).map(k=>val[k]):[])});
+    return()=>{u1();u2();u3();u4();clearTimeout(to)};
+  },[]);
+
+  const fetchPr=useCallback(async function(list){
+    if(status==="p"||!db)return;
+    const all=[...new Set(list.flatMap(p=>p.tickers))];if(!all.length)return;
+    setPst("loading");const upd=Object.assign({},pr);var ok=0;
+    for(const t of all){try{
+      const r=await fetch("https://query1.finance.yahoo.com/v8/finance/chart/"+encodeURIComponent(t)+"?range=1y&interval=1d");
+      if(!r.ok)continue;const d=await r.json(),res=d&&d.chart&&d.chart.result&&d.chart.result[0];if(!res)continue;
+      const cl=res.indicators.quote[0].close.filter(Boolean),ts=res.timestamp;
+      const sTs=new Date(START).getTime()/1000;var si=ts.findIndex(x=>x>=sTs);if(si<0)si=0;
+      const sp=cl[si]||cl[0],cp=cl[cl.length-1];
+      if(sp&&cp){upd[t]={sp:sp,cp:cp,u:new Date().toISOString()};ok++}
+    }catch(e){}}
+    await fbSet("prices",encMap(upd));
+    const snap={d:new Date().toISOString(),r:{}};
+    list.forEach(p=>{const ret=portfolioReturn(p,upd);if(ret!=null)snap.r[p.id]=ret});
+    if(Object.keys(snap.r).length>0)await fbPush("history",snap);
+    setPst(ok>0?"ok":"err");
+  },[status,pr,ps]);
+
+  const executeTrade=async function(portfolio,tickerOut,tickerIn,tradeNum){
+    const newTickers=portfolio.tickers.map(t=>t===tickerOut?tickerIn:t);
+    const ep=Object.assign({},portfolio.entryPrices||{});
+    delete ep[tickerOut];
+    if(pr[tickerIn]&&pr[tickerIn].cp){ep[tickerIn]=pr[tickerIn].cp}
+    await fbUpdate("portfolios/"+portfolio.id,{tickers:newTickers,entryPrices:encMap(ep)});
+    await fbPush("trades",{
+      portfolioId:portfolio.id,advisorName:portfolio.advisorName,
+      tickerOut:tickerOut,tickerIn:tickerIn,tradeNum:tradeNum,date:new Date().toISOString()
+    });
+    setDet(Object.assign({},portfolio,{tickers:newTickers,entryPrices:ep}));
+  };
+
+  // Derive last-updated time from most recent price timestamp
+  const lastUpdated=(()=>{const times=Object.values(pr).map(p=>p?.u).filter(Boolean);return times.length?times.sort().pop():null})();
+
+  const ranked=[...ps].sort((a,b)=>{
+    const ra=portfolioReturn(a,pr),rb=portfolioReturn(b,pr);
+    if(ra==null&&rb==null)return 0;if(ra==null)return 1;if(rb==null)return -1;return rb-ra;
+  });
+  const addT=t=>{const v=t.trim().toUpperCase();if(!v)return;if(tk.length>=PICKS){setFe("Maximum 5 stocks");return}if(tk.includes(v)){setFe(v+" already selected");return}setTk([...tk,v]);setFe("")};
+  const rmT=t=>{setTk(tk.filter(x=>x!==t));setFe("")};
+
+  const submit=async()=>{
+    if(!nm.trim()){setFe("Please enter your name");return}
+    if(!pn.trim()){setFe("Please enter a portfolio name");return}
+    if(pin.length!==4){setFe("Please set a 4-digit PIN");return}
+    if(tk.length!==PICKS){setFe("Select exactly "+PICKS+" stocks");return}
+    if(ps.some(p=>p.advisorName.toLowerCase()===nm.trim().toLowerCase())){setFe("That name is already registered");return}
+    if(!db){setFe("Firebase not configured");return}
+    setSub(true);
+    try{
+      await fbPush("portfolios",{
+        advisorName:nm.trim(),portfolioName:pn.trim(),pin:pin,
+        tickers:[...tk],entryPrices:null,createdAt:new Date().toISOString()
+      });
+      setNm("");setPn("");setPin("");setTk([]);setFe("");setVw("lb");
+    }catch(e){setFe("Failed to save")}
+    setSub(false);
+  };
+
+  if(loading)return(
+    <div style={{textAlign:"center",paddingTop:120}}>
+      <div className="logo" style={{margin:"0 auto 16px"}}>RR</div>
+      <div style={{color:"var(--t4)",fontFamily:"var(--fm)",fontSize:13}}><span className="spin"></span> Loading...</div>
+    </div>
+  );
+
+  return(
+    <div>
+      {!CONFIGURED&&(
+        <div className="cfg-banner">
+          <h3>{"\u26A0\uFE0F"} Firebase Not Configured</h3>
+          <p>Open index.html and replace the placeholder values in firebaseConfig.</p>
+        </div>
+      )}
+
+      <header className="hdr">
+        <div className="logo">RR</div>
+        <h1>The Returns Roundtable</h1>
+        <p className="tag">5 Stocks {"\u00B7"} 3 Trades {"\u00B7"} 12 Months {"\u00B7"} 1 Winner</p>
+        <div className="inaugural">{"\u{1F3C6}"} Inaugural Tournament {"\u{1F3C6}"}</div>
+        <div className="meta">
+          <span className="badge">{"\u{1F4C5}"} 1 Mar 2026 {"\u2192"} 28 Feb 2027</span>
+          <span className={"st st-"+(status==="p"?"p":status==="l"?"l":"c")}>
+            {status==="p"&&("\u23F3 Starts in "+du(START)+" days")}{status==="l"&&<span><span className="live-dot"></span>LIVE</span>}{status==="c"&&"\u{1F3C1} COMPLETE"}
+          </span>
+          <span className="badge">{"\u{1F465}"} {ps.length} registered</span>
+        </div>
+      </header>
+
+      <div className="nav">
+        <div className="navl">
+          <button className={"btn "+(vw==="lb"?"on":"")} onClick={()=>setVw("lb")}>Leaderboard</button>
+          {regOpen?(
+            <button className={"btn "+(vw==="reg"?"on":"")} onClick={()=>setVw("reg")}>+ Register</button>
+          ):(
+            <button className="btn dis" title="Registration closed">+ Register</button>
+          )}
+        </div>
+        {status==="l"&&vw==="lb"&&<button className="btn" onClick={()=>fetchPr(ps)} disabled={pst==="loading"} title="Prices auto-update daily via GitHub Actions">{pst==="loading"?<span><span className="spin"></span>Refreshing...</span>:"\u21BB Refresh Prices"}</button>}
+      </div>
+
+      {vw==="reg"&&regOpen&&(
+        <div className="card">
+          <div className="ctit"><span>{"\u{1F4DD}"}</span> Register Your Portfolio</div>
+          <div className="fr">
+            <div className="fg"><label className="fl">Your Name</label><input className="fi" value={nm} onChange={e=>setNm(e.target.value)} placeholder="e.g. James Smith"/></div>
+            <div className="fg"><label className="fl">Portfolio Name</label><input className="fi" value={pn} onChange={e=>setPn(e.target.value)} placeholder="e.g. Tech Titans"/></div>
+          </div>
+          <div className="fg">
+            <label className="fl">Trade PIN (4 digits)</label>
+            <input className="fi fi-pin" type="password" maxLength={4} inputMode="numeric" value={pin}
+              onChange={e=>setPin(e.target.value.replace(/\D/g,""))} placeholder={"\u2022\u2022\u2022\u2022"}/>
+            <p className="ht">You will need this PIN to make trades during the competition. Remember it!</p>
+          </div>
+          <TickerSearch sel={tk} onAdd={addT} onRm={rmT} prices={pr}/>
+          {fe&&<p className="et">{fe}</p>}
+          <button className="btn1" style={{marginTop:6}} onClick={submit} disabled={!CONFIGURED||!nm.trim()||!pn.trim()||pin.length!==4||tk.length!==PICKS||sub}>{sub?"Submitting...":"Submit Portfolio \u2192"}</button>
+        </div>
+      )}
+      {vw==="reg"&&!regOpen&&(
+        <div className="card">
+          <div className="reg-closed">
+            <div style={{fontSize:32,marginBottom:10}}>{"\u{1F512}"}</div>
+            <div style={{fontSize:16,fontWeight:600,color:"var(--t1)",marginBottom:6}}>Registration Closed</div>
+            <div>Registration closed when the competition started on 1 March 2026.</div>
+          </div>
+        </div>
+      )}
+
+      {vw==="lb"&&(
+        <div>
+          <div className="card">
+            <div className="ctit"><span>{"\u{1F3C6}"}</span> Leaderboard
+              {status==="l"&&lastUpdated&&<span style={{marginLeft:"auto",fontSize:10,fontWeight:500,color:"var(--t5)",fontFamily:"var(--fm)"}}>Updated {ago(lastUpdated)}</span>}
+            </div>
+            {ps.length===0?(
+              <div className="empty">
+                <div style={{fontSize:44,marginBottom:12}}>{"\u{1F4CA}"}</div>
+                <div style={{fontSize:17,color:"var(--t1)",fontWeight:600}}>No portfolios yet</div>
+                <div style={{color:"var(--t4)",marginTop:5,fontSize:14}}>Be the first to enter the inaugural tournament!</div>
+                {regOpen&&<button className="btn" style={{marginTop:14}} onClick={()=>setVw("reg")}>Register Now {"\u2192"}</button>}
+              </div>
+            ):(
+              <div>
+                <div className="lbh"><div>#</div><div>Adviser</div><div className="ch">Holdings</div><div style={{textAlign:"right"}}>Return</div></div>
+                {ranked.map((p,i)=>{const ret=portfolioReturn(p,pr);return(
+                  <div key={p.id} className="lbr" onClick={()=>setDet(p)}>
+                    <RankBadge rank={i+1}/>
+                    <div><div className="an">{p.advisorName}</div><div className="pn">{p.portfolioName}</div></div>
+                    <div className="ch">{p.tickers.map(t=><span key={t} className="mt">{t}{pr[t]?.cp&&<span style={{color:"var(--t5)",fontWeight:500,marginLeft:3}}>${pr[t].cp.toFixed(2)}</span>}</span>)}</div>
+                    <div className={"cr "+(ret==null?"crx":ret>=0?"crp":"crn")}>{status==="p"?"\u2014":ret==null?"Pending":fr(ret)}</div>
+                  </div>
+                )})}
+                <PerfChart portfolios={ps} history={hist}/>
+                {pst==="err"&&status==="l"&&<p className="ht" style={{textAlign:"center",marginTop:14}}>Manual refresh unavailable due to browser restrictions. Prices update automatically overnight via GitHub Actions.</p>}
+              </div>
+            )}
+          </div>
+          <ActivityFeed trades={trades}/>
+        </div>
+      )}
+
+      <Modal p={det} prices={pr} status={status} trades={trades} onClose={()=>setDet(null)} onTrade={executeTrade}/>
+      <div className="footer">The Returns Roundtable {"\u00B7"} Inaugural Tournament {"\u00B7"} Equal Weighted 20%</div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("app")).render(<App/>);
+</script>
+</body>
+</html>
+
+<meta charset="UTF-<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Returns Roundtable</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg0:#0a0c10;--bg1:#0f1219;--bg2:#111827;--bgc:rgba(255,255,255,0.03);
+  --bdr:rgba(255,255,255,0.06);--bdr2:rgba(255,255,255,0.12);
+  --t1:#f1f5f9;--t2:#e2e8f0;--t3:#94a3b8;--t4:#64748b;--t5:#475569;
+  --acc:#10b981;--acc2:#059669;--accg:rgba(16,185,129,0.2);--accbg:rgba(16,185,129,0.1);--accbdr:rgba(16,185,129,0.25);
+  --red:#ef4444;--gold:#fbbf24;--silver:#94a3b8;--bronze:#d97706;
+  --blue:#60a5fa;--bluebg:rgba(59,130,246,0.15);
+  --purple:#c084fc;--purplebg:rgba(168,85,247,0.15);
+  --yellow:#eab308;--yellowbg:rgba(234,179,8,0.1);--yellowbdr:rgba(234,179,8,0.2);
+  --indigo:#818cf8;--indigobg:rgba(99,102,241,0.1);--indigobdr:rgba(99,102,241,0.2);
+  --orange:#f97316;--orangebg:rgba(249,115,22,0.1);--orangebdr:rgba(249,115,22,0.25);
+  --f:'Outfit','Segoe UI',sans-serif;--fm:'JetBrains Mono','Courier New',monospace;
+}
+body{min-height:100vh;background:linear-gradient(145deg,var(--bg0) 0%,var(--bg1) 40%,var(--bg2) 100%);color:var(--t2);font-family:var(--f);line-height:1.5;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+.ctr{max-width:1020px;margin:0 auto;padding:32px 20px 60px;position:relative;z-index:1}
+.hdr{text-align:center;margin-bottom:32px}
+.logo{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--acc),#06d6a0);font-size:22px;font-weight:800;color:var(--bg0);font-family:var(--fm);box-shadow:0 0 40px var(--accg);margin-bottom:14px}
+.hdr h1{font-size:clamp(24px,5vw,34px);font-weight:700;letter-spacing:-.03em;background:linear-gradient(135deg,#f0fdf4,#86efac);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.15}
+.tag{font-size:13px;color:var(--t4);font-family:var(--fm);letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
+.inaugural{display:inline-block;margin-top:12px;padding:6px 16px;border-radius:20px;background:linear-gradient(135deg,rgba(251,191,36,0.1),rgba(245,158,11,0.05));border:1px solid rgba(251,191,36,0.25);font-size:11px;font-weight:600;color:var(--gold);font-family:var(--fm);letter-spacing:.08em;text-transform:uppercase}
+.meta{display:flex;justify-content:center;gap:10px;margin-top:14px;flex-wrap:wrap}
+.badge{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--bdr);font-size:11px;color:var(--t3);font-family:var(--fm);white-space:nowrap}
+.st{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:18px;font-size:11px;font-weight:600;font-family:var(--fm)}
+.st-p{background:var(--yellowbg);border:1px solid var(--yellowbdr);color:var(--yellow)}
+.st-l{background:var(--accbg);border:1px solid var(--accbdr);color:var(--acc)}
+.st-c{background:var(--indigobg);border:1px solid var(--indigobdr);color:var(--indigo)}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:10px}
+.navl{display:flex;gap:8px;flex-wrap:wrap}
+.btn{font-family:var(--f);font-size:13px;font-weight:500;padding:9px 18px;border-radius:8px;cursor:pointer;transition:all .2s;border:1px solid var(--bdr);background:rgba(255,255,255,.04);color:var(--t3)}
+.btn:hover{border-color:var(--bdr2);color:var(--t2)}
+.btn.on{border-color:rgba(16,185,129,.4);color:var(--acc)}
+.btn.dis{opacity:.4;cursor:not-allowed;pointer-events:none}
+.btn1{width:100%;padding:14px;border-radius:10px;border:none;font-family:var(--f);font-size:15px;font-weight:600;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;cursor:pointer;transition:all .2s;box-shadow:0 4px 24px var(--accg)}
+.btn1:hover{transform:translateY(-1px);box-shadow:0 6px 30px var(--accg)}
+.btn1:disabled{opacity:.35;cursor:not-allowed;box-shadow:none;transform:none}
+.btn-trade{padding:10px 20px;border-radius:8px;border:1px solid var(--orangebdr);background:var(--orangebg);color:var(--orange);font-family:var(--f);font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;width:100%;margin-top:14px}
+.btn-trade:hover{background:rgba(249,115,22,.18)}.btn-trade:disabled{opacity:.35;cursor:not-allowed}
+.card{background:var(--bgc);border:1px solid var(--bdr);border-radius:16px;padding:24px;margin-bottom:18px;backdrop-filter:blur(20px)}
+.ctit{font-size:17px;font-weight:600;color:var(--t1);display:flex;align-items:center;gap:9px;margin-bottom:18px}
+.ctit span{font-size:20px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.fr{grid-template-columns:1fr}}
+.fg{margin-bottom:18px}
+.fl{display:block;font-size:11px;font-weight:600;color:var(--t4);text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px;font-family:var(--fm)}
+.fi{width:100%;padding:11px 14px;border-radius:9px;border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.35);color:var(--t2);font-size:14px;font-family:var(--f);outline:none;transition:border-color .2s}
+.fi::placeholder{color:var(--t5)}.fi:focus{border-color:var(--acc)}
+.fi-pin{width:120px;text-align:center;letter-spacing:.3em;font-family:var(--fm);font-size:18px;font-weight:700}
+.ht{font-size:11px;color:var(--t5);margin-top:5px}
+.et{color:var(--red);font-size:12px;margin-top:7px;font-family:var(--fm)}
+.ts{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.tc{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border-radius:7px;background:var(--accbg);border:1px solid var(--accbdr);color:var(--acc);font-size:12px;font-family:var(--fm);font-weight:600;animation:ci .2s ease-out}
+@keyframes ci{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+.tc .x{cursor:pointer;opacity:.5;font-size:15px;line-height:1;transition:opacity .15s}.tc .x:hover{opacity:1}
+.es{display:inline-flex;align-items:center;justify-content:center;padding:7px 12px;border-radius:7px;border:1px dashed rgba(255,255,255,.1);color:var(--t5);font-size:11px;font-family:var(--fm);min-width:72px}
+.sw{position:relative}
+.sug{position:absolute;top:calc(100% + 3px);left:0;right:0;max-height:260px;overflow-y:auto;background:#1a1f2e;border:1px solid rgba(255,255,255,.1);border-radius:10px;z-index:100;box-shadow:0 16px 48px rgba(0,0,0,.55);display:none}
+.sug.open{display:block}
+.stabs{display:flex;border-bottom:1px solid rgba(255,255,255,.06);padding:0 4px;position:sticky;top:0;background:#1a1f2e;z-index:1}
+.stab{padding:7px 12px;font-size:10px;font-family:var(--fm);font-weight:600;color:var(--t5);cursor:pointer;border:none;border-bottom:2px solid transparent;transition:all .15s;text-transform:uppercase;letter-spacing:.05em;background:none}
+.stab:hover{color:var(--t3)}.stab.on{color:var(--acc);border-bottom-color:var(--acc)}
+.si{padding:9px 12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:13px;transition:background .1s;border-bottom:1px solid rgba(255,255,255,.03)}
+.si:hover{background:rgba(255,255,255,.05)}.si:last-child{border-bottom:none}
+.stk{font-family:var(--fm);font-weight:700;color:var(--t2);font-size:13px}
+.snm{color:var(--t4);font-size:11px;margin-left:8px}
+.ext{font-family:var(--fm);font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600}
+.ext-a{background:var(--bluebg);color:var(--blue)}
+.ext-n{background:var(--purplebg);color:var(--purple)}
+.ext-e{background:rgba(16,185,129,.12);color:#34d399}
+.lbh{display:grid;grid-template-columns:42px 1.2fr 1.5fr 100px;padding:9px 14px;font-size:10px;font-weight:700;color:var(--t5);text-transform:uppercase;letter-spacing:.08em;font-family:var(--fm)}
+.lbr{display:grid;grid-template-columns:42px 1.2fr 1.5fr 100px;align-items:center;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.03);transition:background .15s;cursor:pointer}
+.lbr:hover{background:rgba(255,255,255,.025)}
+@media(max-width:640px){.lbh,.lbr{grid-template-columns:36px 1fr 90px}.lbh .ch,.lbr .ch{display:none}}
+.rk{font-family:var(--fm);font-weight:700;font-size:16px}
+.rk1{color:var(--gold)}.rk2{color:var(--silver)}.rk3{color:var(--bronze)}.rkn{color:var(--t5)}
+.an{font-size:14px;font-weight:600;color:var(--t1)}
+.pn{font-size:11px;color:var(--t4);margin-top:1px}
+.ch{display:flex;gap:4px;flex-wrap:wrap}
+.mt{font-family:var(--fm);font-size:10px;font-weight:600;padding:2px 6px;border-radius:3px;background:rgba(255,255,255,.05);color:var(--t3)}
+.cr{text-align:right;font-family:var(--fm);font-weight:700;font-size:14px}
+.crp{color:var(--acc)}.crn{color:var(--red)}.crx{color:var(--t5);font-weight:500;font-size:12px}
+.mo{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;animation:fi .2s}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+.mc{background:#13161f;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:28px;max-width:540px;width:100%;max-height:85vh;overflow-y:auto;position:relative;animation:su .25s ease-out}
+@keyframes su{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.mx{position:absolute;top:14px;right:14px;background:none;border:none;color:var(--t4);font-size:24px;cursor:pointer;padding:4px;line-height:1}.mx:hover{color:var(--t2)}
+.hr{display:grid;grid-template-columns:1fr 65px 75px;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.hr:last-child{border-bottom:none}
+.hrt{font-family:var(--fm);font-weight:700;font-size:13px;color:var(--t2)}
+.hrp{font-size:11px;color:var(--t5);font-weight:400;margin-top:1px}
+.hrw{font-family:var(--fm);font-size:11px;color:var(--t4);text-align:center}
+.hrr{font-family:var(--fm);font-weight:600;font-size:13px;text-align:right}
+.empty{text-align:center;padding:44px 20px;color:var(--t4)}
+.footer{text-align:center;margin-top:36px;font-size:11px;color:#1e293b;font-family:var(--fm)}
+.spin{display:inline-block;width:14px;height:14px;border:2px solid var(--bdr);border-top-color:var(--acc);border-radius:50%;animation:sp .6s linear infinite;vertical-align:middle;margin-right:6px}
+@keyframes sp{to{transform:rotate(360deg)}}
+.chwrap{margin-top:18px;padding:16px;background:rgba(0,0,0,.2);border-radius:12px;border:1px solid var(--bdr)}
+.chtit{font-size:13px;font-weight:600;color:var(--t3);margin-bottom:12px;font-family:var(--fm);text-transform:uppercase;letter-spacing:.06em}
+.sug::-webkit-scrollbar{width:6px}.sug::-webkit-scrollbar-track{background:transparent}.sug::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:3px}
+.cfg-banner{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);border-radius:12px;padding:16px 20px;margin-bottom:20px;text-align:center}
+.cfg-banner h3{color:var(--red);font-size:14px;margin-bottom:6px}.cfg-banner p{color:var(--t3);font-size:12px;font-family:var(--fm)}
+.live-dot{width:8px;height:8px;border-radius:50%;background:var(--acc);display:inline-block;margin-right:6px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.feed-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.04);align-items:flex-start}
+.feed-item:last-child{border-bottom:none}
+.feed-icon{width:32px;height:32px;border-radius:8px;background:var(--orangebg);border:1px solid var(--orangebdr);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.feed-text{font-size:13px;color:var(--t2);line-height:1.5}
+.feed-name{font-weight:600;color:var(--t1)}
+.feed-tickers{font-family:var(--fm);font-weight:600;font-size:12px}
+.feed-out{color:var(--red)}.feed-in{color:var(--acc)}
+.feed-time{font-size:10px;color:var(--t5);font-family:var(--fm);margin-top:2px}
+.feed-arrow{color:var(--t4);margin:0 4px}
+.trade-section{margin-top:16px;padding-top:16px;border-top:1px solid var(--bdr)}
+.trade-badge{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:12px;font-size:11px;font-family:var(--fm);font-weight:600}
+.trade-badge-ok{background:var(--orangebg);border:1px solid var(--orangebdr);color:var(--orange)}
+.trade-badge-done{background:rgba(255,255,255,.04);border:1px solid var(--bdr);color:var(--t5)}
+.sell-chip{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;cursor:pointer;font-family:var(--fm);font-size:12px;font-weight:600;transition:all .15s;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.03);color:var(--t3);margin:4px 4px 4px 0}
+.sell-chip:hover{border-color:var(--red);color:var(--red);background:rgba(239,68,68,.08)}
+.sell-chip.selected{border-color:var(--red);color:var(--red);background:rgba(239,68,68,.1)}
+.pin-gate{text-align:center;padding:12px 0}
+.pin-gate p{font-size:13px;color:var(--t3);margin-bottom:12px}
+.pin-row{display:flex;align-items:center;justify-content:center;gap:10px}
+.reg-closed{text-align:center;padding:20px;color:var(--t4);font-size:13px;border:1px dashed rgba(255,255,255,.1);border-radius:12px;margin-top:10px}
+</style>
+</head>
+<body>
+<div id="app" class="ctr"></div>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+<script>
+const firebaseConfig = {
+  apiKey:            "AIzaSyDcCCzORetz78V4Osc38M_Nv-JRlw_sOq8",
+  authDomain:        "stock-picking-challenge-3882f.firebaseapp.com",
+  databaseURL:       "https://stock-picking-challenge-3882f-default-rtdb.firebaseio.com",
+  projectId:         "stock-picking-challenge-3882f",
+  storageBucket:     "stock-picking-challenge-3882f.firebasestorage.app",
+  messagingSenderId: "636945009913",
+  appId:             "1:636945009913:web:92af7a5d85d5a91b5fa628"
+};
+const CONFIGURED = firebaseConfig.apiKey !== "YOUR_API_KEY_HERE";
+if (CONFIGURED) firebase.initializeApp(firebaseConfig);
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+<script type="text/babel">
+const {useState,useEffect,useRef,useCallback}=React;
+const START="2026-03-01",END="2027-02-28",PICKS=5,MAX_TRADES=3;
+
+const db=typeof CONFIGURED!=="undefined"&&CONFIGURED?firebase.database():null;
+const dbRef=path=>db?db.ref(path):null;
+const encKey=k=>k.replace(/\./g,"_DOT_");
+const decKey=k=>k.replace(/_DOT_/g,".");
+function encMap(o){if(!o)return null;const r={};for(const[k,v]of Object.entries(o))r[encKey(k)]=v;return r}
+function decMap(o){if(!o)return {};const r={};for(const[k,v]of Object.entries(o))r[decKey(k)]=v;return r}
+function fbSet(p,v){return db?dbRef(p).set(v):Promise.resolve()}
+function fbPush(p,v){return db?dbRef(p).push(v):Promise.resolve()}
+function fbUpdate(p,v){return db?dbRef(p).update(v):Promise.resolve()}
+function fbOnValue(p,cb){
+  if(!db)return ()=>{};
+  const ref=dbRef(p);const h=snap=>{cb(snap.exists()?snap.val():null)};
+  ref.on("value",h);return ()=>ref.off("value",h);
+}
+
+const U=[
+{t:"BHP.AX",n:"BHP Group",x:"ASX",c:"s"},{t:"CBA.AX",n:"Commonwealth Bank",x:"ASX",c:"s"},
+{t:"CSL.AX",n:"CSL Limited",x:"ASX",c:"s"},{t:"WBC.AX",n:"Westpac",x:"ASX",c:"s"},
+{t:"NAB.AX",n:"National Australia Bank",x:"ASX",c:"s"},{t:"ANZ.AX",n:"ANZ Group",x:"ASX",c:"s"},
+{t:"WES.AX",n:"Wesfarmers",x:"ASX",c:"s"},{t:"MQG.AX",n:"Macquarie Group",x:"ASX",c:"s"},
+{t:"FMG.AX",n:"Fortescue",x:"ASX",c:"s"},{t:"TLS.AX",n:"Telstra",x:"ASX",c:"s"},
+{t:"RIO.AX",n:"Rio Tinto",x:"ASX",c:"s"},{t:"WDS.AX",n:"Woodside Energy",x:"ASX",c:"s"},
+{t:"ALL.AX",n:"Aristocrat Leisure",x:"ASX",c:"s"},{t:"GMG.AX",n:"Goodman Group",x:"ASX",c:"s"},
+{t:"TCL.AX",n:"Transurban",x:"ASX",c:"s"},{t:"COL.AX",n:"Coles Group",x:"ASX",c:"s"},
+{t:"WOW.AX",n:"Woolworths",x:"ASX",c:"s"},{t:"REA.AX",n:"REA Group",x:"ASX",c:"s"},
+{t:"JHX.AX",n:"James Hardie",x:"ASX",c:"s"},{t:"STO.AX",n:"Santos",x:"ASX",c:"s"},
+{t:"XRO.AX",n:"Xero",x:"ASX",c:"s"},{t:"SHL.AX",n:"Sonic Healthcare",x:"ASX",c:"s"},
+{t:"QBE.AX",n:"QBE Insurance",x:"ASX",c:"s"},{t:"ORG.AX",n:"Origin Energy",x:"ASX",c:"s"},
+{t:"MIN.AX",n:"Mineral Resources",x:"ASX",c:"s"},{t:"CPU.AX",n:"Computershare",x:"ASX",c:"s"},
+{t:"SUN.AX",n:"Suncorp",x:"ASX",c:"s"},{t:"IAG.AX",n:"Insurance Australia",x:"ASX",c:"s"},
+{t:"APA.AX",n:"APA Group",x:"ASX",c:"s"},{t:"CAR.AX",n:"CAR Group",x:"ASX",c:"s"},
+{t:"SEK.AX",n:"Seek",x:"ASX",c:"s"},{t:"TWE.AX",n:"Treasury Wine Estates",x:"ASX",c:"s"},
+{t:"PME.AX",n:"Pro Medicus",x:"ASX",c:"s"},{t:"WTC.AX",n:"WiseTech Global",x:"ASX",c:"s"},
+{t:"TNE.AX",n:"TechnologyOne",x:"ASX",c:"s"},{t:"LYC.AX",n:"Lynas Rare Earths",x:"ASX",c:"s"},
+{t:"RMD.AX",n:"ResMed",x:"ASX",c:"s"},{t:"ALD.AX",n:"Ampol",x:"ASX",c:"s"},
+{t:"EVN.AX",n:"Evolution Mining",x:"ASX",c:"s"},{t:"NST.AX",n:"Northern Star",x:"ASX",c:"s"},
+{t:"MPL.AX",n:"Medibank Private",x:"ASX",c:"s"},{t:"ORI.AX",n:"Orica",x:"ASX",c:"s"},
+{t:"AMC.AX",n:"Amcor",x:"ASX",c:"s"},{t:"BSL.AX",n:"BlueScope Steel",x:"ASX",c:"s"},
+{t:"DXS.AX",n:"Dexus",x:"ASX",c:"s"},{t:"GPT.AX",n:"GPT Group",x:"ASX",c:"s"},
+{t:"MGR.AX",n:"Mirvac Group",x:"ASX",c:"s"},{t:"SGP.AX",n:"Stockland",x:"ASX",c:"s"},
+{t:"VCX.AX",n:"Vicinity Centres",x:"ASX",c:"s"},{t:"SCG.AX",n:"Scentre Group",x:"ASX",c:"s"},
+{t:"CHC.AX",n:"Charter Hall",x:"ASX",c:"s"},{t:"LLC.AX",n:"Lendlease",x:"ASX",c:"s"},
+{t:"IEL.AX",n:"IDP Education",x:"ASX",c:"s"},{t:"NHF.AX",n:"nib Holdings",x:"ASX",c:"s"},
+{t:"QAN.AX",n:"Qantas Airways",x:"ASX",c:"s"},{t:"SVW.AX",n:"Seven Group",x:"ASX",c:"s"},
+{t:"NWS.AX",n:"News Corp",x:"ASX",c:"s"},{t:"TAH.AX",n:"Tabcorp",x:"ASX",c:"s"},
+{t:"PLS.AX",n:"Pilbara Minerals",x:"ASX",c:"s"},{t:"IGO.AX",n:"IGO Limited",x:"ASX",c:"s"},
+{t:"AZJ.AX",n:"Aurizon",x:"ASX",c:"s"},{t:"SOL.AX",n:"WH Soul Pattinson",x:"ASX",c:"s"},
+{t:"ALX.AX",n:"Atlas Arteria",x:"ASX",c:"s"},{t:"FPH.AX",n:"Fisher & Paykel Healthcare",x:"ASX",c:"s"},
+{t:"CWY.AX",n:"Cleanaway Waste",x:"ASX",c:"s"},{t:"ILU.AX",n:"Iluka Resources",x:"ASX",c:"s"},
+{t:"ZIP.AX",n:"Zip Co",x:"ASX",c:"s"},{t:"HUB.AX",n:"Hub24",x:"ASX",c:"s"},
+{t:"NWL.AX",n:"Netwealth",x:"ASX",c:"s"},{t:"PDN.AX",n:"Paladin Energy",x:"ASX",c:"s"},
+{t:"WHC.AX",n:"Whitehaven Coal",x:"ASX",c:"s"},{t:"S32.AX",n:"South32",x:"ASX",c:"s"},
+{t:"BRN.AX",n:"Brainchip",x:"ASX",c:"s"},{t:"WBT.AX",n:"Weebit Nano",x:"ASX",c:"s"},
+{t:"SFR.AX",n:"Sandfire Resources",x:"ASX",c:"s"},{t:"DRR.AX",n:"Deterra Royalties",x:"ASX",c:"s"},
+{t:"AGL.AX",n:"AGL Energy",x:"ASX",c:"s"},{t:"TPG.AX",n:"TPG Telecom",x:"ASX",c:"s"},
+{t:"CEN.AX",n:"Contact Energy",x:"ASX",c:"s"},{t:"JBH.AX",n:"JB Hi-Fi",x:"ASX",c:"s"},
+{t:"A200.AX",n:"BetaShares Australia 200",x:"ASX",c:"e"},{t:"AAA.AX",n:"BetaShares High Interest Cash",x:"ASX",c:"e"},
+{t:"NDQ.AX",n:"BetaShares NASDAQ 100",x:"ASX",c:"e"},{t:"HNDQ.AX",n:"BetaShares NASDAQ 100 Hedged",x:"ASX",c:"e"},
+{t:"DHHF.AX",n:"BetaShares Diversified All Growth",x:"ASX",c:"e"},{t:"DZZF.AX",n:"BetaShares Ethical Diversified HG",x:"ASX",c:"e"},
+{t:"DGGF.AX",n:"BetaShares Ethical Diversified Growth",x:"ASX",c:"e"},{t:"DBBF.AX",n:"BetaShares Ethical Diversified Balanced",x:"ASX",c:"e"},
+{t:"BGBL.AX",n:"BetaShares Global Shares",x:"ASX",c:"e"},{t:"ATEC.AX",n:"BetaShares S&P/ASX Technology",x:"ASX",c:"e"},
+{t:"HACK.AX",n:"BetaShares Global Cybersecurity",x:"ASX",c:"e"},{t:"RBTZ.AX",n:"BetaShares Global Robotics & AI",x:"ASX",c:"e"},
+{t:"CLDD.AX",n:"BetaShares Cloud Computing",x:"ASX",c:"e"},{t:"SEMI.AX",n:"BetaShares Global Semiconductors",x:"ASX",c:"e"},
+{t:"GAME.AX",n:"BetaShares Video Games & Esports",x:"ASX",c:"e"},{t:"DRIV.AX",n:"BetaShares Electric Vehicles",x:"ASX",c:"e"},
+{t:"IPAY.AX",n:"BetaShares Future of Payments",x:"ASX",c:"e"},{t:"IBUY.AX",n:"BetaShares Online Retail",x:"ASX",c:"e"},
+{t:"ASIA.AX",n:"BetaShares Asia Technology Tigers",x:"ASX",c:"e"},{t:"CRYP.AX",n:"BetaShares Crypto Innovators",x:"ASX",c:"e"},
+{t:"ETHI.AX",n:"BetaShares Global Sustainability Leaders",x:"ASX",c:"e"},{t:"HETH.AX",n:"BetaShares Global Sustainability Hedged",x:"ASX",c:"e"},
+{t:"FAIR.AX",n:"BetaShares Aus Sustainability Leaders",x:"ASX",c:"e"},{t:"ERTH.AX",n:"BetaShares Climate Change Innovation",x:"ASX",c:"e"},
+{t:"QLTY.AX",n:"BetaShares Global Quality Leaders",x:"ASX",c:"e"},{t:"HQLT.AX",n:"BetaShares Global Quality Hedged",x:"ASX",c:"e"},
+{t:"INCM.AX",n:"BetaShares Global Income Leaders",x:"ASX",c:"e"},{t:"IIND.AX",n:"BetaShares India Quality",x:"ASX",c:"e"},
+{t:"QUS.AX",n:"BetaShares S&P 500 Equal Weight",x:"ASX",c:"e"},{t:"F100.AX",n:"BetaShares FTSE 100",x:"ASX",c:"e"},
+{t:"QOZ.AX",n:"BetaShares FTSE RAFI Australia 200",x:"ASX",c:"e"},{t:"EX20.AX",n:"BetaShares Aus Ex-20",x:"ASX",c:"e"},
+{t:"QFN.AX",n:"BetaShares S&P/ASX 200 Financials",x:"ASX",c:"e"},{t:"QRE.AX",n:"BetaShares S&P/ASX 200 Resources",x:"ASX",c:"e"},
+{t:"OZBD.AX",n:"BetaShares Aus Composite Bond",x:"ASX",c:"e"},{t:"CRED.AX",n:"BetaShares Aus IG Corp Bond",x:"ASX",c:"e"},
+{t:"AGVT.AX",n:"BetaShares Aus Government Bond",x:"ASX",c:"e"},{t:"GGOV.AX",n:"BetaShares Global Govt Bond 20+",x:"ASX",c:"e"},
+{t:"GBND.AX",n:"BetaShares Sustainability Bond",x:"ASX",c:"e"},{t:"QPON.AX",n:"BetaShares Bank Senior Floating Rate",x:"ASX",c:"e"},
+{t:"HBRD.AX",n:"BetaShares Active Aus Hybrids",x:"ASX",c:"e"},{t:"BHYB.AX",n:"BetaShares Aus Bank Hybrids",x:"ASX",c:"e"},
+{t:"GEAR.AX",n:"BetaShares Geared Aus Equity",x:"ASX",c:"e"},{t:"GGUS.AX",n:"BetaShares Geared US Equity Hedged",x:"ASX",c:"e"},
+{t:"BEAR.AX",n:"BetaShares Aus Equities Bear",x:"ASX",c:"e"},{t:"BBOZ.AX",n:"BetaShares Aus Equities Strong Bear",x:"ASX",c:"e"},
+{t:"BBUS.AX",n:"BetaShares US Equities Strong Bear",x:"ASX",c:"e"},
+{t:"QAU.AX",n:"BetaShares Gold Bullion Hedged",x:"ASX",c:"e"},{t:"OOO.AX",n:"BetaShares Crude Oil Hedged",x:"ASX",c:"e"},
+{t:"USD.AX",n:"BetaShares US Dollar",x:"ASX",c:"e"},{t:"EEU.AX",n:"BetaShares Euro",x:"ASX",c:"e"},
+{t:"POU.AX",n:"BetaShares British Pound",x:"ASX",c:"e"},
+{t:"FOOD.AX",n:"BetaShares Global Agriculture Hedged",x:"ASX",c:"e"},{t:"BNKS.AX",n:"BetaShares Global Banks Hedged",x:"ASX",c:"e"},
+{t:"FUEL.AX",n:"BetaShares Global Energy Hedged",x:"ASX",c:"e"},{t:"MNRS.AX",n:"BetaShares Global Gold Miners Hedged",x:"ASX",c:"e"},
+{t:"DRUG.AX",n:"BetaShares Global Healthcare Hedged",x:"ASX",c:"e"},
+{t:"SMLL.AX",n:"BetaShares Aus Small Companies",x:"ASX",c:"e"},{t:"HVST.AX",n:"BetaShares Aus Dividend Harvester",x:"ASX",c:"e"},
+{t:"YMAX.AX",n:"BetaShares Aus Yield Maximiser",x:"ASX",c:"e"},{t:"UMAX.AX",n:"BetaShares S&P 500 Yield Maximiser",x:"ASX",c:"e"},
+{t:"HEUR.AX",n:"BetaShares Europe Hedged",x:"ASX",c:"e"},{t:"HJPN.AX",n:"BetaShares Japan Hedged",x:"ASX",c:"e"},
+{t:"WRLD.AX",n:"BetaShares Managed Risk Global",x:"ASX",c:"e"},{t:"AUST.AX",n:"BetaShares Managed Risk Aus",x:"ASX",c:"e"},
+{t:"EMMG.AX",n:"BetaShares Legg Mason EM",x:"ASX",c:"e"},{t:"EINC.AX",n:"BetaShares Legg Mason Equity Income",x:"ASX",c:"e"},
+{t:"BNDS.AX",n:"Franklin Aus Bond Active",x:"ASX",c:"e"},
+{t:"CIIH.AX",n:"Franklin Intl Infra Hedged Active",x:"ASX",c:"e"},
+{t:"CUIV.AX",n:"Franklin Intl Multi-Asset Active",x:"ASX",c:"e"},
+{t:"CIVH.AX",n:"Franklin Intl Value Hedged Active",x:"ASX",c:"e"},
+{t:"R3AL.AX",n:"Franklin Aus Real Asset Active",x:"ASX",c:"e"},
+{t:"FRAR.AX",n:"Franklin Aus Resources Active",x:"ASX",c:"e"},
+{t:"FRGG.AX",n:"Franklin Global Growth Active",x:"ASX",c:"e"},
+{t:"VAS.AX",n:"Vanguard Aus Shares",x:"ASX",c:"e"},{t:"VGS.AX",n:"Vanguard Intl Shares",x:"ASX",c:"e"},
+{t:"VGAD.AX",n:"Vanguard Intl Shares Hedged",x:"ASX",c:"e"},{t:"VTS.AX",n:"Vanguard US Total Market",x:"ASX",c:"e"},
+{t:"VEU.AX",n:"Vanguard All-World ex-US",x:"ASX",c:"e"},{t:"VHY.AX",n:"Vanguard Aus High Yield",x:"ASX",c:"e"},
+{t:"VLC.AX",n:"Vanguard MSCI Aus Large",x:"ASX",c:"e"},{t:"VSO.AX",n:"Vanguard MSCI Aus Small",x:"ASX",c:"e"},
+{t:"VGE.AX",n:"Vanguard FTSE Emerging Markets",x:"ASX",c:"e"},{t:"VAP.AX",n:"Vanguard Aus Property",x:"ASX",c:"e"},
+{t:"VAF.AX",n:"Vanguard Aus Fixed Interest",x:"ASX",c:"e"},{t:"VGB.AX",n:"Vanguard Aus Government Bond",x:"ASX",c:"e"},
+{t:"VACF.AX",n:"Vanguard Aus Corporate Fixed Interest",x:"ASX",c:"e"},
+{t:"VEQ.AX",n:"Vanguard FTSE Europe",x:"ASX",c:"e"},{t:"VAE.AX",n:"Vanguard FTSE Asia ex Japan",x:"ASX",c:"e"},
+{t:"VDHG.AX",n:"Vanguard Diversified High Growth",x:"ASX",c:"e"},{t:"VDGR.AX",n:"Vanguard Diversified Growth",x:"ASX",c:"e"},
+{t:"VDBA.AX",n:"Vanguard Diversified Balanced",x:"ASX",c:"e"},{t:"VDCO.AX",n:"Vanguard Diversified Conservative",x:"ASX",c:"e"},
+{t:"VETH.AX",n:"Vanguard Ethically Conscious Intl",x:"ASX",c:"e"},{t:"VISM.AX",n:"Vanguard Intl Small Companies",x:"ASX",c:"e"},
+{t:"IOZ.AX",n:"iShares ASX 200",x:"ASX",c:"e"},{t:"IVV.AX",n:"iShares S&P 500",x:"ASX",c:"e"},
+{t:"IHVV.AX",n:"iShares S&P 500 Hedged",x:"ASX",c:"e"},{t:"IEM.AX",n:"iShares Emerging Markets",x:"ASX",c:"e"},
+{t:"IVE.AX",n:"iShares MSCI EAFE",x:"ASX",c:"e"},{t:"IJP.AX",n:"iShares MSCI Japan",x:"ASX",c:"e"},
+{t:"IEU.AX",n:"iShares Europe",x:"ASX",c:"e"},{t:"IOO.AX",n:"iShares Global 100",x:"ASX",c:"e"},
+{t:"IHOO.AX",n:"iShares Global 100 Hedged",x:"ASX",c:"e"},{t:"IAA.AX",n:"iShares Asia 50",x:"ASX",c:"e"},
+{t:"IZZ.AX",n:"iShares China Large-Cap",x:"ASX",c:"e"},{t:"IRU.AX",n:"iShares Russell 2000",x:"ASX",c:"e"},
+{t:"IJH.AX",n:"iShares S&P MidCap 400",x:"ASX",c:"e"},{t:"IJR.AX",n:"iShares S&P SmallCap 600",x:"ASX",c:"e"},
+{t:"ILC.AX",n:"iShares S&P/ASX 20",x:"ASX",c:"e"},{t:"ISO.AX",n:"iShares S&P/ASX Small Ords",x:"ASX",c:"e"},
+{t:"IHD.AX",n:"iShares S&P/ASX Div Opportunities",x:"ASX",c:"e"},
+{t:"IXJ.AX",n:"iShares Global Healthcare",x:"ASX",c:"e"},{t:"IXI.AX",n:"iShares Global Consumer Staples",x:"ASX",c:"e"},
+{t:"IAF.AX",n:"iShares Aus Composite Bond",x:"ASX",c:"e"},{t:"IGB.AX",n:"iShares Aus Treasury",x:"ASX",c:"e"},
+{t:"ILB.AX",n:"iShares Aus Inflation Gov Bond",x:"ASX",c:"e"},
+{t:"IHWL.AX",n:"iShares MSCI World All Cap Hedged",x:"ASX",c:"e"},
+{t:"IWLD.AX",n:"iShares Core MSCI World ex Aus ESG",x:"ASX",c:"e"},
+{t:"IESG.AX",n:"iShares Core MSCI Aus ESG",x:"ASX",c:"e"},
+{t:"IHCB.AX",n:"iShares Global Corp Bond Hedged",x:"ASX",c:"e"},
+{t:"IHHY.AX",n:"iShares Global High Yield Bond Hedged",x:"ASX",c:"e"},
+{t:"IHEB.AX",n:"iShares EM Bond Hedged",x:"ASX",c:"e"},
+{t:"WDMF.AX",n:"iShares World Multifactor",x:"ASX",c:"e"},
+{t:"MVOL.AX",n:"iShares Aus Minimum Volatility",x:"ASX",c:"e"},
+{t:"IKO.AX",n:"iShares MSCI South Korea",x:"ASX",c:"e"},{t:"ITW.AX",n:"iShares MSCI Taiwan",x:"ASX",c:"e"},
+{t:"QUAL.AX",n:"VanEck Intl Quality",x:"ASX",c:"e"},{t:"QHAL.AX",n:"VanEck Intl Quality Hedged",x:"ASX",c:"e"},
+{t:"QSML.AX",n:"VanEck Intl Small Companies Quality",x:"ASX",c:"e"},
+{t:"MOAT.AX",n:"VanEck Morningstar Wide Moat",x:"ASX",c:"e"},{t:"GOAT.AX",n:"VanEck Morningstar Intl Wide Moat",x:"ASX",c:"e"},
+{t:"MVW.AX",n:"VanEck Aus Equal Weight",x:"ASX",c:"e"},{t:"MVB.AX",n:"VanEck Aus Banks",x:"ASX",c:"e"},
+{t:"MVR.AX",n:"VanEck Aus Resources",x:"ASX",c:"e"},{t:"MVA.AX",n:"VanEck Aus Property",x:"ASX",c:"e"},
+{t:"MVE.AX",n:"VanEck S&P/ASX MidCap",x:"ASX",c:"e"},{t:"MVS.AX",n:"VanEck Small Companies Masters",x:"ASX",c:"e"},
+{t:"DVDY.AX",n:"VanEck Morningstar Aus Moat Income",x:"ASX",c:"e"},
+{t:"SUBD.AX",n:"VanEck Aus Subordinated Debt",x:"ASX",c:"e"},{t:"PLUS.AX",n:"VanEck Aus Corporate Bond Plus",x:"ASX",c:"e"},
+{t:"FLOT.AX",n:"VanEck Aus Floating Rate",x:"ASX",c:"e"},
+{t:"IFRA.AX",n:"VanEck FTSE Global Infra Hedged",x:"ASX",c:"e"},
+{t:"REIT.AX",n:"VanEck FTSE Intl Property Hedged",x:"ASX",c:"e"},
+{t:"GDX.AX",n:"VanEck Gold Miners",x:"ASX",c:"e"},{t:"CLNE.AX",n:"VanEck Global Clean Energy",x:"ASX",c:"e"},
+{t:"HLTH.AX",n:"VanEck Global Healthcare Leaders",x:"ASX",c:"e"},
+{t:"ESGI.AX",n:"VanEck Intl Sustainable Equity",x:"ASX",c:"e"},{t:"GRNV.AX",n:"VanEck Aus Sustainable Equity",x:"ASX",c:"e"},
+{t:"VLUE.AX",n:"VanEck Intl Value",x:"ASX",c:"e"},{t:"EMKT.AX",n:"VanEck EM Multifactor",x:"ASX",c:"e"},
+{t:"CETF.AX",n:"VanEck FTSE China A50",x:"ASX",c:"e"},{t:"CNEW.AX",n:"VanEck China New Economy",x:"ASX",c:"e"},
+{t:"ESPO.AX",n:"VanEck Video Gaming & eSports",x:"ASX",c:"e"},
+{t:"GCAP.AX",n:"VanEck Global Capital Securities",x:"ASX",c:"e"},{t:"EBND.AX",n:"VanEck EM Income Active",x:"ASX",c:"e"},
+{t:"STW.AX",n:"SPDR S&P/ASX 200",x:"ASX",c:"e"},{t:"SFY.AX",n:"SPDR S&P/ASX 50",x:"ASX",c:"e"},
+{t:"SPY.AX",n:"SPDR S&P 500",x:"ASX",c:"e"},{t:"SSO.AX",n:"SPDR S&P/ASX Small Ords",x:"ASX",c:"e"},
+{t:"WXOZ.AX",n:"SPDR World ex Aus",x:"ASX",c:"e"},{t:"WXHG.AX",n:"SPDR World ex Aus Hedged",x:"ASX",c:"e"},
+{t:"WEMG.AX",n:"SPDR S&P Emerging Markets",x:"ASX",c:"e"},{t:"WDIV.AX",n:"SPDR S&P Global Dividend",x:"ASX",c:"e"},
+{t:"BOND.AX",n:"SPDR S&P/ASX Aus Bond",x:"ASX",c:"e"},{t:"GOVT.AX",n:"SPDR S&P/ASX Aus Govt Bond",x:"ASX",c:"e"},
+{t:"OZF.AX",n:"SPDR S&P/ASX 200 Financials ex REITs",x:"ASX",c:"e"},
+{t:"SLF.AX",n:"SPDR S&P/ASX 200 Listed Property",x:"ASX",c:"e"},
+{t:"OZR.AX",n:"SPDR S&P/ASX 200 Resources",x:"ASX",c:"e"},
+{t:"SYI.AX",n:"SPDR MSCI Aus Select High Div Yield",x:"ASX",c:"e"},
+{t:"DJRE.AX",n:"SPDR Dow Jones Global Real Estate",x:"ASX",c:"e"},
+{t:"RDV.AX",n:"Russell High Dividend Aus",x:"ASX",c:"e"},{t:"RVL.AX",n:"Russell Aus Value",x:"ASX",c:"e"},
+{t:"RARI.AX",n:"Russell Aus Responsible Investment",x:"ASX",c:"e"},
+{t:"RCB.AX",n:"Russell Aus Select Corp Bond",x:"ASX",c:"e"},{t:"RSM.AX",n:"Russell Aus Semi-Govt Bond",x:"ASX",c:"e"},
+{t:"RGB.AX",n:"Russell Aus Government Bond",x:"ASX",c:"e"},
+{t:"PMGOLD.AX",n:"Perth Mint Gold",x:"ASX",c:"e"},{t:"ESTX.AX",n:"ETFS Euro Stoxx 50",x:"ASX",c:"e"},
+{t:"ROBO.AX",n:"ETFS ROBO Global Robotics",x:"ASX",c:"e"},{t:"TECH.AX",n:"ETFS Morningstar Global Technology",x:"ASX",c:"e"},
+{t:"ZGOL.AX",n:"ANZ ETFS Physical Gold",x:"ASX",c:"e"},{t:"ZOZI.AX",n:"ANZ ETFS S&P/ASX 100",x:"ASX",c:"e"},
+{t:"ZYAU.AX",n:"ANZ ETFS S&P/ASX 300 High Yield",x:"ASX",c:"e"},
+{t:"ZYUS.AX",n:"ANZ ETFS S&P 500 High Yield Low Vol",x:"ASX",c:"e"},
+{t:"MOGL.AX",n:"Montgomery Global Equities",x:"ASX",c:"e"},
+{t:"AAPL",n:"Apple",x:"NASDAQ",c:"s"},{t:"MSFT",n:"Microsoft",x:"NASDAQ",c:"s"},
+{t:"GOOGL",n:"Alphabet",x:"NASDAQ",c:"s"},{t:"AMZN",n:"Amazon",x:"NASDAQ",c:"s"},
+{t:"NVDA",n:"NVIDIA",x:"NASDAQ",c:"s"},{t:"META",n:"Meta Platforms",x:"NASDAQ",c:"s"},
+{t:"TSLA",n:"Tesla",x:"NASDAQ",c:"s"},{t:"NFLX",n:"Netflix",x:"NASDAQ",c:"s"},
+{t:"AMD",n:"AMD",x:"NASDAQ",c:"s"},{t:"AVGO",n:"Broadcom",x:"NASDAQ",c:"s"},
+{t:"COST",n:"Costco",x:"NASDAQ",c:"s"},{t:"ADBE",n:"Adobe",x:"NASDAQ",c:"s"},
+{t:"CRM",n:"Salesforce",x:"NASDAQ",c:"s"},{t:"QCOM",n:"Qualcomm",x:"NASDAQ",c:"s"},
+{t:"INTC",n:"Intel",x:"NASDAQ",c:"s"},{t:"PEP",n:"PepsiCo",x:"NASDAQ",c:"s"},
+{t:"SBUX",n:"Starbucks",x:"NASDAQ",c:"s"},{t:"PYPL",n:"PayPal",x:"NASDAQ",c:"s"},
+{t:"ABNB",n:"Airbnb",x:"NASDAQ",c:"s"},{t:"COIN",n:"Coinbase",x:"NASDAQ",c:"s"},
+{t:"UBER",n:"Uber",x:"NASDAQ",c:"s"},{t:"SQ",n:"Block (Square)",x:"NASDAQ",c:"s"},
+{t:"SNOW",n:"Snowflake",x:"NASDAQ",c:"s"},{t:"PANW",n:"Palo Alto Networks",x:"NASDAQ",c:"s"},
+{t:"CRWD",n:"CrowdStrike",x:"NASDAQ",c:"s"},{t:"ARM",n:"Arm Holdings",x:"NASDAQ",c:"s"},
+{t:"MRVL",n:"Marvell Technology",x:"NASDAQ",c:"s"},{t:"PLTR",n:"Palantir",x:"NASDAQ",c:"s"},
+{t:"SMCI",n:"Super Micro Computer",x:"NASDAQ",c:"s"},{t:"MU",n:"Micron Technology",x:"NASDAQ",c:"s"},
+{t:"LRCX",n:"Lam Research",x:"NASDAQ",c:"s"},{t:"KLAC",n:"KLA Corp",x:"NASDAQ",c:"s"},
+{t:"AMAT",n:"Applied Materials",x:"NASDAQ",c:"s"},{t:"SNPS",n:"Synopsys",x:"NASDAQ",c:"s"},
+{t:"CDNS",n:"Cadence Design",x:"NASDAQ",c:"s"},{t:"MELI",n:"MercadoLibre",x:"NASDAQ",c:"s"},
+{t:"BKNG",n:"Booking Holdings",x:"NASDAQ",c:"s"},{t:"ISRG",n:"Intuitive Surgical",x:"NASDAQ",c:"s"},
+{t:"REGN",n:"Regeneron",x:"NASDAQ",c:"s"},{t:"GILD",n:"Gilead Sciences",x:"NASDAQ",c:"s"},
+{t:"VRTX",n:"Vertex Pharma",x:"NASDAQ",c:"s"},{t:"MRNA",n:"Moderna",x:"NASDAQ",c:"s"},
+{t:"ILMN",n:"Illumina",x:"NASDAQ",c:"s"},{t:"DXCM",n:"Dexcom",x:"NASDAQ",c:"s"},
+{t:"ZS",n:"Zscaler",x:"NASDAQ",c:"s"},{t:"FTNT",n:"Fortinet",x:"NASDAQ",c:"s"},
+{t:"TEAM",n:"Atlassian",x:"NASDAQ",c:"s"},{t:"WDAY",n:"Workday",x:"NASDAQ",c:"s"},
+{t:"DDOG",n:"Datadog",x:"NASDAQ",c:"s"},{t:"NET",n:"Cloudflare",x:"NASDAQ",c:"s"},
+{t:"TTD",n:"The Trade Desk",x:"NASDAQ",c:"s"},{t:"ROKU",n:"Roku",x:"NASDAQ",c:"s"},
+{t:"DASH",n:"DoorDash",x:"NASDAQ",c:"s"},{t:"RBLX",n:"Roblox",x:"NASDAQ",c:"s"},
+{t:"RIVN",n:"Rivian",x:"NASDAQ",c:"s"},{t:"LCID",n:"Lucid Group",x:"NASDAQ",c:"s"},
+{t:"SOFI",n:"SoFi Technologies",x:"NASDAQ",c:"s"},{t:"HOOD",n:"Robinhood",x:"NASDAQ",c:"s"},
+{t:"CELH",n:"Celsius Holdings",x:"NASDAQ",c:"s"},{t:"MSTR",n:"MicroStrategy",x:"NASDAQ",c:"s"},
+{t:"ON",n:"ON Semiconductor",x:"NASDAQ",c:"s"},{t:"ENPH",n:"Enphase Energy",x:"NASDAQ",c:"s"},
+{t:"FSLR",n:"First Solar",x:"NASDAQ",c:"s"},{t:"CEG",n:"Constellation Energy",x:"NASDAQ",c:"s"},
+{t:"CPRT",n:"Copart",x:"NASDAQ",c:"s"},{t:"ODFL",n:"Old Dominion Freight",x:"NASDAQ",c:"s"},
+{t:"FAST",n:"Fastenal",x:"NASDAQ",c:"s"},{t:"MNST",n:"Monster Beverage",x:"NASDAQ",c:"s"},
+{t:"KDP",n:"Keurig Dr Pepper",x:"NASDAQ",c:"s"},{t:"MAR",n:"Marriott International",x:"NASDAQ",c:"s"},
+{t:"LULU",n:"Lululemon",x:"NASDAQ",c:"s"},{t:"ROST",n:"Ross Stores",x:"NASDAQ",c:"s"},
+{t:"ORLY",n:"O'Reilly Automotive",x:"NASDAQ",c:"s"},{t:"ASML",n:"ASML Holding",x:"NASDAQ",c:"s"},
+{t:"PDD",n:"PDD Holdings",x:"NASDAQ",c:"s"},{t:"JD",n:"JD.com",x:"NASDAQ",c:"s"},
+{t:"BIDU",n:"Baidu",x:"NASDAQ",c:"s"},{t:"NTES",n:"NetEase",x:"NASDAQ",c:"s"},
+{t:"AZN",n:"AstraZeneca",x:"NASDAQ",c:"s"},{t:"CHTR",n:"Charter Communications",x:"NASDAQ",c:"s"},
+];
+
+const gs=()=>{const n=new Date();return n<new Date(START)?"p":n>new Date(END)?"c":"l"};
+const du=d=>Math.max(0,Math.ceil((new Date(d)-new Date())/864e5));
+const fr=v=>{if(v==null)return null;const p=(v*100).toFixed(2);return v>=0?`+${p}%`:`${p}%`};
+const ago=d=>{const s=Math.floor((Date.now()-new Date(d).getTime())/1e3);if(s<60)return"just now";if(s<3600)return Math.floor(s/60)+"m ago";if(s<86400)return Math.floor(s/3600)+"h ago";return Math.floor(s/86400)+"d ago"};
+const COLORS=["#10b981","#f59e0b","#3b82f6","#ef4444","#8b5cf6","#ec4899","#06b6d4","#84cc16","#f97316","#6366f1","#14b8a6","#e11d48","#a855f7","#22d3ee","#facc15","#fb923c","#4ade80","#f472b6","#38bdf8","#a3e635"];
+
+/* FIX #1: Per-portfolio entry price aware return calculations */
+function stockReturn(ticker,prices,entryPrices){
+  const d=prices[ticker];if(!d||!d.sp||!d.cp)return null;
+  const base=entryPrices&&entryPrices[ticker]?entryPrices[ticker]:d.sp;
+  return(d.cp-base)/base;
+}
+function portfolioReturn(p,prices){
+  let s=0,c=0;
+  for(const t of p.tickers){const r=stockReturn(t,prices,p.entryPrices);if(r!=null){s+=r*0.2;c++}}
+  return c>0?s:null;
+}
+
+function RankBadge({rank}){
+  const m={1:"\u{1F947}",2:"\u{1F948}",3:"\u{1F949}"};
+  return React.createElement("div",{className:"rk "+(rank<=3?"rk"+rank:"rkn")},m[rank]||"#"+rank);
+}
+
+function TickerSearch({sel,onAdd,onRm,hideSlots,prices}){
+  const[q,setQ]=useState("");const[open,setOpen]=useState(false);const[tab,setTab]=useState("all");
+  const wr=useRef(null);
+  useEffect(()=>{const h=e=>{if(wr.current&&!wr.current.contains(e.target))setOpen(false)};document.addEventListener("mousedown",h);return()=>document.removeEventListener("mousedown",h)},[]);
+  const fl=U.filter(i=>{
+    if(sel.includes(i.t))return false;
+    if(tab==="as"&&!(i.x==="ASX"&&i.c==="s"))return false;
+    if(tab==="ae"&&!(i.x==="ASX"&&i.c==="e"))return false;
+    if(tab==="na"&&i.x!=="NASDAQ")return false;
+    if(!q.trim())return true;
+    const u=q.toUpperCase();return i.t.toUpperCase().includes(u)||i.n.toUpperCase().includes(u);
+  }).slice(0,14);
+  const pick=t=>{onAdd(t);setQ("");setOpen(false)};
+  const kd=e=>{if(e.key==="Enter"&&q.trim()){e.preventDefault();fl.length?pick(fl[0].t):onAdd(q.trim().toUpperCase())}};
+  const rem=PICKS-sel.length;
+  return(
+    <div className="fg">
+      {!hideSlots&&<><label className="fl">Select {PICKS} Securities ({sel.length}/{PICKS})</label>
+      <div className="ts">
+        {sel.map(t=><div key={t} className="tc">{t}{prices&&prices[t]?.cp&&<span style={{color:"var(--t4)",fontWeight:500,marginLeft:2}}>${prices[t].cp.toFixed(2)}</span>}<span className="x" onClick={()=>onRm(t)}>{"\u00D7"}</span></div>)}
+        {Array.from({length:rem}).map((_,i)=><div key={"e"+i} className="es">Slot {sel.length+i+1}</div>)}
+      </div></>}
+      <div className="sw" ref={wr}>
+        <input className="fi" value={q} onChange={e=>{setQ(e.target.value);setOpen(true)}} onFocus={()=>setOpen(true)} onKeyDown={kd} placeholder="Search ticker or company name..."/>
+        {!hideSlots&&<p className="ht">ASX: use .AX suffix (BHP.AX). NASDAQ: as-is (AAPL). Enter for custom tickers.</p>}
+        <div className={"sug "+(open?"open":"")}>
+          <div className="stabs">
+            {[["all","All"],["as","ASX Shares"],["ae","ASX ETFs"],["na","NASDAQ"]].map(function(a){return(
+              <button key={a[0]} className={"stab "+(tab===a[0]?"on":"")} onMouseDown={function(e){e.preventDefault();setTab(a[0])}}>{a[1]}</button>
+            )})}
+          </div>
+          {fl.length===0?<div style={{padding:14,textAlign:"center",color:"#475569",fontSize:13}}>No matches. Press Enter to add custom ticker.</div>:
+          fl.map(i=>(
+            <div key={i.t} className="si" onMouseDown={function(e){e.preventDefault();pick(i.t)}}>
+              <div><span className="stk">{i.t}</span><span className="snm">{i.n}</span></div>
+              <div style={{display:"flex",alignItems:"center",gap:8}}>
+                {prices&&prices[i.t]?.cp&&<span style={{fontFamily:"var(--fm)",fontSize:11,color:"var(--t3)",fontWeight:600}}>${prices[i.t].cp.toFixed(2)}</span>}
+                <span className={"ext "+(i.c==="e"?"ext-e":i.x==="ASX"?"ext-a":"ext-n")}>{i.c==="e"?"ETF":i.x}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PerfChart({portfolios,history}){
+  const ref=useRef(null),chart=useRef(null);
+  useEffect(()=>{
+    if(!ref.current||!portfolios.length||!history.length)return;
+    if(chart.current)chart.current.destroy();
+    const sorted=[...history].sort((a,b)=>new Date(a.d)-new Date(b.d));
+    const labels=sorted.map(h=>new Date(h.d).toLocaleDateString("en-AU",{day:"numeric",month:"short"}));
+    const datasets=portfolios.map((p,i)=>({
+      label:p.advisorName,
+      data:sorted.map(h=>{const v=h.r&&h.r[p.id];return v!=null?+(v*100).toFixed(2):null}),
+      borderColor:COLORS[i%COLORS.length],backgroundColor:COLORS[i%COLORS.length]+"20",
+      borderWidth:2,tension:.3,pointRadius:sorted.length>20?1:3,pointHoverRadius:5,spanGaps:true,
+    }));
+    chart.current=new Chart(ref.current,{
+      type:"line",data:{labels:labels,datasets:datasets},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:"index",intersect:false},
+        plugins:{legend:{position:"bottom",labels:{color:"#94a3b8",font:{family:"JetBrains Mono",size:11},boxWidth:12,padding:14}},
+          tooltip:{backgroundColor:"#1a1f2e",titleColor:"#f1f5f9",bodyColor:"#e2e8f0",borderColor:"rgba(255,255,255,0.1)",borderWidth:1,
+            titleFont:{family:"Outfit",weight:"600"},bodyFont:{family:"JetBrains Mono",size:12},
+            callbacks:{label:function(c){return c.dataset.label+": "+(c.parsed.y!=null?c.parsed.y.toFixed(2)+"%":"N/A")}}}},
+        scales:{x:{ticks:{color:"#475569",font:{family:"JetBrains Mono",size:10},maxRotation:45},grid:{color:"rgba(255,255,255,0.04)"}},
+          y:{ticks:{color:"#475569",font:{family:"JetBrains Mono",size:10},callback:function(v){return v.toFixed(1)+"%"}},grid:{color:"rgba(255,255,255,0.04)"},
+            title:{display:true,text:"Return %",color:"#475569",font:{family:"JetBrains Mono",size:11}}}}}
+    });
+    return()=>{if(chart.current)chart.current.destroy()};
+  },[portfolios,history]);
+  if(!portfolios.length||!history.length)return null;
+  return(
+    <div className="chwrap">
+      <div className="chtit">{"\u{1F4C8}"} Performance Over Time</div>
+      <div style={{position:"relative",height:Math.min(400,Math.max(240,portfolios.length*25+160))}}><canvas ref={ref}/></div>
+    </div>
+  );
+}
+
+function ActivityFeed({trades}){
+  if(!trades.length)return null;
+  const sorted=[...trades].sort((a,b)=>new Date(b.date)-new Date(a.date));
+  return(
+    <div className="card" style={{marginTop:0}}>
+      <div className="ctit"><span>{"\u{1F4AC}"}</span> Trade Activity</div>
+      {sorted.slice(0,20).map((t,i)=>(
+        <div key={i} className="feed-item">
+          <div className="feed-icon">{"\u{1F504}"}</div>
+          <div>
+            <div className="feed-text">
+              <span className="feed-name">{t.advisorName}</span>{" swapped "}
+              <span className="feed-tickers feed-out">{t.tickerOut}</span>
+              <span className="feed-arrow">{"\u2192"}</span>
+              <span className="feed-tickers feed-in">{t.tickerIn}</span>
+              <span style={{color:"var(--t5)",fontSize:11,marginLeft:6}}>(Trade {t.tradeNum}/{MAX_TRADES})</span>
+            </div>
+            <div className="feed-time">{ago(t.date)}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function Modal({p,prices,status,trades,onClose,onTrade}){
+  const[trading,setTrading]=useState(false);
+  const[pinGate,setPinGate]=useState(false);
+  const[pinInput,setPinInput]=useState("");
+  const[pinError,setPinError]=useState("");
+  const[sellTicker,setSellTicker]=useState(null);
+  const[buyTicker,setBuyTicker]=useState(null);
+  const[submitting,setSubmitting]=useState(false);
+  const[error,setError]=useState("");
+
+  if(!p)return null;
+
+  const pTrades=trades.filter(t=>t.portfolioId===p.id);
+  const tradesLeft=MAX_TRADES-pTrades.length;
+  const canTrade=status==="l"&&tradesLeft>0;
+
+  const sr=t=>stockReturn(t,prices,p.entryPrices);
+  const ret=portfolioReturn(p,prices);
+
+  const checkPin=()=>{
+    if(pinInput===p.pin){setPinGate(false);setPinError("");setPinInput("");setTrading(true)}
+    else{setPinError("Incorrect PIN")}
+  };
+  const pinKeyDown=e=>{if(e.key==="Enter"&&pinInput.length===4)checkPin()};
+
+  const doTrade=async()=>{
+    if(!sellTicker||!buyTicker){setError("Select a stock to sell and one to buy");return}
+    if(p.tickers.includes(buyTicker)){setError("You already hold "+buyTicker);return}
+    setSubmitting(true);setError("");
+    try{await onTrade(p,sellTicker,buyTicker,pTrades.length+1);
+      setTrading(false);setSellTicker(null);setBuyTicker(null);
+    }catch(e){setError("Trade failed — please try again")}
+    setSubmitting(false);
+  };
+
+  const resetUI=()=>{setTrading(false);setPinGate(false);setSellTicker(null);setBuyTicker(null);setError("");setPinInput("");setPinError("")};
+
+  return(
+    <div className="mo" onClick={onClose}><div className="mc" onClick={e=>e.stopPropagation()}>
+      <button className="mx" onClick={onClose}>{"\u00D7"}</button>
+      <div style={{fontSize:20,fontWeight:700,color:"var(--t1)"}}>{p.portfolioName}</div>
+      <div style={{fontSize:13,color:"var(--t4)",marginTop:3}}>{p.advisorName}</div>
+      <div style={{margin:"14px 0 18px",padding:"14px 0",borderTop:"1px solid var(--bdr)",borderBottom:"1px solid var(--bdr)"}}>
+        <div style={{fontSize:10,color:"var(--t4)",textTransform:"uppercase",letterSpacing:".08em",fontFamily:"var(--fm)",marginBottom:3}}>Total Portfolio Return</div>
+        <div style={{fontFamily:"var(--fm)",fontSize:30,fontWeight:700,color:ret==null?"var(--t5)":ret>=0?"var(--acc)":"var(--red)"}}>
+          {status==="p"?"Starts 1 Mar":fr(ret)||"Pending"}
+        </div>
+      </div>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:10}}>
+        <div style={{fontSize:10,color:"var(--t4)",textTransform:"uppercase",letterSpacing:".08em",fontFamily:"var(--fm)"}}>Holdings (20% each)</div>
+        <div className={"trade-badge "+(tradesLeft>0?"trade-badge-ok":"trade-badge-done")}>
+          {tradesLeft>0?tradesLeft+" trade"+(tradesLeft>1?"s":"")+" remaining":"No trades left"}
+        </div>
+      </div>
+      <div style={{display:"grid",gridTemplateColumns:"1fr 60px 70px",padding:"7px 0",fontSize:9,fontWeight:700,color:"var(--t5)",textTransform:"uppercase",letterSpacing:".08em",fontFamily:"var(--fm)",borderBottom:"1px solid var(--bdr)"}}>
+        <div>Ticker</div><div style={{textAlign:"center"}}>Weight</div><div style={{textAlign:"right"}}>Return</div>
+      </div>
+      {p.tickers.map(t=>{const r=sr(t),d=prices[t];return(
+        <div key={t} className="hr">
+          <div><div className="hrt">{t}</div>{d&&d.cp?<div className="hrp">{"$"+d.cp.toFixed(2)}</div>:null}</div>
+          <div className="hrw">20%</div>
+          <div className="hrr" style={{color:r==null?"var(--t5)":r>=0?"var(--acc)":"var(--red)"}}>{status==="p"?"\u2014":fr(r)||"\u2014"}</div>
+        </div>
+      )})}
+
+      {pTrades.length>0&&(
+        <div style={{marginTop:14,paddingTop:12,borderTop:"1px solid var(--bdr)"}}>
+          <div style={{fontSize:10,color:"var(--t4)",textTransform:"uppercase",letterSpacing:".08em",fontFamily:"var(--fm)",marginBottom:8}}>Trade History</div>
+          {pTrades.map((t,i)=>(
+            <div key={i} style={{fontSize:12,color:"var(--t3)",marginBottom:4,fontFamily:"var(--fm)"}}>
+              <span style={{color:"var(--red)"}}>{t.tickerOut}</span>
+              <span style={{color:"var(--t5)",margin:"0 6px"}}>{"\u2192"}</span>
+              <span style={{color:"var(--acc)"}}>{t.tickerIn}</span>
+              <span style={{color:"var(--t5)",marginLeft:8,fontSize:10}}>{ago(t.date)}</span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {canTrade&&!trading&&!pinGate&&(
+        <button className="btn-trade" onClick={()=>setPinGate(true)}>
+          {"\u{1F504}"} Make a Trade ({tradesLeft} remaining)
+        </button>
+      )}
+      {pinGate&&!trading&&(
+        <div className="trade-section">
+          <div className="pin-gate">
+            <p>{"\u{1F512}"} Enter your 4-digit PIN to trade</p>
+            <div className="pin-row">
+              <input className="fi fi-pin" type="password" maxLength={4} inputMode="numeric" value={pinInput}
+                onChange={e=>setPinInput(e.target.value.replace(/\D/g,""))} onKeyDown={pinKeyDown}
+                placeholder={"\u2022\u2022\u2022\u2022"} autoFocus/>
+              <button className="btn" style={{padding:"11px 20px"}} onClick={checkPin} disabled={pinInput.length!==4}>Unlock</button>
+            </div>
+            {pinError&&<p className="et" style={{marginTop:8}}>{pinError}</p>}
+            <button className="btn" style={{marginTop:12,fontSize:12}} onClick={resetUI}>Cancel</button>
+          </div>
+        </div>
+      )}
+      {trading&&(
+        <div className="trade-section">
+          <div style={{fontSize:14,fontWeight:600,color:"var(--t1)",marginBottom:10}}>{"\u{1F504}"} Swap a Holding</div>
+          <div style={{fontSize:11,color:"var(--t4)",fontFamily:"var(--fm)",textTransform:"uppercase",letterSpacing:".06em",marginBottom:8}}>Select stock to sell</div>
+          <div style={{display:"flex",flexWrap:"wrap",marginBottom:14}}>
+            {p.tickers.map(t=>(
+              <div key={t} className={"sell-chip "+(sellTicker===t?"selected":"")} onClick={()=>setSellTicker(t)}>{t}</div>
+            ))}
+          </div>
+          {sellTicker&&(<div>
+            <div style={{fontSize:11,color:"var(--t4)",fontFamily:"var(--fm)",textTransform:"uppercase",letterSpacing:".06em",marginBottom:6}}>Select replacement</div>
+            <TickerSearch sel={p.tickers} onAdd={t=>setBuyTicker(t)} onRm={()=>setBuyTicker(null)} hideSlots={true} prices={prices}/>
+            {buyTicker&&(
+              <div style={{padding:"10px 14px",borderRadius:8,background:"var(--accbg)",border:"1px solid var(--accbdr)",margin:"10px 0",fontFamily:"var(--fm)",fontSize:13,color:"var(--acc)",fontWeight:600}}>
+                Buying: {buyTicker}
+              </div>
+            )}
+          </div>)}
+          {error&&<p className="et">{error}</p>}
+          <div style={{display:"flex",gap:8,marginTop:12}}>
+            <button className="btn" onClick={resetUI}>Cancel</button>
+            <button className="btn-trade" style={{width:"auto",flex:1,marginTop:0}} onClick={doTrade}
+              disabled={!sellTicker||!buyTicker||submitting}>
+              {submitting?"Executing...":"Confirm Swap"}
+            </button>
+          </div>
+        </div>
+      )}
+    </div></div>
+  );
+}
+
+function App(){
+  const[ps,setPs]=useState([]);const[pr,setPr]=useState({});
+  const[hist,setHist]=useState([]);const[trades,setTrades]=useState([]);
+  const[vw,setVw]=useState("lb");const[loading,setLoading]=useState(true);
+  const[pst,setPst]=useState("idle");const[det,setDet]=useState(null);
+  const[nm,setNm]=useState("");const[pn,setPn]=useState("");const[pin,setPin]=useState("");
+  const[tk,setTk]=useState([]);const[fe,setFe]=useState("");const[sub,setSub]=useState(false);
+  const status=gs();
+  const regOpen=status==="p";
+
+  useEffect(()=>{
+    if(!db){setLoading(false);return}
+    const to=setTimeout(()=>setLoading(false),8000);
+    const u1=fbOnValue("portfolios",val=>{
+      const arr=val?Object.keys(val).map(k=>{
+        const raw=val[k];
+        return{id:k,advisorName:raw.advisorName,portfolioName:raw.portfolioName,pin:raw.pin,
+          tickers:raw.tickers,entryPrices:decMap(raw.entryPrices),createdAt:raw.createdAt};
+      }):[];
+      setPs(arr);setLoading(false);clearTimeout(to);
+    });
+    const u2=fbOnValue("prices",val=>{setPr(decMap(val))});
+    const u3=fbOnValue("history",val=>{setHist(val?Object.keys(val).map(k=>val[k]):[])});
+    const u4=fbOnValue("trades",val=>{setTrades(val?Object.keys(val).map(k=>val[k]):[])});
+    return()=>{u1();u2();u3();u4();clearTimeout(to)};
+  },[]);
+
+  const fetchPr=useCallback(async function(list){
+    if(status==="p"||!db)return;
+    const all=[...new Set(list.flatMap(p=>p.tickers))];if(!all.length)return;
+    setPst("loading");const upd=Object.assign({},pr);var ok=0;
+    for(const t of all){try{
+      const r=await fetch("https://query1.finance.yahoo.com/v8/finance/chart/"+encodeURIComponent(t)+"?range=1y&interval=1d");
+      if(!r.ok)continue;const d=await r.json(),res=d&&d.chart&&d.chart.result&&d.chart.result[0];if(!res)continue;
+      const cl=res.indicators.quote[0].close.filter(Boolean),ts=res.timestamp;
+      const sTs=new Date(START).getTime()/1000;var si=ts.findIndex(x=>x>=sTs);if(si<0)si=0;
+      const sp=cl[si]||cl[0],cp=cl[cl.length-1];
+      if(sp&&cp){upd[t]={sp:sp,cp:cp,u:new Date().toISOString()};ok++}
+    }catch(e){}}
+    await fbSet("prices",encMap(upd));
+    const snap={d:new Date().toISOString(),r:{}};
+    list.forEach(p=>{const ret=portfolioReturn(p,upd);if(ret!=null)snap.r[p.id]=ret});
+    if(Object.keys(snap.r).length>0)await fbPush("history",snap);
+    setPst(ok>0?"ok":"err");
+  },[status,pr,ps]);
+
+  const executeTrade=async function(portfolio,tickerOut,tickerIn,tradeNum){
+    const newTickers=portfolio.tickers.map(t=>t===tickerOut?tickerIn:t);
+    const ep=Object.assign({},portfolio.entryPrices||{});
+    delete ep[tickerOut];
+    if(pr[tickerIn]&&pr[tickerIn].cp){ep[tickerIn]=pr[tickerIn].cp}
+    await fbUpdate("portfolios/"+portfolio.id,{tickers:newTickers,entryPrices:encMap(ep)});
+    await fbPush("trades",{
+      portfolioId:portfolio.id,advisorName:portfolio.advisorName,
+      tickerOut:tickerOut,tickerIn:tickerIn,tradeNum:tradeNum,date:new Date().toISOString()
+    });
+    setDet(Object.assign({},portfolio,{tickers:newTickers,entryPrices:ep}));
+  };
+
+  // Derive last-updated time from most recent price timestamp
+  const lastUpdated=(()=>{const times=Object.values(pr).map(p=>p?.u).filter(Boolean);return times.length?times.sort().pop():null})();
+
+  const ranked=[...ps].sort((a,b)=>{
+    const ra=portfolioReturn(a,pr),rb=portfolioReturn(b,pr);
+    if(ra==null&&rb==null)return 0;if(ra==null)return 1;if(rb==null)return -1;return rb-ra;
+  });
+  const addT=t=>{const v=t.trim().toUpperCase();if(!v)return;if(tk.length>=PICKS){setFe("Maximum 5 stocks");return}if(tk.includes(v)){setFe(v+" already selected");return}setTk([...tk,v]);setFe("")};
+  const rmT=t=>{setTk(tk.filter(x=>x!==t));setFe("")};
+
+  const submit=async()=>{
+    if(!nm.trim()){setFe("Please enter your name");return}
+    if(!pn.trim()){setFe("Please enter a portfolio name");return}
+    if(pin.length!==4){setFe("Please set a 4-digit PIN");return}
+    if(tk.length!==PICKS){setFe("Select exactly "+PICKS+" stocks");return}
+    if(ps.some(p=>p.advisorName.toLowerCase()===nm.trim().toLowerCase())){setFe("That name is already registered");return}
+    if(!db){setFe("Firebase not configured");return}
+    setSub(true);
+    try{
+      await fbPush("portfolios",{
+        advisorName:nm.trim(),portfolioName:pn.trim(),pin:pin,
+        tickers:[...tk],entryPrices:null,createdAt:new Date().toISOString()
+      });
+      setNm("");setPn("");setPin("");setTk([]);setFe("");setVw("lb");
+    }catch(e){setFe("Failed to save")}
+    setSub(false);
+  };
+
+  if(loading)return(
+    <div style={{textAlign:"center",paddingTop:120}}>
+      <div className="logo" style={{margin:"0 auto 16px"}}>RR</div>
+      <div style={{color:"var(--t4)",fontFamily:"var(--fm)",fontSize:13}}><span className="spin"></span> Loading...</div>
+    </div>
+  );
+
+  return(
+    <div>
+      {!CONFIGURED&&(
+        <div className="cfg-banner">
+          <h3>{"\u26A0\uFE0F"} Firebase Not Configured</h3>
+          <p>Open index.html and replace the placeholder values in firebaseConfig.</p>
+        </div>
+      )}
+
+      <header className="hdr">
+        <div className="logo">RR</div>
+        <h1>The Returns Roundtable</h1>
+        <p className="tag">5 Stocks {"\u00B7"} 3 Trades {"\u00B7"} 12 Months {"\u00B7"} 1 Winner</p>
+        <div className="inaugural">{"\u{1F3C6}"} Inaugural Tournament {"\u{1F3C6}"}</div>
+        <div className="meta">
+          <span className="badge">{"\u{1F4C5}"} 1 Mar 2026 {"\u2192"} 28 Feb 2027</span>
+          <span className={"st st-"+(status==="p"?"p":status==="l"?"l":"c")}>
+            {status==="p"&&("\u23F3 Starts in "+du(START)+" days")}{status==="l"&&<span><span className="live-dot"></span>LIVE</span>}{status==="c"&&"\u{1F3C1} COMPLETE"}
+          </span>
+          <span className="badge">{"\u{1F465}"} {ps.length} registered</span>
+        </div>
+      </header>
+
+      <div className="nav">
+        <div className="navl">
+          <button className={"btn "+(vw==="lb"?"on":"")} onClick={()=>setVw("lb")}>Leaderboard</button>
+          {regOpen?(
+            <button className={"btn "+(vw==="reg"?"on":"")} onClick={()=>setVw("reg")}>+ Register</button>
+          ):(
+            <button className="btn dis" title="Registration closed">+ Register</button>
+          )}
+        </div>
+        {status==="l"&&vw==="lb"&&<button className="btn" onClick={()=>fetchPr(ps)} disabled={pst==="loading"} title="Prices auto-update daily via GitHub Actions">{pst==="loading"?<span><span className="spin"></span>Refreshing...</span>:"\u21BB Refresh Prices"}</button>}
+      </div>
+
+      {vw==="reg"&&regOpen&&(
+        <div className="card">
+          <div className="ctit"><span>{"\u{1F4DD}"}</span> Register Your Portfolio</div>
+          <div className="fr">
+            <div className="fg"><label className="fl">Your Name</label><input className="fi" value={nm} onChange={e=>setNm(e.target.value)} placeholder="e.g. James Smith"/></div>
+            <div className="fg"><label className="fl">Portfolio Name</label><input className="fi" value={pn} onChange={e=>setPn(e.target.value)} placeholder="e.g. Tech Titans"/></div>
+          </div>
+          <div className="fg">
+            <label className="fl">Trade PIN (4 digits)</label>
+            <input className="fi fi-pin" type="password" maxLength={4} inputMode="numeric" value={pin}
+              onChange={e=>setPin(e.target.value.replace(/\D/g,""))} placeholder={"\u2022\u2022\u2022\u2022"}/>
+            <p className="ht">You will need this PIN to make trades during the competition. Remember it!</p>
+          </div>
+          <TickerSearch sel={tk} onAdd={addT} onRm={rmT} prices={pr}/>
+          {fe&&<p className="et">{fe}</p>}
+          <button className="btn1" style={{marginTop:6}} onClick={submit} disabled={!CONFIGURED||!nm.trim()||!pn.trim()||pin.length!==4||tk.length!==PICKS||sub}>{sub?"Submitting...":"Submit Portfolio \u2192"}</button>
+        </div>
+      )}
+      {vw==="reg"&&!regOpen&&(
+        <div className="card">
+          <div className="reg-closed">
+            <div style={{fontSize:32,marginBottom:10}}>{"\u{1F512}"}</div>
+            <div style={{fontSize:16,fontWeight:600,color:"var(--t1)",marginBottom:6}}>Registration Closed</div>
+            <div>Registration closed when the competition started on 1 March 2026.</div>
+          </div>
+        </div>
+      )}
+
+      {vw==="lb"&&(
+        <div>
+          <div className="card">
+            <div className="ctit"><span>{"\u{1F3C6}"}</span> Leaderboard
+              {status==="l"&&lastUpdated&&<span style={{marginLeft:"auto",fontSize:10,fontWeight:500,color:"var(--t5)",fontFamily:"var(--fm)"}}>Updated {ago(lastUpdated)}</span>}
+            </div>
+            {ps.length===0?(
+              <div className="empty">
+                <div style={{fontSize:44,marginBottom:12}}>{"\u{1F4CA}"}</div>
+                <div style={{fontSize:17,color:"var(--t1)",fontWeight:600}}>No portfolios yet</div>
+                <div style={{color:"var(--t4)",marginTop:5,fontSize:14}}>Be the first to enter the inaugural tournament!</div>
+                {regOpen&&<button className="btn" style={{marginTop:14}} onClick={()=>setVw("reg")}>Register Now {"\u2192"}</button>}
+              </div>
+            ):(
+              <div>
+                <div className="lbh"><div>#</div><div>Adviser</div><div className="ch">Holdings</div><div style={{textAlign:"right"}}>Return</div></div>
+                {ranked.map((p,i)=>{const ret=portfolioReturn(p,pr);return(
+                  <div key={p.id} className="lbr" onClick={()=>setDet(p)}>
+                    <RankBadge rank={i+1}/>
+                    <div><div className="an">{p.advisorName}</div><div className="pn">{p.portfolioName}</div></div>
+                    <div className="ch">{p.tickers.map(t=><span key={t} className="mt">{t}{pr[t]?.cp&&<span style={{color:"var(--t5)",fontWeight:500,marginLeft:3}}>${pr[t].cp.toFixed(2)}</span>}</span>)}</div>
+                    <div className={"cr "+(ret==null?"crx":ret>=0?"crp":"crn")}>{status==="p"?"\u2014":ret==null?"Pending":fr(ret)}</div>
+                  </div>
+                )})}
+                <PerfChart portfolios={ps} history={hist}/>
+                {pst==="err"&&status==="l"&&<p className="ht" style={{textAlign:"center",marginTop:14}}>Manual refresh unavailable due to browser restrictions. Prices update automatically overnight via GitHub Actions.</p>}
+              </div>
+            )}
+          </div>
+          <ActivityFeed trades={trades}/>
+        </div>
+      )}
+
+      <Modal p={det} prices={pr} status={status} trades={trades} onClose={()=>setDet(null)} onTrade={executeTrade}/>
+      <div className="footer">The Returns Roundtable {"\u00B7"} Inaugural Tournament {"\u00B7"} Equal Weighted 20%</div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("app")).render(<App/>);
+</script>
+</body>
+</html>
+8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Returns Roundtable</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg0:#0a0c10;--bg1:#0f1219;--bg2:#111827;--bgc:rgba(255,255,255,0.03);
+  --bdr:rgba(255,255,255,0.06);--bdr2:rgba(255,255,255,0.12);
+  --t1:#f1f5f9;--t2:#e2e8f0;--t3:#94a3b8;--t4:#64748b;--t5:#475569;
+  --acc:#10b981;--acc2:#059669;--accg:rgba(16,185,129,0.2);--accbg:rgba(16,185,129,0.1);--accbdr:rgba(16,185,129,0.25);
+  --red:#ef4444;--gold:#fbbf24;--silver:#94a3b8;--bronze:#d97706;
+  --blue:#60a5fa;--bluebg:rgba(59,130,246,0.15);
+  --purple:#c084fc;--purplebg:rgba(168,85,247,0.15);
+  --yellow:#eab308;--yellowbg:rgba(234,179,8,0.1);--yellowbdr:rgba(234,179,8,0.2);
+  --indigo:#818cf8;--indigobg:rgba(99,102,241,0.1);--indigobdr:rgba(99,102,241,0.2);
+  --orange:#f97316;--orangebg:rgba(249,115,22,0.1);--orangebdr:rgba(249,115,22,0.25);
+  --f:'Outfit','Segoe UI',sans-serif;--fm:'JetBrains Mono','Courier New',monospace;
+}
+body{min-height:100vh;background:linear-gradient(145deg,var(--bg0) 0%,var(--bg1) 40%,var(--bg2) 100%);color:var(--t2);font-family:var(--f);line-height:1.5;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+.ctr{max-width:1020px;margin:0 auto;padding:32px 20px 60px;position:relative;z-index:1}
+.hdr{text-align:center;margin-bottom:32px}
+.logo{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--acc),#06d6a0);font-size:22px;font-weight:800;color:var(--bg0);font-family:var(--fm);box-shadow:0 0 40px var(--accg);margin-bottom:14px}
+.hdr h1{font-size:clamp(24px,5vw,34px);font-weight:700;letter-spacing:-.03em;background:linear-gradient(135deg,#f0fdf4,#86efac);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.15}
+.tag{font-size:13px;color:var(--t4);font-family:var(--fm);letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
+.inaugural{display:inline-block;margin-top:12px;padding:6px 16px;border-radius:20px;background:linear-gradient(135deg,rgba(251,191,36,0.1),rgba(245,158,11,0.05));border:1px solid rgba(251,191,36,0.25);font-size:11px;font-weight:600;color:var(--gold);font-family:var(--fm);letter-spacing:.08em;text-transform:uppercase}
+.meta{display:flex;justify-content:center;gap:10px;margin-top:14px;flex-wrap:wrap}
+.badge{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--bdr);font-size:11px;color:var(--t3);font-family:var(--fm);white-space:nowrap}
+.st{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:18px;font-size:11px;font-weight:600;font-family:var(--fm)}
+.st-p{background:var(--yellowbg);border:1px solid var(--yellowbdr);color:var(--yellow)}
+.st-l{background:var(--accbg);border:1px solid var(--accbdr);color:var(--acc)}
+.st-c{background:var(--indigobg);border:1px solid var(--indigobdr);color:var(--indigo)}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:10px}
+.navl{display:flex;gap:8px;flex-wrap:wrap}
+.btn{font-family:var(--f);font-size:13px;font-weight:500;padding:9px 18px;border-radius:8px;cursor:pointer;transition:all .2s;border:1px solid var(--bdr);background:rgba(255,255,255,.04);color:var(--t3)}
+.btn:hover{border-color:var(--bdr2);color:var(--t2)}
+.btn.on{border-color:rgba(16,185,129,.4);color:var(--acc)}
 .btn1{width:100%;padding:14px;border-radius:10px;border:none;font-family:var(--f);font-size:15px;font-weight:600;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;cursor:pointer;transition:all .2s;box-shadow:0 4px 24px var(--accg)}
 .btn1:hover{transform:translateY(-1px);box-shadow:0 6px 30px var(--accg)}
 .btn1:disabled{opacity:.35;cursor:not-allowed;box-shadow:none;transform:none}
