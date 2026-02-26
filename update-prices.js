@@ -16,7 +16,7 @@ if (!FIREBASE_DB_URL) {
   process.exit(1);
 }
 
-const START = '2026-03-01';
+const START = '2026-02-26';
 const END = '2027-02-28';
 
 // ─── Firebase helpers ───
@@ -93,9 +93,10 @@ async function fetchPrice(ticker) {
 
     const startPrice = closes[startIdx] || closes[0];
     const currentPrice = closes[closes.length - 1];
+    const prevPrice = closes.length >= 2 ? closes[closes.length - 2] : null;
 
     if (startPrice && currentPrice) {
-      return { sp: startPrice, cp: currentPrice, u: new Date().toISOString() };
+      return { sp: startPrice, cp: currentPrice, pp: prevPrice, u: new Date().toISOString() };
     }
     console.warn(`  ✗ ${ticker}: missing price data`);
     return null;
@@ -219,7 +220,8 @@ async function main() {
     if (result) {
       prices[ticker] = result;
       const ret = ((result.cp - result.sp) / result.sp * 100).toFixed(2);
-      console.log(`  ✓ ${ticker}: $${result.sp.toFixed(2)} → $${result.cp.toFixed(2)} (${ret >= 0 ? '+' : ''}${ret}%)`);
+      const daily = result.pp ? ((result.cp - result.pp) / result.pp * 100).toFixed(2) : '?';
+      console.log(`  ✓ ${ticker}: $${result.cp.toFixed(2)} (day: ${daily >= 0 ? '+' : ''}${daily}%, total: ${ret >= 0 ? '+' : ''}${ret}%)`);
       successCount++;
     }
     // Small delay to avoid rate limiting (200ms × ~340 tickers ≈ 70s)
