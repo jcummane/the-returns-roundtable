@@ -22,4 +22,4 @@ jobs:
       - name: Fetch prices and update Firebase
         env:
           FIREBASE_DB_URL: ${{ secrets.FIREBASE_DB_URL }}
-        run: node scripts/update-prices.js
+        run: node update-prices.js
